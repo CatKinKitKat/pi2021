@@ -56,7 +56,7 @@ Melhores ferramentas para web scraping
 5.	Data Stermer
 
 #### Informações a descartar (previsão)
-vantagens de web scraping
+Vantagens de web scraping
 
 1.	Mais rápido: Manusear grandes quantidades de dados poderiam levar dias ou semanas a serem processados através do trabalho manual, com o uso do scraping podemos reduzir substancialmente o esforço e aumentar a velocidade de decisão
 
@@ -68,7 +68,7 @@ vantagens de web scraping
 
 5.	Manutenção básica: Fazer o scraping de dados geralmente não requer muita manutenção.
 
-desvantagens de web scraping
+Desvantagens de web scraping
 
 1.	Baixa proteção: se os dados na web são protegidos, o uso do scraping também pode se tornar um desafio e aumentar os custos.
 
