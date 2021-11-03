@@ -77,21 +77,31 @@ Desvantagens de web scraping
 ## Algoritmos de analise de texto
 
 Os algoritmos de análise de texto podem ser considerados ferramentas de mineração de texto, isto é, o processo de descoberta de conhecimento potencialmente útil e inicialmente desconhecido, ou seja, a extração de conhecimento útil utilizando bases textuais. 
+
 O processo de mineração de texto é dividido em quatro etapas bem definidas: 
+
       -Seleção; 
       -Pré-processamento;
       -Mineração; 
       -Assimilação; 
+      
 Na **seleção**, os documentos relevantes devem ser escolhidos e mais tarde processados. No **pré-processamento** ocorrerá a conversão dos documentos em uma estrutura compatível com minerador, bem como ocorrerá um tratamento especial do texto. Na **mineração**, o minerador irá detectar os padrões com base no algoritmo escolhido. E por fim, na **assimilação**, os utilizadores irão utilizar o conhecimento gerado para apoiar as suas decisões. 
-A etapa pré-processamento pode ser dividida em quatro tarefas: 
+
+A etapa pré-processamento pode ser dividida em quatro tarefas:
+
       -Remoção de StopWords; 
       -Conflação;
       -Normalização de sinônimos; 
       -Indexação; 
+      
 Na etapa **remoção de stopwords** os termos com pouca ou nenhuma relevância para o documento serão removidos. São palavras auxiliares ou conectivas, ou seja, não são discriminantes para o conteúdo do documento. 
+
 Na etapa seguinte, **conflação**, realiza-se uma normalização morfológica, ou seja, realiza-se uma combinação das palavras que são variantes morfológicas em uma única forma de representação. Um dos procedimentos mais conhecidos de conflação é a radicalização (Stemming). Nela as palavras são reduzidas ao seu radical, ou seja, as palavras variantes morfologicamente serão combinadas em uma única representação, o radical. A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP).
+
 Após a conflação, na etapa de **normalização de sinônimos**, os termos que possuem significados similares serão agrupados em um único termo, por exemplo, as palavras ruído, tumulto e barulho serão substituídas ou representadas pelo termo barulho. Na normalização de sinônimos, é formado um vocabulário controlado que se refere à utilização de termos adequados para representar um documento, sendo esses termos pré-definidos e específicos a um determinado assunto de uma área. Isso facilita a procura, pois os termos são normalmente utilizados pelos utilizadores. 
+
 E, por fim, na etapa **indexação** atribui-se uma pontuação para cada termo, garantindo uma única instância do termo no documento. No processo de atribuição de pesos devem ser considerados dois pontos: 
+
       -Quanto mais vezes um termo aparece no documento, mais relevante ele é para o documento;
       -Quanto mais vezes um termo aparece na coleção de documentos, menos importante ele é para diferenciar os documentos.
 
