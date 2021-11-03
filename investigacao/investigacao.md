@@ -44,6 +44,23 @@ Inicialmente todas as informações (dados e meta-dados) são dados como relevan
 #### Informações necessarias (previsão)
 
 #### Informações a descartar (previsão)
+vantagens de web scraping
+
+1.	Mais rápido: Manusear grandes quantidades de dados poderiam levar dias ou semanas a serem processados através do trabalho manual, com o uso do scraping podemos reduzir substancialmente o esforço e aumentar a velocidade de decisão
+
+2.	Confiável e consistente: Ao fazer o trabalho manual é muito fácil de haver erros, por exemplo, erros tipográficos, informações esquecidas ou inserção nas colunas erradas. O uso do web scraping garante consistência e a qualidade dos dados.
+
+3.	Ajuda a reduzir a carga de trabalho.
+
+4.	Menor custo: Uma vez implementado o scraping, o custo total da extração de dados é significativamente reduzido, especialmente quando comparado ao trabalho manual.
+
+5.	Manutenção básica: Fazer o scraping de dados geralmente não requer muita manutenção.
+
+desvantagens de web scraping
+
+1.	Baixa proteção: se os dados na web são protegidos, o uso do scraping também pode se tornar um desafio e aumentar os custos.
+
+2.	Dados estruturados: não vai ser possível fazer scraping a 1000 sites diferentes pois cada site tem uma estrutura completamente diferente.  Será necessário haver alguma estrutura básica que difira em determinadas situações.
 
 ## Algoritmos de analise de texto
 
