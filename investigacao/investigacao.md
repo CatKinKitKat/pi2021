@@ -105,7 +105,15 @@ E, por fim, na etapa **indexação** atribui-se uma pontuação para cada termo,
       -Quanto mais vezes um termo aparece no documento, mais relevante ele é para o documento;
       -Quanto mais vezes um termo aparece na coleção de documentos, menos importante ele é para diferenciar os documentos.
 
-### Algoritmos Classicos
+### Algoritmos Clássicos
+
+Os algoritmos clássicos são instruções passo a passo de modo a que, dada uma entrada específica, é possível rastrear e determinar exatamente a saída.
+      
+      -Os algoritmos clássicos especificam as regras exatas para encontrar a resposta geral;
+      -Um algoritmo clássico usa código e dados para prever a resposta correta para uma pergunta;
+      -O algoritmo clássico produz uma saída com base nas etapas descritas no algoritmo;
+      -Em algoritmos clássicos, normalmente é necessário um grande número de exemplos para determinar a que distância a equação está da equação desejada. É por isso que "big data" é uma grande negócio hoje em dia;
+      -Um algoritmo clássico não dá uma solução depois de chegar a uma solução ótima para um problema;
 
 ### Algoritmos de machine learning
 
