@@ -42,6 +42,16 @@ Será feita também uma analise e extração de keywords nos textos das decriç�
 Inicialmente todas as informações (dados e meta-dados) são dados como relevantes, após consideração e poderação durante analises iniciais do decorrer do estudo poderemos descartar dados que não consideremos relevantes. No entanto nada nos impede de tentar prever ou imaginar quais esses serão e posteriormente avaliar o nosso julgamento para ver o que foi aprendido.
 
 #### Informações necessarias (previsão)
+Web crawling VS web scraping
+Web crawling, também conhecido como Indexação, é usado para indexar as informações na página usando bots também conhecidos como rastreadores. O rastreamento é essencialmente o que os motores de busca fazem. É uma questão de visualizar uma página como um todo e indexá-la. Quando um Bot rastreia um site, ele passa por todas as páginas e todos os links, até a última linha do site, em busca de qualquer informação.
+O web scraping, também conhecido como extração de dados da web, é semelhante ao web crawling, pois identifica e localiza os dados de destino das páginas da web. A principal diferença é que, com o web scraping, sabemos o identificador de conjunto de dados exato, por exemplo, uma estrutura de elemento HTML para páginas da web que estão sendo corrigidas, da qual os dados precisam ser extraídos.
+
+Melhores ferramentas para web scraping
+1.	Scraping-Bot
+2.	Scrapingbee
+3.	Import.io
+4.	PySpider
+5.	Data Stermer
 
 #### Informações a descartar (previsão)
 vantagens de web scraping
