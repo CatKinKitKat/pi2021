@@ -107,4 +107,50 @@ E, por fim, na etapa **indexação** atribui-se uma pontuação para cada termo,
 
 ### Algoritmos Classicos
 
-### Algorimos de machine learning
+### Algoritmos de machine learning
+
+Os algoritmos de machine learning são partes de código que ajudam as pessoas a explorar, analisar e localizar o significado em conjuntos de dados complexos. Cada algoritmo é um conjunto finito de instruções passo a passo inequívocas que um computador pode seguir para atingir um determinado objetivo. Num modelo de machine learning, o objetivo é estabelecer ou descobrir padrões que as pessoas possam utilizar para fazer previsões ou categorizar informações.
+
+Os algoritmos de machine learning utilizam parâmetros baseados em dados de preparação, um subconjunto de dados que representa o conjunto maior. À medida que os dados de preparação se expandem para representar o mundo de forma mais realista, o algoritmo calcula resultados mais precisos.
+
+Algoritmos diferentes analisam os dados de diversas formas. Geralmente, são agrupados consoante as técnicas de machine learning para as quais são utilizados: 
+
+      -Aprendizagem supervisionada; 
+      -Aprendizagem não supervisionada;
+      -Aprendizagem por reforço;
+    
+Os algoritmos mais frequentes utilizam a regressão e a classificação para prever categorias de destino, localizar pontos de dados invulgares, prever valores e descobrir semelhanças.
+
+**Aprendizagem supervisionada:**
+
+Na aprendizagem supervisionada, os algoritmos fazem previsões com base num conjunto de exemplos etiquetados fornecidos por si. Esta técnica é útil quando sabe como deverá ser o resultado.
+Por exemplo, fornece um conjunto de dados que inclui populações de cidades por ano nos últimos 100 anos e deseja saber qual será a população de uma cidade específica dentro de quatro anos. O resultado utiliza etiquetas que já existem no conjunto de dados: população, cidade e ano.
+
+**Aprendizagem não supervisionada:**
+
+Na aprendizagem não supervisionada, os pontos de dados não são etiquetados. O algoritmo etiqueta-os ao organizar os dados ou ao descrever a sua estrutura. Esta técnica é útil quando não sabe como deverá ser o resultado.
+Por exemplo, fornece dados de cliente e deseja criar segmentos de clientes que gostam de produtos semelhantes. Os dados que está a fornecer não são etiquetados e as etiquetas no resultado são geradas com base nas semelhanças descobertas entre os pontos de dados.
+
+**Aprendizagem de reforço**
+
+A aprendizagem por reforço utiliza algoritmos que aprendem com resultados e decide a ação a realizar em seguida. Após cada ação, o algoritmo recebe comentários que o ajudam a determinar se a escolha feita foi correta, neutra ou incorreta. É uma boa técnica utilizada para sistemas automatizados que precisam de tomar muitas decisões pequenas sem orientação humana.
+Por exemplo, se estiver a criar um carro autónomo, quer que este cumpra a lei e mantenha as pessoas seguras. À medida que o carro ganha experiência e um histórico de reforço, aprende a permanecer dentro da faixa, a não ultrapassar o limite de velocidade e a travar quando encontrar peões.
+
+Os algoritmos de machine learning ajudam a responder a perguntas demasiado complexas para responder através de uma análise manual. Existem muitos tipos diferentes de algoritmos de machine learning.Contudo, por norma, os casos de utilização destes algoritmos enquadram-se numa destas categorias.
+
+      -Os algoritmos de classificação de duas classes (binários) dividem os dados em duas categorias. São úteis para perguntas com apenas duas respostas possíveis mutuamente exclusivas, incluindo perguntas de sim/não;
+      
+      -Os algoritmos de classificação multiclasse (multinomial) dividem os dados em três ou mais categorias. São úteis para perguntas com três ou mais respostas possíveis mutuamente exclusivas;
+      
+      -Os algoritmos de deteção de anomalias identificam os pontos de dados que estão fora dos parâmetros definidos para o que é considerado "normal";
+      
+      -Os algoritmos de regressão preveem o valor de um novo ponto de dados com base em dados históricos;
+      
+      -Os algoritmos de séries temporais mostram as alterações a um determinado valor ao longo do tempo. Com a análise e a previsão de série temporal, os dados são recolhidos a intervalos regulares ao longo do tempo e utilizados para fazer previsões e identificar tendências, sazonalidade, periodicidade e irregularidade;
+      
+      -Os algoritmos de clustering dividem os dados por vários grupos ao determinar o nível de semelhança entre os pontos de dados;
+      
+      -Os algoritmos de classificação utilizam cálculos de previsão para atribuir dados a categorias predefinidas;
+    
+
+
