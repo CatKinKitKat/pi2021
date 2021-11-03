@@ -1,3 +1,5 @@
+# Como usar
+
 Foi usado:
 ```virtualenv .venv```
 para criar o ambiente virtual de python3 (container).
@@ -12,4 +14,4 @@ Para instalar os pacotes do ambiente:
 ```pip install -r requirements.txt```
 
 Para sair do ambiente virtual:
-````deactivate```
+```deactivate```
