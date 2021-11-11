@@ -2,23 +2,34 @@
 \usepackage[portuguese]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[default]{opensans}
+\usepackage{newtxtext,newtxmath} %TimesNewRoman
 \usepackage{verbatim}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry}
 \usepackage{amsmath}
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage[svgnames]{xcolor}
-\definecolor{estigred}{RGB}{100.0,0.0,22.0}
+\definecolor{ipbgreen}{RGB}{166,204,59}
+\definecolor{ipbbrown}{RGB}{153,80,42}
 \usepackage[colorinlistoftodos]{todonotes}
-\usepackage[colorlinks=true, allcolors=estigred]{hyperref}
+\usepackage[colorlinks=true, allcolors=ipbbrown]{hyperref}
 
-\title{\includegraphics[scale=0.2]{estig_logo.png}\\[0.5cm]Sites de turismo e reservas} % Doc name
+\title{\includegraphics[scale=0.5]{ipbeja_logo.png}\\[0.5cm]Sites de turismo e reservas} % Doc name
 \author{Gonçalo Amaro -- 17440,\\ Pedro Tomás -- 18962,\\ Vítor Hugo -- 18966} % Doc's author/s
 \date{03 de Novembro, 2021} % Doc date
 
 \begin{document}
+
 \maketitle
+
+\newpage
+
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+
+\newpage
 
 \section{Sites pesquisados}
 
@@ -30,7 +41,7 @@ Foram usados os sites:
     \item \href{https://www.yelp.com/}{Yelp}
 \end{itemize}
 
-\section{(Im)Possibilidade de uso de APIs}
+\section{(Im)possibilidade de uso de APIs}
 
 Dos quais em nenhum foi observada uma facilidade na obtenção de acesso às suas APIs, e apenas alguns (3/4) oferecem acesso à documentação da(s) mesma(s) facilmente.
 A maioria requer um contacto, que foi tentado e continua sem resposta até hoje (contactos iniciados por G.A.17440, entre dia 26 e 29 de Out, e hoje sendo dia 1 de Nov).
