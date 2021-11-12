@@ -10,9 +10,9 @@ Foram usados os sites:
 
 ### (Im)Possibilidade de uso de APIs
 
-Dos quais em nenhum foi observada uma facilidade na obtenção de acesso às suas APIs, e apenas alguns (3/4) oferecem acesso à documentção da(s) mesma(s) fácilmente. A maioria requer um contacto, que foi tentado e continua sem resposta até hoje (contactos inicidados por G.A.17440, entre dia 26 e 29 de Out, e hoje sendo dia 1 de Nov).
+Dos quais em nenhum foi observada uma facilidade na obtenção de acesso às suas APIs, e apenas alguns (3/4) oferecem acesso à documentação da(s) mesma(s) facilmente. A maioria requer um contacto, que foi tentado e continua sem resposta até hoje (contactos iniciados por G.A.17440, entre dia 26 e 29 de Out, e hoje sendo dia 11 de Nov).
 
-Os que oferecem documentação foi observado que todos subdividem os seus serviços de API em 3 ou 4 APIs para casos de uso especificos (reservas, dados, etc) em vez de uma com endpoints que oferecem solução para todos os casos.
+Os que oferecem documentação foi observado que todos subdividem os seus serviços de API em 3 ou 4 APIs para casos de uso específicos (reservas, dados, etc) em vez de uma com endpoints que oferecem solução para todos os casos.
 
 ### Alternativas
 
@@ -20,7 +20,7 @@ Sendo o caso que a impossibilidade do use das APIs (que facilitariam o trabalho)
 
 #### Web-crawling VS web-scraping
 
-Web crawling, também conhecido como Indexação, é usado para indexar as informações na página usando bots também conhecidos como rastreadores. O rastreamento é essencialmente o que os motores de busca fazem. É uma questão de visualizar uma página como um todo e indexá-la. Quando um Bot rastreia um site, ele passa por todas as páginas e todos os links, até a última linha do site, em busca de qualquer informação.
+Web crawling, também conhecido como Indexação, é usado para indexar as informações na página usando bots também conhecidos como trackers. O tracking é essencialmente o que os motores de busca fazem. É uma questão de visualizar uma página como um todo e indexá-la. Quando um Bot rastreia um site, ele passa por todas as páginas e todos os links, até a última linha do site, em busca de qualquer informação.
 
 O web scraping, também conhecido como extração de dados da web, é semelhante ao web crawling, pois identifica e localiza os dados de destino das páginas da web. A principal diferença é que, com o web scraping, sabemos o identificador de conjunto de dados exato, por exemplo, uma estrutura de elemento HTML para páginas da web que estão sendo corrigidas, da qual os dados precisam ser extraídos.
 
@@ -46,11 +46,11 @@ Com isto visto, web scraping é o nosso alvo, visto que minimiza lixo e é direc
 
 ### Necessidade de Web Scraping
 
-Com o acima dito, é necessessário recorrer a soluções de Web Scraping. A comunidade internauta reparou no mesmo, visto que em reação ao observado existem dezenas de projectos e tutoriais de Web Scraping das variadas plataformas de turismo e reservas. Infelizmente, as mesmas não ajudam no processo e cada uma têm um forma de actuação bastante diferente.
+Com o acima dito, é necessário recorrer a soluções de Web Scraping. A comunidade internauta reparou no mesmo, visto que em reação ao observado existem dezenas de projectos e tutoriais de Web Scraping das variadas plataformas de turismo e reservas. Infelizmente, as mesmas não ajudam no processo e cada uma têm um forma de actuação bastante diferente.
 
 ## Bibliotecas de Python para Web Scraping
 
-Para fazer Web Scraping vamos usar Python, pela sua facilidade de uso e multifaceta _"Development speed is more important than execution speed"_. Com Python também temos as opções de criar cadernos Jupyter onde o proprio codigo e os resultados são "encadernados" com paragrafos de texto fazendo o proprio projecto o seu pequeno relatorio de preogresso e resultados; como tamém a criação de ambientes virtuais (containers), onde os pacotes usados ficam registados e instaldos localmente, garantindo assim a portabilidade.
+Para fazer Web Scraping vamos usar Python, pela sua facilidade de uso e multifaceta _"Development speed is more important than execution speed"_. Com Python também temos as opções de criar cadernos Jupyter onde o próprio código e os resultados são "encadernados" com parágrafos de texto fazendo o próprio projecto o seu pequeno relatório de progresso e resultados; como também a criação de ambientes virtuais (containers), onde os pacotes usados ficam registados e instalados localmente, garantindo assim a portabilidade.
 
 Para tal linguagem existem 5 grandes bibliotecas para a resolução deste caso:
     - Requests
@@ -59,21 +59,21 @@ Para tal linguagem existem 5 grandes bibliotecas para a resolução deste caso:
     - lxml
     - Selenium
 
-Cada uma tendo vantagens e desvantagens diferentes, um pequeno exemplo é o Selenium (a mais conhecida), que é a biblioteca mais completa e poderosa das listadas, mas tem um nivel de complxidade maior e requer um setup inicial maior e mais trabalhoso, requer WebDrivers para a execução das tarefas, pode ser "manhosa" com Firefox, sendo preferencial usar Chromium-based Browsers como o Chrome e o novo Edge (necessario ainda o ChromeDriver e o EdgeDriver), visto que esta ferramenta não é apenas de web scraping mas sim de automação de testes.
+Cada uma tendo vantagens e desvantagens diferentes, um pequeno exemplo é o Selenium (a mais conhecida), que é a biblioteca mais completa e poderosa das listadas, mas tem um nível de complexidade maior e requer um setup inicial maior e mais trabalhoso, requer WebDrivers para a execução das tarefas, pode ser "manhosa" com Firefox, sendo preferencial usar Chromium-based Browsers como o Chrome e o novo Edge (necessário ainda o ChromeDriver e o EdgeDriver), visto que esta ferramenta não é apenas de web scraping mas sim de automação de testes.
 
-Tentaremos evitar essa pela sua complexidade e extras desnecessarios às nossas necessidades e custo temporal do setup inicial. Caso seja necessario usar, não vamos hesitar. Para cada website pode ser necessario usar bibliotecas diferentes por necessidade ou por obtenção de informações/blog posts/etc.. que facilitem ou melhorem o output desejado.
+Tentaremos evitar essa pela sua complexidade e extras desnecessários às nossas necessidades e custo temporal do setup inicial. Caso seja necessário usar, não vamos hesitar. Para cada website pode ser necessário usar bibliotecas diferentes por necessidade ou por obtenção de informações/blog posts/etc.. que facilitem ou melhorem o output desejado.
 
 ### Tratamento do output
 
-Os outputs do conteudo scraped podem vir em .xml ou .csv (ou outras mas essencialmente essas duas). Tentaremos ao maximo usar .csv, e transformar qualquer .xml em .csv, visto que um maior numero de ferramentas graficas (Excel, PowerBI, etc..) e/ou bibliotecas de Python (Pandas, matplotlib, etc) para analise de dados tratam melhor ficheiros separados por virgulas.
+Os outputs do conteúdo scraped podem vir em .xml ou .csv (ou outras mas essencialmente essas duas). Tentaremos ao máximo usar .csv, e transformar qualquer .xml em .csv, visto que um maior numero de ferramentas gráficas (Excel, PowerBI, etc..) e/ou bibliotecas de Python (Pandas, matplotlib, etc) para analise de dados tratam melhor ficheiros separados por virgulas.
 
-Será feita também uma analise e extração de keywords nos textos das decrições e reviews. Para tál existem variados algoritmos que podemos usar, alguns "classicos" outros até de machine learning.
+Será feita também uma analise e extração de keywords nos textos das descrições e reviews. Para tál existem variados algoritmos que podemos usar, alguns "clássicos" outros até de machine learning.
 
-Inicialmente todas as informações (dados e meta-dados) são dados como relevantes, após consideração e poderação durante analises iniciais do decorrer do estudo poderemos descartar dados que não consideremos relevantes. No entanto nada nos impede de tentar prever ou imaginar quais esses serão e posteriormente avaliar o nosso julgamento para ver o que foi aprendido.
+Inicialmente todas as informações (dados e meta-dados) são dados como relevantes, após consideração e ponderação durante analises iniciais do decorrer do estudo poderemos descartar dados que não consideremos relevantes. No entanto nada nos impede de tentar prever ou imaginar quais esses serão e posteriormente avaliar o nosso julgamento para ver o que foi aprendido.
 
-#### Informações necessarias (previsão)
+#### Informações necessárias (previsão)
 
-Qualquer dado direcatmente relacionado com o establecimento como horas de funcionamento, localização, preços, classificação e quantidade de feedback. Também a relação das keywords apanhadas do feedback em relação ao oferecido.
+Qualquer dado diretamente relacionado com o estabelecimento como horas de funcionamento, localização, preços, classificação e quantidade de feedback. Também a relação das keywords apanhadas do feedback em relação ao oferecido.
 
 #### Informações a descartar (previsão)
 
@@ -89,19 +89,19 @@ O processo de mineração de texto é dividido em quatro etapas bem definidas:
       -Mineração;
       -Assimilação;
 
-Na seleção, os documentos relevantes devem ser escolhidos e mais tarde processados. No pré-processamento ocorrerá a conversão dos documentos em uma estrutura compatível com minerador, bem como ocorrerá um tratamento especial do texto. Na mineração, o minerador irá detectar os padrões com base no algoritmo escolhido. E por fim, na assimilação, os utilizadores irão utilizar o conhecimento gerado para apoiar as suas decisões.
+Na seleção, os documentos relevantes devem ser escolhidos e mais tarde processados. No pré-processamento ocorrerá a conversão dos documentos em uma estrutura compatível com o algoritmo, bem como ocorrerá um tratamento especial do texto. Na mineração, o algoritmo irá detectar os padrões com base no algoritmo escolhido. E por fim, na assimilação, os utilizadores irão utilizar o conhecimento gerado para apoiar as suas decisões.
 
 A etapa pré-processamento pode ser dividida em quatro tarefas:
       -Remoção de StopWords;
-      -Conflação;
-      -Normalização de sinônimos;
+      -Compilação;
+      -Normalização de sinónimos;
       -Indexação;
 
 Na etapa remoção de stopwords os termos com pouca ou nenhuma relevância para o documento serão removidos. São palavras auxiliares ou conectivas, ou seja, não são discriminantes para o conteúdo do documento.
 
-Na etapa seguinte, conflação, realiza-se uma normalização morfológica, ou seja, realiza-se uma combinação das palavras que são variantes morfológicas em uma única forma de representação. Um dos procedimentos mais conhecidos de conflação é a radicalização (Stemming). Nela as palavras são reduzidas ao seu radical, ou seja, as palavras variantes morfologicamente serão combinadas em uma única representação, o radical. A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP).
+Na etapa seguinte, compilação, realiza-se uma normalização morfológica, ou seja, realiza-se uma combinação das palavras que são variantes morfológicas em uma única forma de representação. Um dos procedimentos mais conhecidos de compilação é a radicalização (Stemming). Nela as palavras são reduzidas ao seu radical, ou seja, as palavras variantes morfologicamente serão combinadas em uma única representação, o radical. A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP).
 
-Após a conflação, na etapa de normalização de sinônimos, os termos que possuem significados similares serão agrupados em um único termo, por exemplo, as palavras ruído, tumulto e barulho serão substituídas ou representadas pelo termo barulho. Na normalização de sinônimos, é formado um vocabulário controlado que se refere à utilização de termos adequados para representar um documento, sendo esses termos pré-definidos e específicos a um determinado assunto de uma área. Isso facilita a procura, pois os termos são normalmente utilizados pelos utilizadores.
+Após a compilação, na etapa de normalização de sinónimos, os termos que possuem significados similares serão agrupados em um único termo, por exemplo, as palavras ruído, tumulto e barulho serão substituídas ou representadas pelo termo barulho. Na normalização de sinónimos, é formado um vocabulário controlado que se refere à utilização de termos adequados para representar um documento, sendo esses termos pré-definidos e específicos a um determinado assunto de uma área. Isso facilita a procura, pois os termos são normalmente utilizados pelos utilizadores.
 
 E, por fim, na etapa indexação atribui-se uma pontuação para cada termo, garantindo uma única instância do termo no documento. No processo de atribuição de pesos devem ser considerados dois pontos:
       -Quanto mais vezes um termo aparece no documento, mais relevante ele é para o documento;
@@ -155,17 +155,17 @@ Os algoritmos de machine learning ajudam a responder a perguntas demasiado compl
 
 ### Decisão sobre o tipo de algoritmo
 
-Após alargada análise dos tipos e subtipos de algoritmos de mineração de texto (analise de texto), é obvia a escolha em algoritmos de machine learning com aprendisagem não supervista para execução da nossa análise; a questão está em qual serão usados visto que muitos para os nossos casos poderão ter de ser sujeitos a pré-processamento; o que removeria as nossas requeridas dimensões de analise textual. No entanto vai continuar a haver pré-processamento como algoritmos de redução de dimencionalidade, a diferença comparando com a frase anterior é quão pré-modelação não afectará negativamente os resultados e possiveis associações.
+Após alargada análise dos tipos e subtipos de algoritmos de mineração de texto (analise de texto), é óbvia a escolha em algoritmos de machine learning com aprendizagem não supervista para execução da nossa análise; a questão está em qual serão usados visto que muitos para os nossos casos poderão ter de ser sujeitos a pré-processamento; o que removeria as nossas requeridas dimensões de analise textual. No entanto vai continuar a haver pré-processamento como algoritmos de redução de dimencionalidade, a diferença comparando com a frase anterior é quão pré-modelação não afectará negativamente os resultados e possíveis associações.
 
 #### Algoritmos considerados
 
 Dos variados algoritmos vistos e disponíveis na internet ou em bibliotecas de Python (como SciKitLearn, Tensorflow, Keras), demos a decisão de considerar os seguintes algoritmos como candidatos a uso e/ou pertencentes aos grupos de algoritmos usados para comparação de resultados:
     - LDA (Latent Dirichlet Allocation): um modelo de distribuição gaussiana, muito usado por empresas de software sobre feedback e bug reports para associação de resultados do QA,
     - K-Means Clustering: muito usado para fazer clusters de keywords em redes sociais,
-    - Naive Bayes Classifier: dos mais usados diariamente, é muito usado para filtros de spam, identificação de caractristicas em texto como idade e género e posterior sorteio e categorização,
-    - KNN (K-Nearest Neighbour): usado para agrupar dados relacionais com os contactos, relatórios, correspondencia e emails em empresas,
-    - SVM (Support Vector Machines): este é usado nos mesmos lugares que regressões lineares, porém mais rapido ou poderoso, é usado para agrupar pontos como texto com imagens ou topicos de texto em sites de vendas de 2ª mão,
+    - Naive Bayes Classifier: dos mais usados diariamente, é muito usado para filtros de spam, identificação de características em texto como idade e género e posterior sorteio e categorização,
+    - KNN (K-Nearest Neighbor): usado para agrupar dados relacionais com os contactos, relatórios, correspondência e emails em empresas,
+    - SVM (Support Vector Machines): este é usado nos mesmos lugares que regressões lineares, porém mais rápido ou poderoso, é usado para agrupar pontos como texto com imagens ou tópicos de texto em sites de vendas de 2ª mão,
     - Decision Tree: usado na analise de feedback positivo e queixas de clientes,
-    - Association Rules: muito usado na associaão de topicos com relatórios, como medicações com resultados de análises clinicas.
+    - Association Rules: muito usado na associação de tópicos com relatórios, como medicações com resultados de análises clínicas.
 
-Pode-se notar que aqui foram escolhidos algoritmos de machine learning já comuns a grupos que realizaram tarefas semelhantes e que são algoritmos simples e rápido não sendo mais um algoritmo de uma familia de algoritmos (mais complexos ou não, mas que têm muita variedade), táis como redes neurais, algoritmos geneticos ou algoritmos lineares (como regressões lineares).
+Pode-se notar que aqui foram escolhidos algoritmos de machine learning já comuns a grupos que realizaram tarefas semelhantes e que são algoritmos simples e rápido não sendo mais um algoritmo de uma familia de algoritmos (mais complexos ou não, mas que têm muita variedade), tais como redes neurais, algoritmos genéticos ou algoritmos lineares (como regressões lineares).
