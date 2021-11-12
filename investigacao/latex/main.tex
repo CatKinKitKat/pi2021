@@ -15,7 +15,7 @@
 \usepackage[colorlinks=true, allcolors=ipbbrown]{hyperref}
 
 \title{\includegraphics[scale=0.5]{ipbeja_logo.png}\\[0.5cm]Sistema de apoio à promoção do turismo rural\\Fase de Investigação} % Doc name
-\author{Gonçalo Amaro -- 17440,\\ Pedro Tomás -- 18962,\\ Vítor Hugo -- 18966} % Doc's author/s
+\author{Gonçalo Amaro -- 17440,\\ Pedro Tomás -- 18962,\\ Vítor Abreu -- 18966} % Doc's author/s
 \date{11 de Novembro, 2021} % Doc date
 
 \begin{document}
@@ -43,14 +43,13 @@ Foram usados os sites:
 
 \section{(Im)possibilidade de uso de APIs}
 
-Dos quais em nenhum foi observada uma facilidade na obtenção de acesso às suas APIs, e apenas alguns (3/4) oferecem acesso à documentação da(s) mesma(s) facilmente.
-A maioria requer um contacto, que foi tentado e continua sem resposta até hoje (contactos iniciados por G.A.17440, entre dia 26 e 29 de Out, e hoje sendo dia 1 de Nov).
+Em nenhum dos sites testados foi observada uma facilidade na obtenção de acesso às suas APIs, apenas alguns (3/4) ofereceram acesso à documentação da(s) mesma(s) facilmente. A maioria requer um contacto, que foi tentado e continua sem resposta até hoje (contactos iniciados por G.A.17440, entre dia 26 e 29 de Out, e hoje sendo dia 11 de Nov).
 
-Os que oferecem documentação foi observado que todos subdividem os seus serviços de API em 3 ou 4 APIs para casos de uso específicos (reservas, dados, etc) em vez de uma com endpoints que oferecem solução para todos os casos.
+Dentro dos sites que oferecem documentação foi observado que todos subdividem os seus serviços de API em 3 ou 4 APIs para casos de uso específicos (reservas, dados, etc) em vez de uma com "endpoints" que oferecem solução para todos os casos.
 
 \section{Alternativas}
 
-Sendo o caso que a impossibilidade do use das APIs (que facilitariam o trabalho) temos de recorrer a outras técnicas para obter os dados.
+Sendo que é impossível o uso das APIs (que facilitariam o trabalho) temos de recorrer a outras técnicas para obter os dados.
 
 \subsection{\textit{Web-crawling} VS \textit{web-scraping}}
 
@@ -60,7 +59,7 @@ O \textit{trackers} é essencialmente o que os motores de busca fazem.
 Quando um Bot rastreia um site, ele passa por todas as páginas e todos os links, até a última linha do site, em busca de qualquer informação.
 
 O \textit{web scraping}, também conhecido como extração de dados da \textit{web}, é semelhante ao \textit{web crawling}, pois identifica e localiza os dados de destino das páginas da \textit{web}.
-A principal diferença é que, com o \textit{web scraping}, sabemos o identificador de conjunto de dados exato, por exemplo, uma estrutura de elemento HTML para páginas da \textit{web} que estão sendo corrigidas, da qual os dados precisam ser extraídos.
+A principal diferença é que, com o \textit{web scraping}, sabemos quem identificou o conjunto de dados exatamente, por exemplo, uma estrutura de elemento HTML para páginas da \textit{web} que estão a ser corrigidas, da qual os dados precisam ser extraídos.
 
 Com isto visto, \textit{web scraping} é o nosso alvo, visto que minimiza lixo e é direcionado.
 No entanto devemos olhar para:
@@ -68,7 +67,7 @@ No entanto devemos olhar para:
 \subsubsection{Vantagens de \textit{web scraping}}
 
 \begin{enumerate}
-    \item Mais rápido: Manusear grandes quantidades de dados poderiam levar dias ou semanas a serem processados através do trabalho manual, com o uso do scraping podemos reduzir substancialmente o esforço e aumentar a velocidade de decisão.
+    \item Mais rápido: É possível manusear grandes quantidades de dados que poderiam levar dias ou semanas a serem processados através do trabalho manual, com o uso do scraping podemos reduzir substancialmente o esforço e aumentar a velocidade de decisão.
     \item Confiável e consistente: Ao fazer o trabalho manual é muito fácil de haver erros, por exemplo, erros tipográficos, informações esquecidas ou inserção nas colunas erradas. O uso do \textit{web scraping} garante consistência e a qualidade dos dados.
     \item Ajuda a reduzir a carga de trabalho.
     \item Menor custo: Uma vez implementado o \textit{scraping}, o custo total da extração de dados é significativamente reduzido, especialmente quando comparado ao trabalho manual.
@@ -78,14 +77,14 @@ No entanto devemos olhar para:
 \subsubsection{Desvantagens de \textit{web scraping}}
 
 \begin{enumerate}
-    \item Baixa proteção: se os dados na \textit{web} são protegidos, o uso do scraping também pode se tornar um desafio e aumentar os custos.
-    \item Dados estruturados: não vai ser possível fazer scraping a 1000 sites diferentes pois cada site tem uma estrutura completamente diferente.  Será necessário haver alguma estrutura básica que difira em determinadas situações.
+    \item Baixa proteção: Se os dados na \textit{web} são protegidos, o uso do scraping também pode se tornar um desafio e aumentar os custos.
+    \item Dados estruturados: Não vai ser possível fazer scraping a 1000 sites diferentes pois cada site tem uma estrutura completamente diferente. Será necessário haver alguma estrutura básica que seja diferente em determinadas situações.
 \end{enumerate}
 
 \subsection{Necessidade de \textit{Web Scraping}}
 
 Com o acima dito, é necessário recorrer a soluções de \textit{Web Scraping}.
-A comunidade internauta reparou no mesmo, visto que em reação ao observado existem dezenas de projetos e tutoriais de \textit{Web Scraping} das variadas plataformas de turismo e reservas.
+A comunidade internauta reparou no mesmo, visto que em reação ao observado existem dezenas de projetos e tutoriais de Web Scraping das variadas plataformas de turismo e reservas. 
 Infelizmente, as mesmas não ajudam no processo e cada uma têm um forma de atuação bastante diferente.
 
 \section{Bibliotecas de Python para \textit{Web Scraping}}
@@ -102,21 +101,21 @@ Para tal linguagem existem 5 grandes bibliotecas para a resolução deste caso:
     \item \href{https://pypi.org/project/selenium/}{Selenium}
 \end{itemize}
 
-Cada uma tendo vantagens e desvantagens diferentes, um pequeno exemplo é o Selenium (a mais conhecida), que é a biblioteca mais completa e poderosa das listadas, mas tem um nível de complexidade maior e requer um setup inicial maior e mais trabalhoso, requer \textit{WebDrivers} para a execução das tarefas, pode ser ``manhosa'' com Firefox, sendo preferencial usar \textit{Chromium-based Browsers} como o Chrome e o novo Edge (necessário ainda o \textit{ChromeDriver} e o \textit{EdgeDriver}), visto que esta ferramenta não é apenas de \textit{web scraping} mas sim de automação de testes.
+Cada uma tem diferentes vantagens e desvantagens, um pequeno exemplo é o Selenium (a mais conhecida), que é a biblioteca mais completa e poderosa das listadas, mas tem um nível de complexidade maior e requer um setup inicial maior e mais trabalhoso, requer \textit{WebDrivers} para a execução das tarefas, pode ser complicada com Firefox, sendo preferencial usar \textit{Chromium-based Browsers} como o Chrome e o novo Edge (necessário ainda o \textit{ChromeDriver} e o \textit{EdgeDriver}), visto que esta ferramenta não é apenas de \textit{web scraping} mas sim de automação de testes.
 
-Tentaremos evitar essa pela sua complexidade e extras desnecessários às nossas necessidades e custo temporal do setup inicial.
-Caso seja necessário usar, não vamos hesitar.
-Para cada website pode ser necessário usar bibliotecas diferentes por necessidade ou por obtenção de informações/blog posts/etc\ldots  que facilitem ou melhorem o output desejado.
+Tentaremos evitar essa pela sua complexidade e extras desnecessários às nossas necessidades e custo temporal do setup inicial. 
+Caso seja necessário usar, não vamos hesitar. 
+Para cada website pode ser necessário usar bibliotecas diferentes por necessidade ou por obtenção de informações/blog posts/etc.. que facilitem ou melhorem o output desejado.
 
 \subsection{Tratamento de output}
 
-Os outputs do conteúdo \textit{scraped} podem vir em .xml ou .csv (ou outras mas essencialmente essas duas).
-Tentaremos ao máximo usar .csv, e transformar qualquer .xml em .csv, visto que um maior numero de ferramentas gráficas (Excel, PowerBI, etc..) e/ou bibliotecas de Python (Pandas, matplotlib, etc) para analise de dados tratam melhor ficheiros separados por virgulas.
+Os outputs do conteúdo \textit{scraped} podem vir em .xml ou .csv (ou outras mas essencialmente essas duas). 
+Tentaremos ao máximo usar .csv, e transformar qualquer .xml em .csv, visto que um maior número de ferramentas gráficas (Excel, PowerBI, etc..) e/ou bibliotecas de Python (Pandas, matplotlib, etc) para a análise de dados tratam melhor ficheiros separados por vírgulas.
 
-Será feita também uma analise e extração de keywords nos textos das descrições e \textit{reviews}.
-Para tál existem variados algoritmos que podemos usar, alguns ``clássicos'' outros até de \textit{machine learning}.
+Será feita também uma análise e extração de \textit{keywords} nos textos das descrições e \textit{reviews}.
+Para tal existem variados algoritmos que podemos usar, alguns "clássicos" outros até de \textit{machine learning}.
 
-Inicialmente todas as informações (dados e meta-dados) são dados como relevantes, após consideração e ponderação durante analises iniciais do decorrer do estudo poderemos descartar dados que não consideremos relevantes.
+Inicialmente todas as informações (dados e meta-dados) são dados como relevantes, após consideração e ponderação durante análises iniciais do decorrer do estudo poderemos descartar dados que não consideremos relevantes. 
 No entanto nada nos impede de tentar prever ou imaginar quais esses serão e posteriormente avaliar o nosso julgamento para ver o que foi aprendido.
 
 \subsubsection{Informações necessárias (previsão)}
@@ -128,7 +127,7 @@ Também a relação das \textit{keywords} apanhadas do \textit{feedback} em rela
 
 Provavelmente informações pessoais de clientes e empregados não nos serão minimamente importantes.
 
-\section{Algoritmos de analise/mineração de texto}
+\section{Algoritmos de análise/mineração de texto}
 
 Os algoritmos de análise de texto podem ser considerados ferramentas de mineração de texto, isto é, o processo de descoberta de conhecimento potencialmente útil e inicialmente desconhecido, ou seja, a extração de conhecimento útil utilizando bases textuais.
 
@@ -147,25 +146,23 @@ E por fim, na assimilação, os utilizadores irão utilizar o conhecimento gerad
 
 A etapa pré-processamento pode ser dividida em quatro tarefas:
 \begin{itemize}
-    \item Remoção de \textit{StopWords}
-    \item Conflação
+    \item Remover \textit{StopWords}
+    \item Compilação
     \item Normalização de sinónimos
     \item Indexação
 \end{itemize}
 
-Na etapa remoção de \textit{stopwords} os termos com pouca ou nenhuma relevância para o documento serão removidos.
-São palavras auxiliares ou conectivas, ou seja, não são discriminantes para o conteúdo do documento.
+Na etapa Remover \textit{stopwords} os termos com pouca ou nenhuma relevância para o documento serão removidos. 
+São palavras auxiliares ou conetivas, ou seja, não são discriminantes para o conteúdo do documento.
 
-Na etapa seguinte, conflação, realiza-se uma normalização morfológica, ou seja, realiza-se uma combinação das palavras que são variantes morfológicas em uma única forma de representação.
-Um dos procedimentos mais conhecidos de conflação é a radicalização (Stemming).
-Nela as palavras são reduzidas ao seu radical, ou seja, as palavras variantes morfologicamente serão combinadas em uma única representação, o radical.
-A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP).
+Na etapa seguinte, compilação, realiza-se uma normalização morfológica, ou seja, realiza-se uma combinação das palavras que são variantes morfológicas em uma única forma de representação. 
+Um dos procedimentos mais conhecidos de compilação é a radicalização (Stemming). Nela as palavras são reduzidas ao seu radical, ou seja, as palavras variantes morfologicamente serão combinadas em uma única representação, o radical. A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP).
 
-Após a conflação, na etapa de normalização de sinónimos, os termos que possuem significados similares serão agrupados em um único termo, por exemplo, as palavras ruído, tumulto e barulho serão substituídas ou representadas pelo termo barulho.
-Na normalização de sinónimos, é formado um vocabulário controlado que se refere à utilização de termos adequados para representar um documento, sendo esses termos pré-definidos e específicos a um determinado assunto de uma área.
+Após a compilação, na etapa de normalização de sinónimos, os termos que possuem significados similares serão agrupados em um único termo, por exemplo, as palavras ruído, tumulto e barulho serão substituídas ou representadas pelo termo barulho. 
+Na normalização de sinónimos, é formado um vocabulário controlado que se refere à utilização de termos adequados para representar um documento, sendo esses termos pré-definidos e específicos a um determinado assunto de uma área. 
 Isso facilita a procura, pois os termos são normalmente utilizados pelos utilizadores.
 
-E, por fim, na etapa indexação atribui-se uma pontuação para cada termo, garantindo uma única instância do termo no documento.
+E, por fim, na etapa indexação atribui-se uma pontuação para cada termo, garantindo uma única instância do termo no documento. 
 No processo de atribuição de pesos devem ser considerados dois pontos:
 \begin{itemize}
     \item Quanto mais vezes um termo aparece no documento, mais relevante ele é para o documento
@@ -202,25 +199,25 @@ Geralmente, são agrupados consoante as técnicas de \textit{machine learning} p
 
 \subsubsection{Aprendizagem supervisionada}
 
-Na aprendizagem supervisionada, os algoritmos fazem previsões com base num conjunto de exemplos etiquetados fornecidos por si.
-Esta técnica é útil quando sabe como deverá ser o resultado.
-Por exemplo, fornece um conjunto de dados que inclui populações de cidades por ano nos últimos 100 anos e deseja saber qual será a população de uma cidade específica dentro de quatro anos.
+Na aprendizagem supervisionada, os algoritmos fazem previsões com base num conjunto de exemplos etiquetados fornecidos por si. 
+Esta técnica é útil quando sabe como deverá ser o resultado. 
+Por exemplo, fornece um conjunto de dados que inclui populações de cidades por ano nos últimos 100 anos e deseja saber qual será a população de uma cidade específica dentro de quatro anos. 
 O resultado utiliza etiquetas que já existem no conjunto de dados: população, cidade e ano.
 
 \subsubsection{Aprendizagem não supervisionada}
 
-Na aprendizagem não supervisionada, os pontos de dados não são etiquetados.
-O algoritmo etiqueta- Ao organizar os dados ou ao descrever a sua estrutura.
-Esta técnica é útil quando não sabe como deverá ser o resultado.
-Por exemplo, fornece dados de cliente e deseja criar segmentos de clientes que gostam de produtos semelhantes.
+Na aprendizagem não supervisionada, os pontos de dados não são etiquetados. 
+O algoritmo etiqueta-os ao organizar os dados ou ao descrever a sua estrutura. 
+Esta técnica é útil quando não sabe como deverá ser o resultado. 
+Por exemplo, fornece dados de cliente e deseja criar segmentos de clientes que gostam de produtos semelhantes. 
 Os dados que está a fornecer não são etiquetados e as etiquetas no resultado são geradas com base nas semelhanças descobertas entre os pontos de dados.
 
 \subsubsection{Aprendizagem de reforço}
 
-A aprendizagem por reforço utiliza algoritmos que aprendem com resultados e decide a ação a realizar em seguida.
-Após cada ação, o algoritmo recebe comentários que o ajudam a determinar se a escolha feita foi correta, neutra ou incorreta.
-É uma boa técnica utilizada para sistemas automatizados que precisam de tomar muitas decisões pequenas sem orientação humana.
-Por exemplo, se estiver a criar um carro autónomo, quer que este cumpra a lei e mantenha as pessoas seguras.
+A aprendizagem por reforço utiliza algoritmos que aprendem com resultados e decide a ação a realizar em seguida. 
+Após cada ação, o algoritmo recebe comentários que o ajudam a determinar se a escolha feita foi correta, neutra ou incorreta. 
+É uma boa técnica utilizada para sistemas automatizados que precisam de tomar muitas decisões pequenas sem orientação humana. 
+Por exemplo, se estivermos a criar um carro autónomo, queremos que este cumpra a lei e mantenha as pessoas seguras. 
 À medida que o carro ganha experiência e um histórico de reforço, aprende a permanecer dentro da faixa, a não ultrapassar o limite de velocidade e a travar quando encontrar peões.
 
 Os algoritmos de \textit{machine learning} ajudam a responder a perguntas demasiado complexas para responder através de uma análise manual.
@@ -237,19 +234,19 @@ Existem muitos tipos diferentes de algoritmos de \textit{machine learning}.Contu
 
 \subsection{Decisão sobre o tipo de algoritmo}
 
-Após alargada análise dos tipos e subtipos de algoritmos de mineração de texto (analise de texto), é óbvia a escolha em algoritmos de machine learning com aprendizagem não supervista para execução da nossa análise; a questão está em qual serão usados visto que muitos para os nossos casos poderão ter de ser sujeitos a pré-processamento; o que removeria as nossas requeridas dimensões de analise textual.
-No entanto vai continuar a haver pré-processamento como algoritmos de redução de dimencionalidade, a diferença comparando com a frase anterior é quão pré-modelação não afetará negativamente os resultados e possíveis associações.
+Após a grande análise dos tipos e subtipos de algoritmos de mineração de texto (análise de texto), é óbvia a escolha em algoritmos de machine learning com aprendizagem não supervisionada para a execução da nossa análise; a questão está em qual serão usados visto que muitos deles para os nossos casos poderão ter de ser sujeitos a pré-processamento; o que removeria as nossas requeridas dimensões de análise textual. 
+No entanto vai continuar a haver pré-processamento como algoritmos de redução de dimensionalidade, a diferença comparado com a frase anterior é quão a pré-modelação não afetará negativamente os resultados e possíveis associações.
 
 \subsubsection{Algoritmos considerados}
 
 Dos variados algoritmos vistos e disponíveis na internet ou em bibliotecas de Python (como SciKitLearn, Tensorflow, Keras), demos a decisão de considerar os seguintes algoritmos como candidatos a uso e/ou pertencentes aos grupos de algoritmos usados para comparação de resultados:
 \begin{itemize}
-    \item LDA (Latent Dirichlet Allocation): um modelo de distribuição gaussiana, muito usado por empresas de software sobre feedback e bug reports para associação de resultados do QA,
+    \item LDA (Latent Dirichlet Allocation): um modelo de distribuição gaussiana, muito usado por empresas de software sobre \textit{feedback} e bug reports para associação de resultados do QA,
     \item K-Means Clustering: muito usado para fazer clusters de keywords em redes sociais,
     \item Naive Bayes Classifier: dos mais usados diariamente, é muito usado para filtros de spam, identificação de características em texto como idade e género e posterior sorteio e categorização,
     \item KNN (K-Nearest Neighbor): usado para agrupar dados relacionais com os contactos, relatórios, correspondência e emails em empresas,
     \item SVM (Support Vector Machines): este é usado nos mesmos lugares que regressões lineares, porém mais rápido ou poderoso, é usado para agrupar pontos como texto com imagens ou tópicos de texto em sites de vendas de 2ª mão,
-    \item Decision Tree: usado na analise de feedback positivo e queixas de clientes,
+    \item Decision Tree: usado na análise de \textit{feedback} positivo e queixas de clientes,
     \item Association Rules: muito usado na associação de tópicos com relatórios, como medicações com resultados de análises clínicas.
 \end{itemize}
 
@@ -257,8 +254,12 @@ Pode-se notar que aqui foram escolhidos algoritmos de \textit{machine learning} 
 
 \section{Webgrafia}
 
-Devido à enormidade de \textit{websites} visitados apenas conseguimos colocar o motor de busca:
+Ouve uma enormidade de \textit{websites} visitados dos quais conseguimos recolher:
 \begin{itemize}
     \item \href{https://www.google.com/}{Google}
+    \item \href{https://www.devmedia.com.br/mineracao-de-texto-analise-comparativa-de-algoritmos-revista-sql-magazine-138/34013}{Site usado para pesquisas de algoritmos de mineração de texto}
+    \item \href{https://azure.microsoft.com/pt-pt/overview/machine-learning-algorithms/#overview}{Site usado para pesquisas de algoritmos ML}
+    \item \href{https://rockcontent.com/br/blog/web-crawler/}{Site usado para confirmar alguns tópicos}
+    \item \href{https://www.geekboots.com/story/classic-algorithm-vs-ml-algorithm}{Site usado para retirar algumas características dos algoritmos clássicos}
 \end{itemize}
 \end{document}
