@@ -35,8 +35,7 @@
 \subsection{Objetivo do trabalho}
 
 O objetivo deste trabalho é a análise de dados de plataformas online relacionados com turismo, para o desenvolvimento do turismo rural alentejano.
-Isto é obter todos os dados de \textit{posts} e comentários relacionados com \textit{providers} de acesso, entretenimento, refeições e estadia diretamente ligados ao património cultural do alentejo.
-Estes a serem analisados e classificados, criando assim um modelo de possíveis sentimentos e procuras que o comercio local tem o interesse em fornecer aos visitantes.
+Isto é, obter todos os dados de \textit{posts} e comentários relacionados com \textit{providers} de acesso, entretenimento, refeições e estadia diretamente ligados ao património cultural do alentejo. Estes a serem analisados e classificados, criando assim um modelo de possíveis sentimentos e procuras que o comércio local tem o interesse em fornecer aos visitantes.
 
 O nosso foco principal é nos \textit{posts} e comentários em português principalmente, com a possibilidade de analisar também o conteúdo em inglês e fazer \textit{cross-referencing}.
 
@@ -44,6 +43,9 @@ O nosso foco principal é nos \textit{posts} e comentários em português princi
 
 Com esta investigação queremos obter o nosso curso de ação.
 Quais são os websites e os métodos de obtenção de dados, e os métodos de analisar os mesmos.
+Após exaustiva procura pelos websites preferenciais e discussão entre todos os elementos do grupo, para a utilização de um conjunto deles onde fosse possível se realizar uma boa análise e obtenção dos dados, com especial foco na linguagem portuguesa, reunimos alguns possíveis candidatos que serão abordados no ponto seguinte. 
+
+Foi decidido também que dentro das opções que serão referidas em seguida, teremos preferência na utilização de um em específico, uma vez que para alem da língua portuguesa temos intenções de dar alguma prioridade ás informações relacionadas com o turismo rural alentejano, sendo assim e devido a uma maior procura e número de resultados que o website oferecia, inicialmente iriamos utilizar o website TripAdvisor como primeira opção.
 
 \section{Sites pesquisados}
 
@@ -73,8 +75,8 @@ Sendo que é impossível o uso das APIs (que facilitariam o trabalho) temos de r
 
 \subsection{\textit{Web-crawling} VS \textit{web-scraping}}
 
-\textit{Web crawling}, também conhecido como Indexação, é usado para indexar as informações na página usando bots também conhecidos como \textit{tracker}.
-O \textit{trackers} é essencialmente o que os motores de busca fazem.
+\textit{Web crawling}, também conhecido como Indexação, é usado para indexar as informações na página usando bots também conhecidos como \textit{trackers}.
+O \textit{tracker} é essencialmente o que os motores de busca fazem.
 É uma questão de visualizar uma página como um todo e indexá-la.
 Quando um Bot rastreia um site, ele passa por todas as páginas e todos os links, até a última linha do site, em busca de qualquer informação.
 
@@ -104,7 +106,8 @@ No entanto devemos olhar para:
 \subsection{Necessidade de \textit{Web Scraping}}
 
 Com o acima dito, é necessário recorrer a soluções de \textit{Web Scraping}.
-A comunidade internauta reparou no mesmo, visto que em reação ao observado existem dezenas de projetos e tutoriais de Web Scraping das variadas plataformas de turismo e reservas.
+
+A comunidade internauta reparou no mesmo, visto que em reação ao observado existem dezenas de projetos e tutoriais de \textit{Web Scraping} das variadas plataformas de turismo e reservas.
 Infelizmente, as mesmas não ajudam no processo e cada uma têm um forma de atuação bastante diferente.
 
 \section{Bibliotecas de Python para \textit{Web Scraping}}
@@ -147,7 +150,8 @@ Também a relação das \textit{keywords} apanhadas do \textit{feedback} em rela
 
 Provavelmente informações pessoais de clientes e empregados não nos serão minimamente importantes.
 
-\section{Algoritmos de análise/mineração de texto}
+\section{Análise}
+\subsection{Algoritmos de mineração de texto}
 
 Os algoritmos de análise de texto podem ser considerados ferramentas de mineração de texto, isto é, o processo de descoberta de conhecimento potencialmente útil e inicialmente desconhecido, ou seja, a extração de conhecimento útil utilizando bases textuais.
 
@@ -167,7 +171,7 @@ E por fim, na assimilação, os utilizadores irão utilizar o conhecimento gerad
 A etapa pré-processamento pode ser dividida em quatro tarefas:
 \begin{itemize}
     \item Remover \textit{StopWords}
-    \item Convulsão
+    \item Compilação
     \item Normalização de sinónimos
     \item Indexação
 \end{itemize}
@@ -175,12 +179,9 @@ A etapa pré-processamento pode ser dividida em quatro tarefas:
 Na etapa Remover \textit{stopwords} os termos com pouca ou nenhuma relevância para o documento serão removidos.
 São palavras auxiliares ou conetivas, ou seja, não são discriminantes para o conteúdo do documento.
 
-Na etapa seguinte, convulsão, realiza-se uma normalização morfológica, ou seja, realiza-se uma combinação das palavras que são variantes morfológicas em uma única forma de representação.
-Um dos procedimentos mais conhecidos de convulsão é a radicalização (Stemming). Nela as palavras são reduzidas ao seu radical, ou seja, as palavras variantes morfologicamente serão combinadas em uma única representação, o radical. A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP).
+Na etapa seguinte, compilação, realiza-se uma normalização morfológica, ou seja, as palavras são reduzidas ao seu radical, serão combinadas em uma única representação. A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP).
 
-Após a convulsão, na etapa de normalização de sinónimos, os termos que possuem significados similares serão agrupados em um único termo, por exemplo, as palavras ruído, tumulto e barulho serão substituídas ou representadas pelo termo barulho.
-Na normalização de sinónimos, é formado um vocabulário controlado que se refere à utilização de termos adequados para representar um documento, sendo esses termos pré-definidos e específicos a um determinado assunto de uma área.
-Isso facilita a procura, pois os termos são normalmente utilizados pelos utilizadores.
+Após a compilação, na etapa de normalização de sinónimos, os termos que possuem significados similares serão agrupados em um único termo, por exemplo, as palavras ruído, tumulto e barulho serão substituídas ou representadas pelo termo barulho.
 
 E, por fim, na etapa indexação atribui-se uma pontuação para cada termo, garantindo uma única instância do termo no documento.
 No processo de atribuição de pesos devem ser considerados dois pontos:
@@ -203,8 +204,6 @@ Os algoritmos clássicos são instruções passo a passo de modo a que, dada uma
 \subsection{Algoritmos de \textit{machine learning}}
 
 Os algoritmos de \textit{machine learning} são partes de código que ajudam as pessoas a explorar, analisar e localizar o significado em conjuntos de dados complexos.
-Cada algoritmo é um conjunto finito de instruções passo a passo inequívocas que um computador pode seguir para atingir um determinado objetivo.
-Num modelo de \textit{machine learning}, o objetivo é estabelecer ou descobrir padrões que as pessoas possam utilizar para fazer previsões ou categorizar informações.
 
 Os algoritmos de \textit{machine learning} utilizam parâmetros baseados em dados de preparação, um subconjunto de dados que representa o conjunto maior.
 À medida que os dados de preparação se expandem para representar o mundo de forma mais realista, o algoritmo calcula resultados mais precisos.
@@ -236,11 +235,9 @@ Os dados que está a fornecer não são etiquetados e as etiquetas no resultado 
 
 A aprendizagem por reforço utiliza algoritmos que aprendem com resultados e decide a ação a realizar em seguida.
 Após cada ação, o algoritmo recebe comentários que o ajudam a determinar se a escolha feita foi correta, neutra ou incorreta.
-É uma boa técnica utilizada para sistemas automatizados que precisam de tomar muitas decisões pequenas sem orientação humana.
 Por exemplo, se estivermos a criar um carro autónomo, queremos que este cumpra a lei e mantenha as pessoas seguras.
 À medida que o carro ganha experiência e um histórico de reforço, aprende a permanecer dentro da faixa, a não ultrapassar o limite de velocidade e a travar quando encontrar peões.
 
-Os algoritmos de \textit{machine learning} ajudam a responder a perguntas demasiado complexas para responder através de uma análise manual.
 Existem muitos tipos diferentes de algoritmos de \textit{machine learning}.Contudo, por norma, os casos de utilização destes algoritmos enquadram-se numa destas categorias.
 \begin{itemize}
     \item Algoritmos de classificação de duas classes (binários) dividem os dados em duas categorias. São úteis para perguntas com apenas duas respostas possíveis mutuamente exclusivas, incluindo perguntas de sim/não
