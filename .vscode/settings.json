@@ -1,9 +1,9 @@
 {
     "markdownlint.config": {
-        "MD025": {
-            "front_matter_title": ""
-        },
-        "MD028": false
+      "MD025": {
+        "front_matter_title": ""
+      },
+      "MD028": false
     },
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": false,
