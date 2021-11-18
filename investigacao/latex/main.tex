@@ -3,6 +3,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{newtxtext,newtxmath} %TimesNewRoman
+\usepackage[numbers]{natbib}
 \usepackage{verbatim}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry}
 \usepackage{amsmath}
@@ -19,6 +20,7 @@
 \date{11 de Novembro, 2021} % Doc date
 
 \begin{document}
+\bibliographystyle{IEEEtranN}
 
 \maketitle
 
@@ -112,8 +114,8 @@ Infelizmente, as mesmas não ajudam no processo e cada uma têm um forma de atua
 
 \section{Bibliotecas de Python para \textit{Web Scraping}}
 
-Para fazer \textit{Web Scraping} vamos usar Python, pela sua facilidade de uso e multifaceta \textit{``Development speed is more important than execution speed''}.
-Com Python também temos as opções de criar cadernos Jupyter onde o próprio código e os resultados são ``encadernados'' com parágrafos de texto fazendo o próprio projeto o seu pequeno relatório de progresso e resultados; como também a criação de ambientes virtuais (\textit{containers}), onde os pacotes usados ficam registados e instalados localmente, garantindo assim a portabilidade.
+Para fazer \textit{Web Scraping} vamos usar Python, pela sua facilidade de uso e multifaceta \textit{``Development speed is more important than execution speed''}.\cite{tds6}
+Com Python também temos as opções de criar cadernos Jupyter onde o próprio código e os resultados são ``encadernados'' com parágrafos de texto fazendo o próprio projeto o seu pequeno relatório de progresso e resultados; como também a criação de ambientes virtuais (\textit{containers}), onde os pacotes usados ficam registados e instalados localmente, garantindo assim a portabilidade.\cite{tds5}
 
 Para tal linguagem existem 5 grandes bibliotecas para a resolução deste caso:
 \begin{itemize}
@@ -124,11 +126,11 @@ Para tal linguagem existem 5 grandes bibliotecas para a resolução deste caso:
 \end{itemize}
 
 Cada uma tem diferentes vantagens e desvantagens.
-Caso nenhuma destas resultar, usaremos \href{https://pypi.org/project/selenium/}{Selenium} , que é uma biblioteca mais completa e poderosa que as listadas, visto que é uma ferramenta de testes de automação.
-Porém tem um nível de complexidade maior e requer um setup inicial maior e mais trabalhoso, requer \textit{WebDrivers} para a execução das tarefas, pode ser complicada com Firefox, sendo preferencial usar \textit{Chromium-based Browsers} como o Chrome e o novo Edge (necessário ainda o \textit{ChromeDriver} e o \textit{EdgeDriver})..
-Tentaremos evitar essa, a todo o custo, pela sua complexidade e extras desnecessários às nossas necessidades e custo temporal do setup inicial.
+Caso nenhuma destas resultar, usaremos \href{https://pypi.org/project/selenium/}{Selenium}, que é uma biblioteca mais completa e poderosa que as listadas, visto que é uma ferramenta de testes de automação.\cite{tds3}
+Porém tem um nível de complexidade maior e requer um setup inicial maior e mais trabalhoso, requer \textit{WebDrivers} para a execução das tarefas, pode ser complicada com Firefox, sendo preferencial usar \textit{Chromium-based Browsers} como o Chrome e o novo Edge (necessário ainda o \textit{ChromeDriver} e o \textit{EdgeDriver})..\cite{taw1}
+Tentaremos evitar essa, a todo o custo, pela sua complexidade e extras desnecessários às nossas necessidades e custo temporal do setup inicial.\cite{fcc1}
 
-Para cada website pode ser necessário usar bibliotecas diferentes por necessidade ou por obtenção de informações/blog posts/etc\ldots que facilitem ou melhorem o output desejado.
+Para cada website pode ser necessário usar bibliotecas diferentes por necessidade ou por obtenção de informações/blog posts/etc\ldots que facilitem ou melhorem o output desejado.\cite{tds1}
 
 \subsection{Tratamento de output}
 
@@ -153,7 +155,7 @@ Provavelmente informações pessoais de clientes e empregados não nos serão mi
 \section{Análise}
 \subsection{Algoritmos de mineração de texto}
 
-Os algoritmos de análise de texto podem ser considerados ferramentas de mineração de texto, isto é, o processo de descoberta de conhecimento potencialmente útil e inicialmente desconhecido, ou seja, a extração de conhecimento útil utilizando bases textuais.
+Os algoritmos de análise de texto podem ser considerados ferramentas de mineração de texto, isto é, o processo de descoberta de conhecimento potencialmente útil e inicialmente desconhecido, ou seja, a extração de conhecimento útil utilizando bases textuais.\cite{tds4}
 
 O processo de mineração de texto é dividido em quatro etapas bem definidas:
 \begin{itemize}
@@ -166,7 +168,7 @@ O processo de mineração de texto é dividido em quatro etapas bem definidas:
 Na seleção, os documentos relevantes devem ser escolhidos e mais tarde processados.
 No pré-processamento ocorrerá a conversão dos documentos em uma estrutura compatível com minerador, bem como ocorrerá um tratamento especial do texto.
 Na mineração, o minerador irá detetar os padrões com base no algoritmo escolhido.
-E por fim, na assimilação, os utilizadores irão utilizar o conhecimento gerado para apoiar as suas decisões.
+E por fim, na assimilação, os utilizadores irão utilizar o conhecimento gerado para apoiar as suas decisões.\cite{oth1}
 
 A etapa pré-processamento pode ser dividida em quatro tarefas:
 \begin{itemize}
@@ -177,9 +179,9 @@ A etapa pré-processamento pode ser dividida em quatro tarefas:
 \end{itemize}
 
 Na etapa Remover \textit{stopwords} os termos com pouca ou nenhuma relevância para o documento serão removidos.
-São palavras auxiliares ou conetivas, ou seja, não são discriminantes para o conteúdo do documento.
+São palavras auxiliares ou conetivas, ou seja, não são discriminantes para o conteúdo do documento.\cite{oth3}
 
-Na etapa seguinte, compilação, realiza-se uma normalização morfológica, ou seja, as palavras são reduzidas ao seu radical, serão combinadas em uma única representação. A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP).
+Na etapa seguinte, compilação, realiza-se uma normalização morfológica, ou seja, as palavras são reduzidas ao seu radical, serão combinadas em uma única representação. A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP).\cite{oth1}
 
 Após a compilação, na etapa de normalização de sinónimos, os termos que possuem significados similares serão agrupados em um único termo, por exemplo, as palavras ruído, tumulto e barulho serão substituídas ou representadas pelo termo barulho.
 
@@ -192,7 +194,7 @@ No processo de atribuição de pesos devem ser considerados dois pontos:
 
 \subsection{Algoritmos Clássicos}
 
-Os algoritmos clássicos são instruções passo a passo de modo a que, dada uma entrada específica, é possível rastrear e determinar exatamente a saída.
+Os algoritmos clássicos são instruções passo a passo de modo a que, dada uma entrada específica, é possível rastrear e determinar exatamente a saída.\cite{oth2}
 \begin{itemize}
   \item Algoritmos clássicos especificam as regras exactas para encontrar a resposta geral
   \item Um algoritmo clássico usa código e dados para prever a resposta correta para uma pergunta
@@ -206,7 +208,7 @@ Os algoritmos clássicos são instruções passo a passo de modo a que, dada uma
 Os algoritmos de \textit{machine learning} são partes de código que ajudam as pessoas a explorar, analisar e localizar o significado em conjuntos de dados complexos.
 
 Os algoritmos de \textit{machine learning} utilizam parâmetros baseados em dados de preparação, um subconjunto de dados que representa o conjunto maior.
-À medida que os dados de preparação se expandem para representar o mundo de forma mais realista, o algoritmo calcula resultados mais precisos.
+À medida que os dados de preparação se expandem para representar o mundo de forma mais realista, o algoritmo calcula resultados mais precisos.\cite{oth2}
 
 Algoritmos diferentes analisam os dados de diversas formas.
 Geralmente, são agrupados consoante as técnicas de \textit{machine learning} para as quais são utilizados:
@@ -256,7 +258,7 @@ No entanto vai continuar a haver pré-processamento como algoritmos de redução
 
 \subsubsection{Algoritmos considerados}
 
-Dos variados algoritmos vistos e disponíveis na internet ou em bibliotecas de Python (como SciKitLearn, Tensorflow, Keras), demos a decisão de considerar os seguintes algoritmos como candidatos a uso e/ou pertencentes aos grupos de algoritmos usados para comparação de resultados:
+Dos variados algoritmos vistos e disponíveis na internet ou em bibliotecas de Python (como SciKitLearn, Tensorflow, Keras), tomamos a decisão de considerar os seguintes algoritmos como candidatos a uso e/ou pertencentes aos grupos de algoritmos usados para comparação de resultados:
 \begin{itemize}
   \item LDA (Latent Dirichlet Allocation): um modelo de distribuição gaussiana, muito usado por empresas de software sobre \textit{feedback} e bug reports para associação de resultados do QA,
   \item K-Means Clustering: muito usado para fazer clusters de keywords em redes sociais,
@@ -270,36 +272,15 @@ Este é o:
   \item LSTM (\textit{Long-short term memory}): que é um tipo de RNN (rede neural recorrente) com ou sem um \textit{layer} CNN (um \textit{layer} de convulsão).
 \end{itemize}
 
-Poderá ser usado este método visto que não só ``está na moda'' como existe muito material de apoio por esse motivo, isto se houver tempo extra para experimentar e se essa experiência produzir melhores resultados comparativamente a um SVM por exemplo\ldots
+Poderá ser usado este método visto que não só ``está na moda'' como existe muito material de apoio por esse motivo, isto se houver tempo extra para experimentar e se essa experiência produzir melhores resultados comparativamente a um SVM por exemplo\ldots\cite{tai1}
 
 Pode-se notar que aqui foram escolhidos algoritmos de \textit{machine learning} já comuns a grupos que realizaram tarefas semelhantes e que são algoritmos simples e rápido não sendo mais um algoritmo de uma família de algoritmos (mais complexos ou não, mas que têm muita variedade), tais como redes neurais (à exceção do RNN LSTM), algoritmos genéticos ou algoritmos lineares (como regressões lineares).
 
 \section{Webgrafia}
 
-Ouve uma enormidade de \textit{websites} visitados dos quais conseguimos recolher:
-\begin{itemize}
-  \item Motores de Busca:
-  \\ -- \href{https://www.google.com/}{Google}
-  \\ -- \href{https://www.medium.com/}{Medium Articles}
-  \item TowardsDataScience:
-  \\ -- \href{https://towardsdatascience.com/scraping-tripadvisor-text-mining-and-sentiment-analysis-for-hotel-reviews-cc4e20aef333}{Web Scraping TripAdvisor, Text Mining and Sentiment Analysis for Hotel Reviews}
-  \\ -- \href{https://towardsdatascience.com/web-scraping-regular-expressions-and-data-visualization-doing-it-all-in-python-37a1aade7924}{Web Scraping, Regular Expressions, and Data Visualization: Doing it all in Python}
-  \\ -- \href{https://towardsdatascience.com/data-science-skills-web-scraping-using-python-d1a85ef607ed}{Data Science Skills: Web scraping using python}
-  \\ -- \href{https://towardsdatascience.com/sentiment-analysis-with-text-mining-13dd2b33de27}{Sentiment Analysis with Text Mining}
-  \\ -- \href{https://towardsdatascience.com/improving-airbnb-yield-prediction-with-text-mining-9472c0181731}{Improving Airbnb Yield Prediction with Text Mining}
-  \\ -- \href{https://towardsdatascience.com/text-mining-for-dummies-text-classification-with-python-98e47c3a9deb}{Text Mining for Dummies: Sentiment Analysis with Python}
-  \item Medium:
-  \\ -- \href{https://medium.com/the-andela-way/introduction-to-web-scraping-using-selenium-7ec377a8cf72}{Introduction to Web Scraping using Selenium}
-  \\ -- \href{https://medium.com/free-code-camp/better-web-scraping-in-python-with-selenium-beautiful-soup-and-pandas-d6390592e251}{Better web scraping in Python with Selenium, Beautiful Soup, and pandas}
-  \item TowardsAI:
-  \\ -- \href{https://pub.towardsai.net/text-mining-in-python-steps-and-examples-78b3f8fd913b}{Text Mining in Python: Steps and Examples}
-  \item Publicações Académicas:
-  \\ -- Variados .pdf, alguns angariados \href{https://sci-hub.41610.org/sci-hub-mirrors}{de forma não convencional} e outros via \href{https://www.scienceopen.com/search}{ScienceOpen} e \href{https://www.jstor.org/action/doBasicSearch?Query=text+mining}{JSTOR}.
-  \item Outros:
-  \\ -- \href{https://www.devmedia.com.br/mineracao-de-texto-analise-comparativa-de-algoritmos-revista-sql-magazine-138/34013}{Mineração de texto: Análise comparativa de algoritmos - Revista SQL Magazine 138}
-  \\ -- \href{https://azure.microsoft.com/pt-pt/overview/machine-learning-algorithms/#overview}{O que são algoritmos de machine learning?}
-  \\ -- \href{https://rockcontent.com/br/blog/web-crawler/}{Web crawler: saiba o que é e qual a sua relação com o Marketing Digital}
-  \\ -- \href{https://www.geekboots.com/story/classic-algorithm-vs-ml-algorithm}{Classic algorithm vs ML algorithm}
-  \\ -- \href{https://www.intellspot.com/text-mining-algorithms/}{Text Mining Algorithms List}
-\end{itemize}
+
+% Autor (data). Título. Data de acesso. URL.
+\bibliography{main.bib}
+
+
 \end{document}
