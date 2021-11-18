@@ -3,7 +3,8 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{newtxtext,newtxmath} %TimesNewRoman
-\usepackage[numbers]{natbib}
+\usepackage[sectionbib, numbers, comma, sort]{natbib}
+\usepackage{chapterbib}
 \usepackage{verbatim}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry}
 \usepackage{amsmath}
@@ -277,9 +278,7 @@ Poderá ser usado este método visto que não só ``está na moda'' como existe 
 Pode-se notar que aqui foram escolhidos algoritmos de \textit{machine learning} já comuns a grupos que realizaram tarefas semelhantes e que são algoritmos simples e rápido não sendo mais um algoritmo de uma família de algoritmos (mais complexos ou não, mas que têm muita variedade), tais como redes neurais (à exceção do RNN LSTM), algoritmos genéticos ou algoritmos lineares (como regressões lineares).
 
 \section{Webgrafia}
-
-
-% Autor (data). Título. Data de acesso. URL.
+\renewcommand{\bibsection}{}
 \bibliography{main.bib}
 
 
