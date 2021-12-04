@@ -1,0 +1,41 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[portuguese]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath} %TimesNewRoman
+\usepackage[sectionbib, numbers, comma, sort]{natbib}
+\usepackage{chapterbib}
+\usepackage{verbatim}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\definecolor{ipbgreen}{RGB}{166,204,59}
+\definecolor{ipbbrown}{RGB}{153,80,42}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=ipbbrown]{hyperref}
+
+\title{\includegraphics[scale=0.5]{ipbeja_logo.png}\\[0.5cm]Sistema de apoio à promoção do turismo rural\\Fase de Investigação} % Doc name
+\author{Gonçalo Amaro -- 17440,\\ Pedro Tomás -- 18962,\\ Vítor Abreu -- 18966} % Doc's author/s
+\date{05 de Dezembro, 2021} % Doc date
+
+\begin{document}
+\bibliographystyle{IEEEtranN}
+
+\maketitle
+
+\newpage
+
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+
+\newpage
+
+\section{Webgrafia}
+\renewcommand{\bibsection}{}
+\bibliography{main.bib}
+
+\end{document}
