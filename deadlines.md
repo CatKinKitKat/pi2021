@@ -1,6 +1,8 @@
-# Fase 1
+# Deadlines
 
-## Web-scraping
+## Fase 1
+
+### Web-scraping
 
 Data(1 Dezembro)
 
@@ -14,9 +16,9 @@ Quatro sub-fases:
 
 *- Se conseguirmos.
 
-# Fase 2
+## Fase 2
 
-## Text-Analysis/Machine Learning
+### Text-Analysis/Machine Learning
 
 Data(18 Dezembro) -> com possibilidade de revisão durante as férias
 
@@ -36,9 +38,9 @@ Sub-fases seguinte:
 + Cross-references entre plataformas: Amaro
 + Relatório de Fase: Todos
 
-# Fase 3
+## Fase 3
 
-## Apresentação gráfica e possíveis revisões às fases anteriores
+### Apresentação gráfica e possíveis revisões às fases anteriores
 
 Data(30 Janeiro)
 
@@ -50,9 +52,9 @@ Single sub-fases:
 
 *- Gráficos específicos de cada plataforma, feitos pelo individuo responsável.
 
-# Fase 4
+## Fase 4
 
-## Relatório LaTeX (template do JPB)
+### Relatório LaTeX (template do JPB)
 
 Data(10 Fevereiro)
 
