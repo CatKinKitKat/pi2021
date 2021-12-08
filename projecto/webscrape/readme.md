@@ -1,7 +1,7 @@
 # Como usar
 
 Foi usado:
-```virtualenv .venv```
+```virtualenv .venv``` ou se não estiver no ENV: ```python -m virtualenv .venv ```
 para criar o ambiente virtual de python3 (container).
 
 Para usar este ambiente executamos:
