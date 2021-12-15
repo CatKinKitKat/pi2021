@@ -20,12 +20,19 @@
 \author{Gonçalo Amaro -- 17440,\\ Pedro Tomás -- 18962,\\ Vítor Abreu -- 18966} % Doc's author/s
 \date{11 de Novembro, 2021} % Doc date
 
+\def\blankpage{%
+      \clearpage%
+      \thispagestyle{empty}%
+      \addtocounter{page}{-1}%
+      \null%
+      \clearpage}
+
 \begin{document}
 \bibliographystyle{IEEEtranN}
 
 \maketitle
 
-\newpage
+\blankpage
 
 {
   \hypersetup{linkcolor=black}

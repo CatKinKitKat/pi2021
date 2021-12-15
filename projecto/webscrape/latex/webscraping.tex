@@ -18,19 +18,286 @@
 
 \title{\includegraphics[scale=0.5]{ipbeja_logo.png}\\[0.5cm]Sistema de apoio à promoção do turismo rural\\Fase de Webscraping} % Doc name
 \author{Gonçalo Amaro -- 17440,\\ Pedro Tomás -- 18962,\\ Vítor Abreu -- 18966} % Doc's author/s
-\date{05 de Dezembro, 2021} % Doc date
+\date{15 de Dezembro, 2021} % Doc date
+
+\def\blankpage{%
+      \clearpage%
+      \thispagestyle{empty}%
+      \addtocounter{page}{-1}%
+      \null%
+      \clearpage}
 
 \begin{document}
 \bibliographystyle{IEEEtranN}
 
 \maketitle
 
-\newpage
+\blankpage
 
 {
   \hypersetup{linkcolor=black}
   \tableofcontents
 }
+
+\newpage
+
+\section{Introdução}
+
+\newpage
+
+\section{Planeamento}
+
+\subsection{Divisão de Tarefas}
+
+\subsection{Tecnologias Usadas}
+
+\subsubsection{Ambientes Virtuais de Python}
+
+\subsubsection{Bibliotecas de Python usadas}
+
+\newpage
+
+\section{TripAdvisor}
+
+\subsection{Estratégia}
+
+\subsection{Desenvolvimento}
+
+\newpage
+
+\subsubsection{Hotéis}
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|l|l|l|l|}
+  \hline
+      ~ & Hotel & Estrelas & Preço \\ \hline
+      0 & Pousada Convento Beja & "4,5 de 5 bolhas" & 100 \\ \hline
+      1 & Vila Galé Clube de Campo & "4,5 de 5 bolhas" & 99 \\ \hline
+      2 & Herdade dos Grous & "4,5 de 5 bolhas" & 130 \\ \hline
+      3 & Hotel Bejense & 4 de 5 bolhas & 63 \\ \hline
+      4 & Herdade do Vau & "4,5 de 5 bolhas" & 85 \\ \hline
+      5 & Herdade Da Diabroria & 4 de 5 bolhas & 76 \\ \hline
+      6 & Hotel Melius & 4 de 5 bolhas & 75 \\ \hline
+      7 & BejaParque Hotel & "3,5 de 5 bolhas" & 80 \\ \hline
+      8 & Hotel São Domingos & 4 de 5 bolhas & 55 \\ \hline
+      9 & Maria`s Guesthouse & 5 de 5 bolhas & 85 81 \\ \hline
+      10 & Hotel Santa Bárbara & 4 de 5 bolhas & 59 \\ \hline
+      11 & Beja Hostel & "3,5 de 5 bolhas" & 50 \\ \hline
+      12 & Império romano guest house & "4,5 de 5 bolhas" & 67 \\ \hline
+      13 & Guest House Stories & 5 de 5 bolhas & 50 \\ \hline
+      14 & Monte Das Beatas - Alojamento Local & 5 de 5 bolhas & 50 \\ \hline
+      15 & Hospedaria Santa Maria & 3 de 5 bolhas & 36 \\ \hline
+      16 & Aljana Guest House & "4,5 de 5 bolhas" & 99 \\ \hline
+      17 & Sesmarias Turismo Rural \& SPA & 5 de 5 bolhas & 90 \\ \hline
+      18 & Monte da Floresta B\&B & "3,5 de 5 bolhas" & 80 76 \\ \hline
+      19 & Casa de Pedrogao & 4 de 5 bolhas & 54 51 \\ \hline
+      20 & Hotel Santa Clara & 5 de 5 bolhas & 58 \\ \hline
+      21 & Herdade das Barradas da Serra & 5 de 5 bolhas & 125 \\ \hline
+      22 & Paradise In Portugal & 5 de 5 bolhas & 79 \\ \hline
+      23 & Villa Extramuros & 5 de 5 bolhas & ~ \\ \hline
+      24 & Albergaria Do Calvario & 5 de 5 bolhas & ~ \\ \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+
+\subsubsection{Atrações}
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|l|l|}
+  \hline
+      ~ & Attraction \\ \hline
+      0 & Castelo de Beja \\ \hline
+      1 & Museu Regional de Beja (Museu Rainha D. Leonor) \\ \hline
+      2 & Nucleo Museologico \\ \hline
+      3 & Casa de Santa Vitória \\ \hline
+      4 & Igreja de Nossa Senhora Dos Prazeres E Museu Episcopal \\ \hline
+      5 & Ruínas Romanas de Pisões \\ \hline
+      6 & Museu Visigotico--Igreja de Santo Amaro \\ \hline
+      7 & Jardim Gago Coutinho e Sacadura Cabral \\ \hline
+      8 & Sé Catedral de Beja / Igreja de São Tiago \\ \hline
+      9 & Museu Jorge Vieira/Casa Das Artes \\ \hline
+      10 & Porta de Évora - Arco romano de Beja \\ \hline
+      11 & Pelourinho de Beja \\ \hline
+      12 & Igreja de Santa Maria da Feira \\ \hline
+      13 & Igreja do Salvador \\ \hline
+      14 & Igreja da Misericórdia \\ \hline
+      15 & Estátua da Rainha Dona Leonor \\ \hline
+      16 & Igreja do Carmo \\ \hline
+      17 & Ermida de Santo André \\ \hline
+      18 & Igreja de Nossa Senhora do Pé da Cruz \\ \hline
+      19 & Ermida de Santo Estêvão \\ \hline
+      20 & Bairro da Mouraria \\ \hline
+      21 & Janela Manuelina \\ \hline
+      22 & Arcadas da Praça da República \\ \hline
+      23 & Arco das portas de Avis \\ \hline
+      24 & Monumento ao Prisioneiro Político Desconhecido \\ \hline
+      25 & Palácio dos Maldonados \\ \hline
+      26 & Convento de Santo António em Beja \\ \hline
+      27 & Colégio dos Jesuítas de Beja \\ \hline
+      28 & Piscina Descoberta Municipal de Beja \\ \hline
+      29 & Passo da Rua da Ancha \\ \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+
+\subsubsection{Restaurantes}
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|l|l|}
+  \hline
+      ~ & Restaurant \\ \hline
+      0 & Íntimo restaurante \\ \hline
+      1 & Restaurante Dom Dinis \\ \hline
+      2 & Herdade dos Grous Restaurante \\ \hline
+      3 & Adega Tipica Restaurante \\ \hline
+      4 & Bifanas do Márinho \\ \hline
+      5 & Pulo Do Lobo \\ \hline
+      6 & Toi Farois \\ \hline
+      7 & Restaurante Sabores Do Monte \\ \hline
+      8 & Pizzaria Milano \\ \hline
+      9 & Pizaria e Restaurante Mediterrâneo Dona Maria \\ \hline
+      10 & Frango à Guia \\ \hline
+      11 & Casa de Pasto - Tem Avondo \\ \hline
+      12 & Restaurante Espelho D'Água \\ \hline
+      13 & Hamburgueria da Avenida \\ \hline
+      14 & O Arbitro \\ \hline
+      15 & Adega do Castelo - Museu do Vinho \\ \hline
+      16 & Pinguinhas - Tapas e Petiscos \\ \hline
+      17 & Taberna A Pipa \\ \hline
+      18 & Luiz Da Rocha \\ \hline
+      19 & Restaurante Pousada São Francisco \\ \hline
+      20 & Malhadinha Restaurant Wine \& Gourmet \\ \hline
+      21 & A Ilha Do Peixe \\ \hline
+      22 & Sabores do Campo \\ \hline
+      23 & Art Deco \\ \hline
+      24 & Os Bolos da Marisa \\ \hline
+      25 & Restaurante Típico O Arcada \\ \hline
+      26 & A Merenda Snack Bar Restaurante \\ \hline
+      27 & A Pracinha \\ \hline
+      28 & Restaurante Alcoforado \\ \hline
+      29 & Restaurante A Lareira \\ \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+
+\subsection{Resultados}
+
+\newpage
+
+\section{Booking}
+
+\subsection{Estratégia}
+
+\subsection{Desenvolvimento}
+
+\newpage
+
+\subsubsection{Hotéis}
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|l|l|l|l|}
+  \hline
+      ~ & Hotel & Classificação & Preço \\ \hline
+      0 & Hotel Bejense & "8,4" & 189 \\ \hline
+      1 & Aljana Guest House Beja & "9,3" & 330 \\ \hline
+      2 & BejaParque Hotel & "8,1" & 255 \\ \hline
+      3 & Pousada Convento de Beja & "8,7" & 270 \\ \hline
+      4 & Guest House Stories & "8,7" & 135 \\ \hline
+      5 & Hotel Melius & "8,1" & 242 \\ \hline
+      6 & Casa do Arco - Beja & "9,4" & 210 \\ \hline
+      7 & Barrote Beja- Alojamento Local & "9,7" & 255 \\ \hline
+      8 & Maria`s Guesthouse & "9,4" & 226 \\ \hline
+      9 & Beja Garden & "8,0" & 90 \\ \hline
+      10 & HI Beja - Pousada de Juventude & "9,6" & 327 \\ \hline
+      11 & Casa do Sembrano & "9,5" & 330 \\ \hline
+      12 & Casa Idalina Villa in Beja's beautiful countryside & "9,4" & 210 \\ \hline
+      13 & Império Romano Guest House & "9,0" & 150 \\ \hline
+      14 & Monte das Beatas - Alojamento Local & "8,7" & 306 \\ \hline
+      15 & Casa do Jardim & "8,8" & 270 \\ \hline
+      16 & Casa das Histórias & "8,9" & 195 \\ \hline
+      17 & Casa Centro Histórico Beja - Castelo & "7,9" & 180 \\ \hline
+      18 & Quinta do Castelo & "9,0" & 214 \\ \hline
+      19 & Casa do Avô Zé & "8,1" & 174 \\ \hline
+      20 & Suite na Praça da República & "8,7" & 228 \\ \hline
+      21 & Herdade da Diabroria - Agroturismo & "8,8" & 285 \\ \hline
+      22 & Herdade do Vau & "7,8" & 270 \\ \hline
+      23 & Monte da Corte Ligeira & "8,3" & 150 \\ \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+
+\subsection{Resultados}
+
+\newpage
+
+\section{Zomato}
+
+\subsection{Estratégia}
+
+\subsection{Desenvolvimento}
+
+\newpage
+
+\subsubsection{Restaurantes}
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|l|l|l|l|}
+  \hline
+      ~ & Restaurante & Tipo & Preço \\ \hline
+      0 & Adega Típica 25 de Abril & "Alentejana, Portuguesa" & 25 \\ \hline
+      1 & Dom Dinis & "Bifes, Portuguesa" & 30 \\ \hline
+      2 & Sushi Alentejano & "Sushi, Japonesa" & 35 \\ \hline
+      3 & Herdade dos Grous & "Contemporânea, Portuguesa" & 60 \\ \hline
+      4 & Pulo do Lobo & Portuguesa & 25 \\ \hline
+      5 & Bar Parque da Vila Beringel & "Snacks, Bebidas" & 12 \\ \hline
+      6 & Figa's & "Pizza, Italiana" & 25 \\ \hline
+      7 & Cervejaria Portugalo & "Portuguesa, Bebidas, Petiscos" & 25 \\ \hline
+      8 & Entre Arcos & "Portuguesa, Grelhados" & 25 \\ \hline
+      9 & Aperitivo & "Bebidas, Portuguesa" & 20 \\ \hline
+      10 & O Arbitro & Portuguesa & 25 \\ \hline
+      11 & Café Central & "Snacks, Bebidas, Portuguesa" & 15 \\ \hline
+      12 & Gatus Cervejaria Alentejana & "Alentejana, Portuguesa, Marisqueira" & 25 \\ \hline
+      13 & Hamburgueria da Avenida & Hamburgueria & 25 \\ \hline
+      14 & Casa de Pasto O Forno & "Snacks, Bebidas, Portuguesa" & 12 \\ \hline
+      15 & Tennis Courts Club & Portuguesa & 25 \\ \hline
+      16 & Cervejaria Mira Serra & "Marisqueira, Portuguesa" & 40 \\ \hline
+      17 & Espelho d'Água & Portuguesa & 25 \\ \hline
+      18 & TEM Avondo & "Portuguesa, Alentejana" & 25 \\ \hline
+      19 & Menau & Portuguesa & 25 \\ \hline
+      20 & Toy Faróis & "Portuguesa, Grelhados" & 25 \\ \hline
+      21 & Taberna A Pipa & "Alentejana, Portuguesa, Petiscos" & 25 \\ \hline
+      22 & Pizzeria Milano & "Pizza, Italiana, Portuguesa" & 25 \\ \hline
+      23 & Dona Maria Deck & "Portuguesa, Petiscos, Snacks" & 25 \\ \hline
+      24 & O Alemão & "Portuguesa, Petiscos, Alentejana" & 25 \\ \hline
+      25 & Deliciosa Alvorada & "Portuguesa, Alentejana" & 25 \\ \hline
+      26 & Moments IPDJ & Portuguesa & 20 \\ \hline
+      27 & Bar Regional & "Bebidas, Snacks" & 6 \\ \hline
+      28 & Sushizzaria & "Sushi, Hamburgueria, Pizza" & 30 \\ \hline
+      \ldots & \ldots & \ldots & \ldots \\ \hline
+      155 & Vegetariano & Vegetariana & 25 \\ \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+
+\subsection{Resultados}
+
+\newpage
+
+\section{Próximos Passos}
+
+\newpage
+
+\section{Conclusão}
 
 \newpage
 
