@@ -6,6 +6,8 @@
 \usepackage[sectionbib, numbers, comma, sort]{natbib}
 \usepackage{chapterbib}
 \usepackage{verbatim}
+\documentclass{standalone}
+\usepackage{csvsimple}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry}
 \usepackage{amsmath}
 \usepackage{natbib}
@@ -43,13 +45,24 @@
 
 \section{Introdução}
 
+O objetivo desta fase de trabalho é a recolha da informação que será utilizada no decorrer do projeto, isto é, o "web-scrapping". Simplificando, o processo de "web-scrapping" é simplesmente a recolha de dados de uma forma automatizada, no nosso caso foi utilizado a linguagem python juntamente com algumas bibliotecas como a "Beautifullsoup4". Todas as informações recolhidas foram apenas dentro da localidade de Beja e entre todos os resultados alguns até podem ser comuns, umas vez que todos nós recolhemos por exemplo as "reviews" dos hotéis, atrações e restaurantes.
 \newpage
 
 \section{Planeamento}
 
 \subsection{Divisão de Tarefas}
 
+Para a realização desta fase de trabalho o grupo decidiu dividir as tarefas e organizá-las a partir da plataforma "Trello" (https://trello.com/b/PIApdmTA/pi-2021-22) uma vez que o grupo já se encontrava a usar a mesma e já temos mais á vontade. Assim sendo, o site "TripAdvisor" foi realizado pelo aluno Gonçalo Amaro, o "Booking" pelo Pedro Tomás e o "Zomato" pelo Vítor Abreu e todos conseguiram aceder aos seus devidos "websites" e adquirir as informações possíveis. 
+
 \subsection{Tecnologias Usadas}
+
+Na realização do web-scrapping foi desenvolvido um ambiente virtual de python3 para realizar os scripts que iriam recolher as informações. 
+
+Como forma de organizar todos os pacotes e possíveis atualizações de bibliotecas dentro do código também foi gerado um ficheiro .txt denominado "requirements" que atualizavamos e usavamos sempre que um dos elementos do grupo iria realizar o seu trabalho. 
+
+A linguagem optata para a construção dos scripts foi o python já que é uma das mais acessíveis linguagens de programação disponíveis devido à sua simples síntaxe e não ser complicada e também pela vasta quantidade de bibliotecas disponibilizadas, que mais tarde foram bastante úteis na realização do projeto.
+
+Para finalizar, todos os ficheiros foram guardados em formato .csv uma vez que a quantidade de informação era grande e seria fácil de a organizar no formato indicado.
 
 \subsubsection{Ambientes Virtuais de Python}
 
@@ -194,7 +207,103 @@
 
 \subsection{Estratégia}
 
+Para a realização do "web-scrapping" no "website" da Booking.com, inicialmente foi necessário a filtragem pelos hóteis apenas na localidade de Beja, uma vez ser o local que o grupo em conjunto decidiu optar para realizar todas as pesquisas num sítio em comum. Após ter o Booking a apresentar todos os resultados para os hóteis de Beja, foi recolhido o link que redireciona especificamente para esses resultados. Para aceder ás informações específicas de cada elemento da página e mais tarde aceder aos mesmos para retirar a informação pretendida, foi usado a ferramenta de "inspecionar a página" e assim descobrir os nomes das classes e todos os outros elementos que continham conteúdo importante para o projeto, como o nome dos hóteis, preço, classificação, número de comentários e alguns outros detalhes que podessem ser úteis.
+
+Em seguida foi necessário realizar o "web-scrapping" das reviews de cada hotel, a realização desta parte foi um pouco mais difícil uma vez que para as reviews serem bem recolhidas era fulcral que o "web-scrapping" fosse realizado usando outro link, ou seja, foi retirado do site o prefixo de um novo link que seria o "https://www.booking.com/reviews/pt/hotel/" e baseando nos hóteis já retirados foi colocado o nome de cada um á frente do mesmo, criando assim um novo link que seria usado na realização do "web-scrapping" após a criação de um novo link para cada hotel, os processos foram semelhantes aos anteriormente feitos.
+
+Para finalizar, os resultados foram todos guardados em ficheiros .csv para uma mais fácil visualização.
+
 \subsection{Desenvolvimento}
+
+\begin{figure}[!htb]
+Inicialmente foi feita a filtragem de apenas os hóteis de Beja.
+    \centering
+    \includegraphics[width=15cm]{1.PNG}
+    \caption{Site Booking.com ao usar a ferramenta inspecionar}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[!htb]
+No código foi implementado as bibliotecas BeautifulSoup para facilitar a tarefa de realizar o "web-scraping".
+    \centering
+    \includegraphics[width=15cm]{2.PNG}
+    \caption{"Import" de algumas das bibliotecas necessárias}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[!htb]
+A partir do "website" ao inspecionar a página era possível retirar os headers que eram valores necessários na realização do "web-scrapping". Também é realizado o pedido HTTP e juntou-se a informação com a biblioteca "BeautifulSoup".
+    \centering
+    \includegraphics[width=15cm]{3.PNG}
+    \caption{"Import" de algumas das bibliotecas necessárias}
+    \label{fig:my_label}
+\end{figure}
+
+\newpage
+
+\begin{figure}[!htb]
+Foram criados diferentes arrays para receber as informações e posteriormente colocada a respetiva informação em cada um deles.
+    \centering
+    \includegraphics[width=15cm]{4.PNG}
+    \caption{"Import" de algumas das bibliotecas necessárias}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[!htb]
+Devido a alguns "arrays" conterem mais informação, possivelmente devido a algum tipo de informação adicional que possa estar em algum hótel especificamente, para preveneir erros, foi feito um pequeno código para que todos os "arrays" contenham as mesmas dimensões.
+    \centering
+    \includegraphics[width=15cm]{5.PNG}
+    \caption{"Import" de algumas das bibliotecas necessárias}
+    \label{fig:my_label}
+\end{figure}
+
+\newpage
+
+\begin{figure}[!htb]
+Por fim todos os resultados contidos nos "arrays" foram guardados num ficheiro .csv denominado "listtable.csv".
+    \centering
+    \includegraphics[width=15cm]{6.PNG}
+    \caption{"Import" de algumas das bibliotecas necessárias}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[!htb]
+Alguns dos resultados dos hóteis em Beja.
+    \centering
+    \includegraphics[width=15cm]{7.PNG}
+    \caption{"Import" de algumas das bibliotecas necessárias}
+    \label{fig:my_label}
+\end{figure}
+
+\newpage
+
+\begin{figure}[!htb]
+Construção dos links para realizar o "web-scraping" das "reviews" de cada hotel.
+    \centering
+    \includegraphics[width=15cm]{8.PNG}
+    \caption{"Import" de algumas das bibliotecas necessárias}
+    \label{fig:my_label}
+\end{figure}
+
+\newpage
+
+\begin{figure}[!htb]
+Foi realizado o pedido "HTTP" e juntado á biblioteca "BeautifulSoup" para aceder ás "reviews" de cada site e todos os valores foram salvos no formato .csv.
+    \centering
+    \includegraphics[width=15cm]{9.PNG}
+    \caption{"Import" de algumas das bibliotecas necessárias}
+    \label{fig:my_label}
+\end{figure}
+
+\newpage
+
+\begin{figure}[!htb]
+Algumas das "reviews" de um dos sites disponíveis.
+    \centering
+    \includegraphics[width=15cm]{10.PNG}
+    \caption{"Import" de algumas das bibliotecas necessárias}
+    \label{fig:my_label}
+\end{figure}
 
 \newpage
 
@@ -230,13 +339,59 @@
       22 & Herdade do Vau & "7,8" & 270 \\ \hline
       23 & Monte da Corte Ligeira & "8,3" & 150 \\ \hline
   \end{tabular}
+        \caption{Tabela com todos os hotéis de Beja retirados do Booking.com}
 \end{table}
 
 \newpage
 
 \subsection{Resultados}
 
-\newpage
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|p{50}|p{352}|}
+  \hline
+      Nº Opinião & Opiniões \\ \hline
+      0 & A localização é excelente assim como as condições do espaço. Local muito bem cuidado e apelativo. Fomos muito bem recebidos. A casa estava muito bem equipada. Muito obrigada, Catarina. \\ \hline
+      1 & Nada digno de registo. \\ \hline
+      2 & A simpatia da Sra Catarina foi fantástica. A casa e as acomodações corresponderam ás expetivas e relação qualidade preço foi perfeita. A localização é óptima, apesar de algum barulho das viaturas que passam junto ás janelas dos quartos. Beja é uma cidade fantástica e voltaremos concerteza. Recomendo. \\ \hline
+      3 & Localização excelente, apartamento espaçoso, e totalmente equipado.
+      O facto de ser uma construção antiga, cria um ambiente muito peculiar, além de que a expessura das paredes ajuda na questão da temperatura (estivémos no verÃ£o, portanto a casa não era quente apesar dos 30 e tal graus na rua).
+      \\ \hline
+      4 & A localização é impecável mesmo no centro histórico de Beja. Casa Limpa e organizada. Dona super prestável e e simpática. \\ \hline
+      5 & De noite ouve-se o barulho da rua com muita facilidade. \\ \hline
+      6 & A casa está muito perto do castelo e está muito bem decorada e limpa. Muito agradável!  \\ \hline
+      7 & O dono não tem culpa mas a zona não é muito bem frequentada á noite \\ \hline
+      8 & A casa é muito gira e funcional! \\ \hline
+      9 & Casa muito agradável e bem situada.  Os anfitriães são simpáticos e disponíveis. Cozinha muito bem equipada e casa de banho excelente. \\ \hline
+      10 & Da localização, da relação preço/qualidade que entendo adequada.  \\ \hline
+      11 & Localização no centro histórico tem vantagens (centralidade) e desvantagens (dificuldades de estacionamento). \\ \hline
+      12 & Localização, decoração, conforto, organização do espaço e o gosto cuidado na decoração. \\ \hline
+      13 & Não tinha microondas. \\ \hline
+      14 & Localização, estacionamento perto, a decoração do alojamento, ter máquina de lavar roupa deu muito geito. \\ \hline
+      15 & Virado para duas ruas públicas isso condiciona a entrada de luz e de ventilação em casa pela noção de segurança; 
+      Existem algumas infiltrações junto ao pavimento nalgumas divisões, fruto da data de construção e ser uma casa térrea;
+      Haver imenso equipamento de cozinha, de limpeza, de menage, mas não haver uma pastilha para a máquina de lavar roupa (mero detalhe).
+      \\ \hline
+      16 & A casa em si é antiga e possui algumas divisões de formatos, alturas, níveis de pavimento e arcadas distintas, o que lhe dão um ar muito original;
+      Está bem conservada/renovada, com uma cozinha bastante equipada (incluindo lavagem e limpeza), onde é possível de confeccionar, conservar e lavar. 
+      A localização na zona histórica de Beja, no meio do casario.
+      \\ \hline
+      17 & Poderia ter um microondas. \\ \hline
+      18 & Muito bem localizado, anfitriões muito simpáticos.
+      Muito interessante a manutenção de casa típica alentejana.
+      Gostamos todos muito
+      \\ \hline
+      19 & Gostei de tudo. NÃ£o tenho do q reclamar. \\ \hline
+      20 & O apartamento é uma graça. Super completo, amplo, decorado com muito bom gosto e jovial! Adorei!!!!! \\ \hline
+      21 & Serviço conforto e localização. \\ \hline
+      22 & A limpeza poderia ser mais cuidada. Não dar para ligar a chaleira eléctrica porque o quadro não aguentava. O fogão estar rachado não ofereceu muita confiança para cozinhar. \\ \hline
+      23 & Da receção, da decoração, da temperatura da casa, o ser uma casa acolhedora situada no coração do centro histórico. \\ \hline
+      ... & ...\\ \hline
+      28 & De tudo. Um lugar ótimo para uma família passar uns dias, a casa está bem situada e as pessoas muito simpáticas. Um lugar a repetir.  \\ \hline
+      
+    \end{tabular}
+        \caption{Tabela de resultados de algumas "Reviews" para um dos hotéis (hotel18.csv)}
+\end{table}
 
 \section{Zomato}
 
@@ -295,13 +450,22 @@
 
 \section{Próximos Passos}
 
+Na seguinte fase de trabalho o grupo irá ter que começar a desenvolver os processos ETL (extract, transform, load) do trabalho já realizado, uma das tarefas será a adaptação de todo o conteúdo textual já armazenado.
+
 \newpage
 
 \section{Conclusão}
 
+Concluindo, este trabalho serviu para aprender o que realmente é o "web-scraping" e todos os usos que ele pode ter para a recolha de dados estruturados da web. Para além de aprender o que ele realmente é, também tivemos a oportunidade de trabalhar com ele e usá-lo num caso prático. Houveram algumas dúvidas principalmente para retirar algumas informações de alguns dos "websites" trabalhados e também na criação do ambiente virtual, porem todas as duvidas foram superadas graças ao trabalho em equipa e pesquisas online, para alem da ajuda da docente responsável pelo projeto. Por fim, achamos que o balanço desta parte do trabalho tenha sido bastante positiva.
+
 \newpage
 
 \section{Webgrafia}
+
+https://www.youtube.com/watch?v=PRkOFgNAkio
+
+Booking.com
+
 \renewcommand{\bibsection}{}
 \bibliography{main.bib}
 
