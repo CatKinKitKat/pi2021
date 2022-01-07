@@ -1,13 +1,11 @@
-# pi2021
+# Projecto avaliação da disciplina de Projecto Integrado ano lectivo 2021/2022
 
-## scope
+## Grupo
 
-projecto avaliacao de projecto integrado ano lectivo 2021/2022
++ Gonçalo Amaro -- 17440
++ Pedro Tomás -- 18962
++ Vítor Abreu -- 18966
 
-## group
-
-amaro, tomas, abreu(2017,2018,2018)
-
-### illustration
+## Ilustração
 
 ![screenshot](./screenshot.png)

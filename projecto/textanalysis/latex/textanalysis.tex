@@ -1,0 +1,77 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[portuguese]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath} %TimesNewRoman
+\usepackage[sectionbib, numbers, comma, sort]{natbib}
+\usepackage{chapterbib}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=ipbbrown]{hyperref}
+\usepackage{minted}
+\usepackage{adjustbox}
+
+% school colours
+\definecolor{ipbgreen}{RGB}{166,204,59}
+\definecolor{ipbbrown}{RGB}{153,80,42}
+
+% code block style
+\usemintedstyle{arduino}
+
+\title{\includegraphics[scale=0.5]{ipbeja_logo.png}\\[0.5cm]Sistema de apoio à promoção do turismo rural\\Fase de Análise de Texto via Machine Learning} % Doc name
+\author{Gonçalo Amaro -- 17440,\\ Pedro Tomás -- 18962,\\ Vítor Abreu -- 18966} % Doc's author/s
+\date{XX de Janeiro, 2022} % Doc date
+
+\def\blankpage{%
+      \clearpage%
+      \thispagestyle{empty}%
+      \addtocounter{page}{-1}%
+      \null%
+      \clearpage}
+
+\begin{document}
+\bibliographystyle{IEEEtranN}
+
+\maketitle
+
+\blankpage{}
+
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+
+\newpage
+
+\section{Introdução}
+
+\section{Planeamento}
+
+\subsection{Divisão de Tarefas}
+
+\subsection{Tecnologias Usadas}
+
+\subsubsection{Ambientes Virtuais de Python}
+
+\subsubsection{Bibliotecas de Python usadas}
+
+\subsection{Estratégia}
+
+\subsection{Desenvolvimento}
+
+\subsection{Resultados}
+
+\section{Próximos Passos}
+
+\section{Conclusão}
+
+\section{Webgrafia}
+
+\renewcommand{\bibsection}{}
+\bibliography{textanalysis.bib}
+
+\end{document}
