@@ -1,8 +1,8 @@
-Restaurante,Tipo,Preco
-Adega Tipica 25 de Abril,"Alentejana, Portuguesa",25
+Restaurante,Tipo,Preço
+Adega Típica 25 de Abril,"Alentejana, Portuguesa",25
 Dom Dinis,"Bifes, Portuguesa",30
 Sushi Alentejano,"Sushi, Japonesa",35
-Herdade dos Grous,"Contemporanea, Portuguesa",60
+Herdade dos Grous,"Contemporânea, Portuguesa",60
 Pulo do Lobo,Portuguesa,25
 Bar Parque da Vila Beringel,"Snacks, Bebidas",12
 Figa's,"Pizza, Italiana",25
@@ -10,37 +10,37 @@ Cervejaria Portugalo,"Portuguesa, Bebidas, Petiscos",25
 Entre Arcos,"Portuguesa, Grelhados",25
 Aperitivo,"Bebidas, Portuguesa",20
 O Arbitro,Portuguesa,25
-Cafe Central,"Snacks, Bebidas, Portuguesa",15
+Café Central,"Snacks, Bebidas, Portuguesa",15
 Gatus Cervejaria Alentejana,"Alentejana, Portuguesa, Marisqueira",25
 Hamburgueria da Avenida,Hamburgueria,25
 Casa de Pasto O Forno,"Snacks, Bebidas, Portuguesa",12
 Tennis Courts Club,Portuguesa,25
 Cervejaria Mira Serra,"Marisqueira, Portuguesa",40
-Espelho d'Agua,Portuguesa,25
+Espelho d'Água,Portuguesa,25
 TEM Avondo,"Portuguesa, Alentejana",25
 Menau,Portuguesa,25
-Toy Farois,"Portuguesa, Grelhados",25
+Toy Faróis,"Portuguesa, Grelhados",25
 Taberna A Pipa,"Alentejana, Portuguesa, Petiscos",25
 Pizzeria Milano,"Pizza, Italiana, Portuguesa",25
 Dona Maria Deck,"Portuguesa, Petiscos, Snacks",25
-O Alemao,"Portuguesa, Petiscos, Alentejana",25
+O Alemão,"Portuguesa, Petiscos, Alentejana",25
 Deliciosa Alvorada,"Portuguesa, Alentejana",25
 Moments IPDJ,Portuguesa,20
 Bar Regional,"Bebidas, Snacks",6
 Sushizzaria,"Sushi, Hamburgueria, Pizza",30
-Intimo,"Pizza, Italiana",25
+Íntimo,"Pizza, Italiana",25
 Peter Brissos,Portuguesa,30
 Adega do Castelo,"Alentejana, Portuguesa",30
 Gelateria Luiggi,"Gelados, Snacks, Bebidas",8
-Espelho d'Agua,Portuguesa,25
+Espelho d'Água,Portuguesa,25
 TEM Avondo,"Portuguesa, Alentejana",25
-Toy Farois,"Portuguesa, Grelhados",25
+Toy Faróis,"Portuguesa, Grelhados",25
 Dona Maria Deck,"Portuguesa, Petiscos, Snacks",25
-O Alemao,"Portuguesa, Petiscos, Alentejana",25
+O Alemão,"Portuguesa, Petiscos, Alentejana",25
 Deliciosa Alvorada,"Portuguesa, Alentejana",25
 Moments IPDJ,Portuguesa,20
 Bar Regional,"Bebidas, Snacks",6
-Intimo,"Pizza, Italiana",25
+Íntimo,"Pizza, Italiana",25
 Peter Brissos,Portuguesa,30
 Gelateria Luiggi,"Gelados, Snacks, Bebidas",8
 Lana Caprina,"Portuguesa, Alentejana, Petiscos, Snacks",25
@@ -51,57 +51,57 @@ O Chaparral,Portuguesa,25
 Casa do Povo,"Snacks, Bebidas",8
 A Estalagem,Portuguesa,25
 Aguarela Caffe,"Bebidas, Snacks",8
-Pe de Gesso,"Portuguesa, Marisqueira",30
+Pé de Gesso,"Portuguesa, Marisqueira",30
 Vinhos e Petiscos,Portuguesa,25
-The Pub - Sports Caffe,"Bebidas, Snacks, Portuguesa",20
+The Pub - Sports Caffė,"Bebidas, Snacks, Portuguesa",20
 Raposo,Portuguesa,25
-Cafe Caixinha,"Snacks, Bebidas",8
-Cafe Retiro dos Cacadores,"Snacks, Bebidas",8
-Sabores do Campo,"Vegetariana, Comida saudavel, Sobremesa, Pastelaria, Snacks",25
+Café Caixinha,"Snacks, Bebidas",8
+Café Retiro dos Caçadores,"Snacks, Bebidas",8
+Sabores do Campo,"Vegetariana, Comida saudável, Sobremesa, Pastelaria, Snacks",25
 Nova China,Chinesa,25
 Taberna do Engenho,"Portuguesa, Alentejana",25
 Valentino,"Indiana, Italiana, Pizza",25
-Talego Cafe,Snacks,8
+Talego Café,Snacks,8
 Primus Coffee,"Snacks, Pastelaria",8
 Cervejaria Gazela,"Snacks, Portuguesa",12
-Quiosque do Terreirinho das Pecas,"Snacks, Pastelaria",8
+Quiosque do Terreirinho das Peças,"Snacks, Pastelaria",8
 Pastelaria Bambina,"Snacks, Pastelaria",8
-Fermentopao Deposito dos Correios,"Padaria, Pastelaria",6
+Fermentopão Depósito dos Correios,"Padaria, Pastelaria",6
 Art Deco,"Alentejana, Portuguesa",25
 A Esquina,Portuguesa,25
 A Pracinha,"Snacks, Bebidas",8
-Cafe O Petisco,"Snacks, Bebidas",8
-Cafe com Natas,"Pastelaria, Snacks",8
+Café O Petisco,"Snacks, Bebidas",8
+Café com Natas,"Pastelaria, Snacks",8
 Pastelaria Paula,"Snacks, Pastelaria",8
-Snack Bar Restaurante Os Gemeos,Portuguesa,25
+Snack Bar Restaurante Os Gémeos,Portuguesa,25
 Capitel,"Snacks, Bebidas",8
 King Doner Kebab,"Kebab, Snacks",15
 Podium Racebar,"Snacks, Bebidas",8
 Burger King,"Fast food, Hamburgueria",15
-Tavernas Caffe,"Bebidas, Snacks",8
-Cafe Lopes,"Snacks, Bebidas",8
-Fermentopao,"Padaria, Pastelaria",6
+Tavernas Caffé,"Bebidas, Snacks",8
+Café Lopes,"Snacks, Bebidas",8
+Fermentopão,"Padaria, Pastelaria",6
 A Tasquinha,"Snacks, Portuguesa",8
-Quiosque Bar Da Rodoviaria,"Snacks, Bebidas",6
+Quiosque Bar Da Rodoviária,"Snacks, Bebidas",6
 O Martelo,Portuguesa,25
 O Castelo,"Snacks, Pastelaria",12
 Bagga,"Pastelaria, Snacks",8
 Ricki Kebab & Pizza,"Kebab, Pizza, Fast food",15
-Cafe Nacional 18,Snacks,8
+Café Nacional 18,Snacks,8
 Vilarinho,Portuguesa,25
 Esplanada O Capitel,"Snacks, Bebidas",8
 McDonald's,"Fast food, Hamburgueria",15
-Fermentopao - Largo de Santo Amaro,"Padaria, Pastelaria",6
-Pastelaria Joia,Pastelaria,8
+Fermentopão - Largo de Santo Amaro,"Padaria, Pastelaria",6
+Pastelaria Jóia,Pastelaria,8
 Padaria Felizardo,Padaria,6
-A Toca dos Cacadores,"Snacks, Bebidas",6
-Cafe O Pereira,"Snacks, Bebidas",6
+A Toca dos Caçadores,"Snacks, Bebidas",6
+Café O Pereira,"Snacks, Bebidas",6
 Fronteira,"Snacks, Bebidas",6
 Gelataria Luiggi,"Gelados, Sobremesa, Crepes",8
 Nobreza,Snacks,12
-Cafe Pastelaria Pio-Pio,"Snacks, Bebidas",8
+Café Pastelaria Pio-Pio,"Snacks, Bebidas",8
 Tea House Maltesinhas - Conventual Sweets,"Pastelaria, Snacks",8
-Cafe Santo Amaro,"Snacks, Bebidas",6
+Café Santo Amaro,"Snacks, Bebidas",6
 Taberna 23,Portuguesa,25
 Aromas & Temperos,Portuguesa,25
 Frango Dourado,"Churrasco, Grelhados, Portuguesa",20
@@ -113,20 +113,20 @@ Os Bolos da Marisa,"Sobremesa, Pastelaria",8
 Colher de Pau,"Snacks, Bebidas, Portuguesa",12
 O Largo,"Snacks, Bebidas",8
 Miminho Doce,"Pastelaria, Snacks",8
-So Cafe 2,"Snacks, Bebidas",8
+So Café 2,"Snacks, Bebidas",8
 Doce & Salgado,"Snacks, Bebidas",8
-Cafe Avenida,"Snacks, Bebidas",8
-Bar D. Joao,Snacks,8
+Café Avenida,"Snacks, Bebidas",8
+Bar D. João,Snacks,8
 O Espeto,"Bifes, Churrasco, Grelhados",25
-Cafe do Mercado,"Snacks, Bebidas",8
+Café do Mercado,"Snacks, Bebidas",8
 Kapo & Ccino,"Pastelaria, Snacks",8
 Lumiar,"Snacks, Bebidas",8
 Gost'ti,"Snacks, Pastelaria",8
-Cafe Cristina,Snacks,8
+Café Cristina,Snacks,8
 Telepizza,"Pizza, Fast food",15
 Snack Bar 32,"Portuguesa, Snacks",8
-Cafe Rosa,"Snacks, Bebidas",8
-Cafe Simenta,"Snacks, Bebidas",6
+Café Rosa,"Snacks, Bebidas",8
+Café Simenta,"Snacks, Bebidas",6
 Leitaria Bejense,"Snacks, Bebidas",8
 Asas de Beja,"Snacks, Bebidas, Portuguesa",20
 O Duro,"Snacks, Bebidas, Portuguesa",8
@@ -139,19 +139,19 @@ Alendoce,"Snacks, Pastelaria",8
 O Futuro,"Snacks, Bebidas",8
 A Colmeia,"Snacks, Bebidas",8
 O Pinto,"Snacks, Portuguesa",15
-Cafe Vieira,"Snacks, Bebidas",8
+Café Vieira,"Snacks, Bebidas",8
 Celibri,Portuguesa,20
 Nova Era,"Snacks, Bebidas",8
 Porta 15,"Bebidas, Petiscos",20
 Spot24h Food and Drinks,"Snacks, Bebidas",8
 Verdervilha,"Snacks, Bebidas, Portuguesa",20
 Taberna 5 de Outubro,"Bebidas, Snacks",8
-Seara de Pao,"Padaria, Pastelaria",8
+Seara de Pão,"Padaria, Pastelaria",8
 Taberna Beira Torre,"Snacks, Bebidas",8
 Tapitas,"Snacks, Bebidas",8
-Pastelaria Santo Andre,"Padaria, Snacks",8
+Pastelaria Santo André,"Padaria, Snacks",8
 O Pita,"Snacks, Bebidas",8
-Cafe C+S O Caricas,"Snacks, Bebidas",8
+Café C+S O Caricas,"Snacks, Bebidas",8
 Boutique das 20 Bifanas,"Snacks, Bebidas",6
 O Largo,"Snacks, Bebidas",8
 Vegetariano,Vegetariana,25
