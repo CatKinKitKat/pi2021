@@ -49,11 +49,77 @@
 
 \section{Introdução}
 
-Após descrito os fundamentos de ETL e uma vez que a fase de estamos atualmente é a de transformação será necessário ser usado um tipo de processos bastante conhecido chamado de "keyword extraction" este processo consiste essencialmente em retirar do texto as palavras mais importantes que sejam capazes de o descrever, ficando assim com o essencial e de uma maneira mais clara e simplificada.
+Após descrito os fundamentos de ETL e uma vez que a fase de estamos atualmente é a de transformação será necessário ser usado um tipo de processos bastante conhecido chamado de ``extração de palavras chave'' e ``análise de sentimentos''.
+Estes processos consistem:
 
-\section{Planeamento}
+\begin{itemize}
+  \item \text{retirar do texto as palavras mais importantes que sejam capazes de descrever o estabelecimento.}
+  \item \text{caracterizar o sentimento do texto, ou seja, saber se o texto é positivo ou negativo.}
+\end{itemize}
 
-Para a realização dos processos de "keyword extraction" usaremos a linguagem de programação "Python" e uma possível opção será a realização de um script capaz de remover e limpar todo o texto armazenado da fase de extração, deixando-o assim apto para a fase de carregamento.
+\section{Análise de Texto}
+
+Uma Análise de Texto é um processo de extração de palavras chave e análise de sentimento. Basicamente os processos acima descritos.
+Mais especificamente a extração de palavras chave é feita através de um algoritmo de Machine Learning que é chamado de ``bag of words'' ou ``bag of features''; e a análise de sentimento é feita através de um algoritmo de Machine Learning que é chamado de ``Naive Bayes'' ou ``Naive Bayes Classifier'', ou usando ``transformers'' ou ``transformer'' que é um algoritmo de Machine Learning que é chamado de ``Tf-Idf'' ou ``Term Frequency - Inverse Document Frequency''.
+
+O ultimo caso foi descrito com duas opções porque como poderão verificar mais à frente, a nossa tentativa de ``Naive Bayes'' não foi bem sucedida, e por isso foi usado um ``transformer'' com um dataset chamado de ``Bert'' ou ``Bert For Classification'', este foi criado pela ``Google''.
+
+Para a realização dos processos acima descritos usaremos a linguagem de programação ``Python'' e variadas bibliotecas.
+Das quais:
+
+\begin{itemize}
+  \item \textbf{nltk} -- \href{https://pypi.org/project/nltk/}{Natural Language Toolkit}.
+  \item \textbf{sklearn} -- \href{https://pypi.org/project/scikit-learn/}{Scikit-learn}.
+  \item \textbf{numpy} -- \href{https://pypi.org/project/numpy/}{Numpy}.
+  \item \textbf{pandas} -- \href{https://pypi.org/project/pandas/}{Pandas}.
+  \item \textbf{transformers} -- \href{https://pypi.org/project/transformers/}{Transformers}.
+  \item \textbf{torch} -- \href{https://pypi.org/project/torch/}{PyTorch}.
+  \item \textbf{yake} -- \href{https://pypi.org/project/yake/}{YAKE!}.
+\end{itemize}
+
+Será feita a realização de um script por cada processo, que será transformado num notebook, via \textit{p2j}, para que possa ser documentado.
+
+\subsection{Extração de Palavras Chave}
+
+Aqui foi executado o processo de extração de palavras chave, que consistiu em usar o YAKE!, que é uma biblioteca de autores portugueses e um japonês que foi criada para extrair palavras chave de um texto. Os seus autores são residentes em: Instituto Politécnico de Tomar, Universidade da Beira Interior, Universidade do Porto, INESC TEC e Universidade de Kyoto.
+
+A razão especifica do uso desta biblioteca ao invés de fazer de raiz, foi o facto acima descrito, em nome de apoio ao uso de trabalhos de autoria portuguesa.
+
+\subsubsection{Processo de Execução}
+
+Este ``script'' funciona da seguinte forma:
+
+\begin{itemize}
+  \item Indicamos o caminho da pasta onde se encontra o texto a ser analisado.
+  \item Importa todos os \text{.csv} de reviews que se encontram na pasta.
+  \item Por cada \text{.csv} de reviews, extrai as palavras chave.
+  \item Exporta as palavras chave para um \text{.csv}.
+\end{itemize}
+
+\subsubsection{Processo de Desenvolvimento}
+
+\subsection{Análise de Sentimento}
+
+\subsubsection{Processo de Execução}
+
+Este ``script'' funciona da seguinte forma:
+
+\begin{itemize}
+  \item Indicamos o caminho da pasta onde se encontra o texto a ser analisado.
+  \item Importa todos os \text{.csv} de reviews que se encontram na pasta.
+  \item Por cada \text{.csv} de reviews, faz a análise de sentimento.
+  \item Exporta os sentimentos para um \text{.csv}.
+\end{itemize}
+
+\subsubsection{Processo de Desenvolvimento}
+
+\section{Resultados}
+
+\subsection{Extração de Palavras Chave}
+
+\subsection{Análise de Sentimento}
+
+\section{Conclusão}
 
 \section{Webgrafia}
 
