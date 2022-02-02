@@ -47,7 +47,7 @@ def main():
 
     # Create table
     table_name = "reviews"
-    cols = "(review_id INTEGER PRIMARY KEY, review_text TEXT, business_id INTEGER, sentiment TEXT, keywords TEXT, month TEXT, year INTEGER, FOREIGN KEY (business_id) REFERENCES business (business_id))"
+    cols = "(review_id INTEGER PRIMARY KEY, review_text TEXT, business_id INTEGER, sentiment TEXT, month TEXT, year INTEGER, FOREIGN KEY (business_id) REFERENCES business (business_id))"
     create_table(conn, table_name, cols)
 
     # Insert data
@@ -111,7 +111,9 @@ def main():
 
     # Insert data
     table_name = "reviews"
+    all = 0
     for file in os.listdir("./data/activities"):
+        all += 1
         if file.startswith("place") and not file.endswith(".zip"):
             print(file)
             pd = pandas.read_csv(
@@ -126,11 +128,11 @@ def main():
             pd.columns = pd.columns.str.strip()
             lstm = pd[pd.columns[0]].tolist()
             lsty = pd[pd.columns[1]].tolist()
-            pd = pandas.read_csv(
-                "./keywords/activities/" + file, engine="python", on_bad_lines="skip"
-            )
-            pd.columns = pd.columns.str.strip()
-            lstk = pd["Expressao"].tolist()
+            # pd = pandas.read_csv(
+            #     "./keywords/activities/" + file, engine="python", on_bad_lines="skip"
+            # )
+            # pd.columns = pd.columns.str.strip()
+            # lstk = pd["Expressao"].tolist()
             for i in range(len(lst)):
                 try:
                     insert_data(
@@ -140,15 +142,17 @@ def main():
                         + str(lst[i])
                         .encode("ascii", "ignore")
                         .decode("utf-8", "ignore")
-                        + "', 3, '"
+                        + "', "
+                        + str(all).encode("ascii", "ignore").decode("utf-8", "ignore")
+                        + ", '"
                         + str(lsts[i])
                         .encode("ascii", "ignore")
                         .decode("utf-8", "ignore")
                         + "', '"
-                        + str(lstk[i])
-                        .encode("ascii", "ignore")
-                        .decode("utf-8", "ignore")
-                        + "', '"
+                        # + str(lstk[i])
+                        # .encode("ascii", "ignore")
+                        # .decode("utf-8", "ignore")
+                        # + "', '"
                         + str(lstm[i])
                         .encode("ascii", "ignore")
                         .decode("utf-8", "ignore")
@@ -161,6 +165,7 @@ def main():
                 except:
                     pass
     for file in os.listdir("./data/hotels"):
+        all += 1
         if file.startswith("hotel") and not file.endswith(".zip"):
             print(file)
             pd = pandas.read_csv(
@@ -175,11 +180,11 @@ def main():
             pd.columns = pd.columns.str.strip()
             lstm = pd[pd.columns[0]].tolist()
             lsty = pd[pd.columns[1]].tolist()
-            pd = pandas.read_csv(
-                "./keywords/hotels/" + file, engine="python", on_bad_lines="skip"
-            )
-            pd.columns = pd.columns.str.strip()
-            lstk = pd["Expressao"].tolist()
+            # pd = pandas.read_csv(
+            #     "./keywords/hotels/" + file, engine="python", on_bad_lines="skip"
+            # )
+            # pd.columns = pd.columns.str.strip()
+            # lstk = pd["Expressao"].tolist()
             for i in range(len(lst)):
                 try:
                     insert_data(
@@ -189,15 +194,17 @@ def main():
                         + str(lst[i])
                         .encode("ascii", "ignore")
                         .decode("utf-8", "ignore")
-                        + "', 3, '"
+                        + "', "
+                        + str(all).encode("ascii", "ignore").decode("utf-8", "ignore")
+                        + ", '"
                         + str(lsts[i])
                         .encode("ascii", "ignore")
                         .decode("utf-8", "ignore")
                         + "', '"
-                        + str(lstk[i])
-                        .encode("ascii", "ignore")
-                        .decode("utf-8", "ignore")
-                        + "', '"
+                        # + str(lstk[i])
+                        # .encode("ascii", "ignore")
+                        # .decode("utf-8", "ignore")
+                        # + "', '"
                         + str(lstm[i])
                         .encode("ascii", "ignore")
                         .decode("utf-8", "ignore")
@@ -210,6 +217,7 @@ def main():
                 except:
                     pass
     for file in os.listdir("./data/restaurants"):
+        all += 1
         if file.startswith("restaurant") and not file.endswith(".zip"):
             print(file)
             pd = pandas.read_csv(
@@ -224,11 +232,11 @@ def main():
             pd.columns = pd.columns.str.strip()
             lstm = pd[pd.columns[0]].tolist()
             lsty = pd[pd.columns[1]].tolist()
-            pd = pandas.read_csv(
-                "./keywords/restaurants/" + file, engine="python", on_bad_lines="skip"
-            )
-            pd.columns = pd.columns.str.strip()
-            lstk = pd["Expressao"].tolist()
+            # pd = pandas.read_csv(
+            #     "./keywords/restaurants/" + file, engine="python", on_bad_lines="skip"
+            # )
+            # pd.columns = pd.columns.str.strip()
+            # lstk = pd["Expressao"].tolist()
             for i in range(len(lst)):
                 try:
                     insert_data(
@@ -238,15 +246,17 @@ def main():
                         + str(lst[i])
                         .encode("ascii", "ignore")
                         .decode("utf-8", "ignore")
-                        + "', 3, '"
+                        + "', "
+                        + str(all).encode("ascii", "ignore").decode("utf-8", "ignore")
+                        + ", '"
                         + str(lsts[i])
                         .encode("ascii", "ignore")
                         .decode("utf-8", "ignore")
                         + "', '"
-                        + str(lstk[i])
-                        .encode("ascii", "ignore")
-                        .decode("utf-8", "ignore")
-                        + "', '"
+                        # + str(lstk[i])
+                        # .encode("ascii", "ignore")
+                        # .decode("utf-8", "ignore")
+                        # + "', '"
                         + str(lstm[i])
                         .encode("ascii", "ignore")
                         .decode("utf-8", "ignore")
