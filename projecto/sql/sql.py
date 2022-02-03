@@ -54,7 +54,7 @@ def keywords_from_review_by_month_year(conn, table_name):
             c = conn.cursor()
             c.execute(
                 "SELECT review_text, business_id FROM {} WHERE month = '{}' AND year = {}".format(
-                    table_name, month, year
+                    table_name, month, str(year)
                 )
             )
             data = c.fetchall()
@@ -66,14 +66,26 @@ def keywords_from_review_by_month_year(conn, table_name):
                 elif data[i][1] == data[i - 1][1]:
                     lst.append(data[i][0])
                 else:
-                    keywords = yake.KeywordExtractor(lan="pt").extract_keywords(lst)
+                    keywords = yake.KeywordExtractor(lan="pt").extract_keywords(
+                        "".join(str(x) for x in lst)
+                    )
                     for k in keywords:
                         df.loc[ind] = [
-                            data[i - 1][1],
-                            month,
-                            year,
-                            k[0],
-                            k[1],
+                            str(data[i - 1][1])
+                            .encode("ascii", "ignore")
+                            .decode("utf-8", "ignore"),
+                            str(month)
+                            .encode("ascii", "ignore")
+                            .decode("utf-8", "ignore"),
+                            str(year)
+                            .encode("ascii", "ignore")
+                            .decode("utf-8", "ignore"),
+                            str(k[0])
+                            .encode("ascii", "ignore")
+                            .decode("utf-8", "ignore"),
+                            str(k[1])
+                            .encode("ascii", "ignore")
+                            .decode("utf-8", "ignore"),
                         ]
                         ind += 1
                     lst = []
