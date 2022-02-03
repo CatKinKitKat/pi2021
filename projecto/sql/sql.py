@@ -1,8 +1,10 @@
 import os
-import re
-from numpy import place
+import yake
 import pandas
 import sqlite3
+import warnings
+
+warnings.filterwarnings("ignore")
 
 
 def create_db(db_name):
@@ -30,6 +32,74 @@ def export_data(conn, table_name, file_name):
     df.to_csv(file_name, index=False)
 
 
+def keywords_from_review_by_month_year(conn, table_name):
+    months = [
+        "janeiro",
+        "fevereiro",
+        "março",
+        "abril",
+        "maio",
+        "junho",
+        "julho",
+        "agosto",
+        "setembro",
+        "outubro",
+        "novembro",
+        "dezembro",
+    ]
+    df = pandas.DataFrame(columns=["business_id", "month", "year", "keyword", "score"])
+    ind = 0
+    for year in range(2000, 2022):
+        for month in months:
+            c = conn.cursor()
+            c.execute(
+                "SELECT review_text, business_id FROM {} WHERE month = '{}' AND year = {}".format(
+                    table_name, month, year
+                )
+            )
+            data = c.fetchall()
+            data = sorted(data, key=lambda x: x[1])
+            lst = []
+            for i in range(len(data)):
+                if i == 0:
+                    lst.append(data[i][0])
+                elif data[i][1] == data[i - 1][1]:
+                    lst.append(data[i][0])
+                else:
+                    keywords = yake.KeywordExtractor(lan="pt").extract_keywords(lst)
+                    for k in keywords:
+                        df.loc[ind] = [
+                            data[i - 1][1],
+                            month,
+                            year,
+                            k[0],
+                            k[1],
+                        ]
+                        ind += 1
+                    lst = []
+                    lst.append(data[i][0])
+    # df.to_sql("keywords", conn, if_exists="append", index=False)
+    for row in df.itertuples():
+        data = (
+            "("
+            + str(row.business_id).encode("ascii", "ignore").decode("utf-8", "ignore")
+            + ", '"
+            + str(row.month).encode("ascii", "ignore").decode("utf-8", "ignore")
+            + "', "
+            + str(row.year).encode("ascii", "ignore").decode("utf-8", "ignore")
+            + ", '"
+            + str(row.keyword).encode("ascii", "ignore").decode("utf-8", "ignore")
+            + "', "
+            + str(row.score).encode("ascii", "ignore").decode("utf-8", "ignore")
+            + ")"
+        )
+        insert_data(
+            conn,
+            "keywords",
+            data,
+        )
+
+
 def main():
     # Create database
     db_name = "projecto.db"
@@ -48,6 +118,11 @@ def main():
     # Create table
     table_name = "reviews"
     cols = "(review_id INTEGER PRIMARY KEY, review_text TEXT, business_id INTEGER, sentiment TEXT, month TEXT, year INTEGER, FOREIGN KEY (business_id) REFERENCES business (business_id))"
+    create_table(conn, table_name, cols)
+
+    # Create table
+    table_name = "keywords"
+    cols = "(business_id INTEGER, month TEXT, year INTEGER, keyword TEXT, score FLOATING POINT, FOREIGN KEY (business_id) REFERENCES business (business_id))"
     create_table(conn, table_name, cols)
 
     # Insert data
@@ -71,7 +146,7 @@ def main():
     for i in range(len(lst)):
         data = (
             "("
-            + str(l)
+            + str(l).encode("ascii", "ignore").decode("utf-8", "ignore")
             + ", '"
             + str(lst[i]).encode("ascii", "ignore").decode("utf-8", "ignore")
             + "', 1)"
@@ -86,7 +161,7 @@ def main():
     for i in range(len(lst)):
         data = (
             "("
-            + str(l)
+            + str(l).encode("ascii", "ignore").decode("utf-8", "ignore")
             + ", '"
             + str(lst[i]).encode("ascii", "ignore").decode("utf-8", "ignore")
             + "', 2)"
@@ -101,7 +176,7 @@ def main():
     for i in range(len(lst)):
         data = (
             "("
-            + str(l)
+            + str(l).encode("ascii", "ignore").decode("utf-8", "ignore")
             + ", '"
             + str(lst[i]).encode("ascii", "ignore").decode("utf-8", "ignore")
             + "', 3)"
@@ -271,10 +346,14 @@ def main():
 
     conn.commit()
 
+    keywords_from_review_by_month_year(conn, table_name)
+    conn.commit()
+
     # export sqlite database to csv
     export_data(conn, "reviews", "./reviews.csv")
     export_data(conn, "business", "./business.csv")
     export_data(conn, "business_type", "./business_type.csv")
+    export_data(conn, "keywords", "./keywords.csv")
 
     conn.close()
 
