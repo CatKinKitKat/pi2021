@@ -36,7 +36,7 @@ def keywords_from_review_by_month_year(conn, table_name):
     months = [
         "janeiro",
         "fevereiro",
-        "março",
+        "marco",
         "abril",
         "maio",
         "junho",
