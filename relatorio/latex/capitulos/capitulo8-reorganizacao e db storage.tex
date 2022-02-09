@@ -1,0 +1,22 @@
+\chapter{Reorganização e DB storage}
+\label{cap8}
+
+\section{Reorganização dos dados (\textit{TripAdvisor} apenas)}
+
+Para as analises temporais e para o transporte de dados, foi necessário criar uma base de dados organizada e relacional, que garantisse a integridade dos dados e a sua coerência.
+
+Para isso foram usados os pacotes \textit{pandas} para o \textit{import} dos \textit{.csv} em \textit{DataFrames} e \textit{sqlite3} para a criação da base de dados \textit{SQLite3}.
+
+\subsection{Metodologia}
+
+Inicialmente, foi criada uma base de dados \textit{SQLite3}, que será usada para armazenar os dados. A base de dados \textit{SQLite3} foi criada e as tabelas foram criadas, com os campos correspondentes a cada coluna do ficheiro \textit{.csv}, dos quais os dados foram importados via \textit{pandas}. 
+
+Os \textit{DataFrames} de \textit{pandas} oferecem uma maneira de aceder e manipular dados, e também fornecem uma maneira de criar e manipular tabelas. Todas as operações de manipulação de dados são feitas através de funções de \textit{DataFrame}.
+
+Seguidamente, é empurrado os dados dos \textit{DataFrames} correspondentes às tabelas para a base de dados. Com esta base de dados, é possível fazer consultas e manipulações de dados, tal como também exportar os dados organizados para ficheiros \textit{.csv} de forma a que possam ser usados em outros programas, tais como o \textit{R}, o \textit{Excel}, o \textit{PowerBI}, etc.
+
+\subsection{Execução e Resultados}
+
+Foi feito um \textit{script} para executar a criação da base de dados \textit{SQLite3}, e para o \textit{import} dos dados dos \textit{DataFrames} para a base de dados. O qual foi executado com sucesso, como podemos ver na base de dados e nos ficheiros \textit{.csv}.
+
+

@@ -13,6 +13,12 @@
 
 \input{02-info-to-fill}
 \usepackage[]{hyperref}
+\usepackage{adjustbox}
+\usepackage{pdfpages}
+\usepackage{minted}
+
+\usemintedstyle{arduino}
+
 \hypersetup{hidelinks,hypertexnames=true}
 
 \begin{document}
@@ -50,8 +56,16 @@
 \pagenumbering{arabic}
 
 \input{capitulos/capitulo1-introducao} % capitulo 1
-\input{capitulos/capitulo2}
-\input{capitulos/capitulo3}
+\input{capitulos/capitulo2-investigacao}
+\input{capitulos/capitulo3-Webscaping}
+\input{capitulos/Capitulo4-Pre-processamento}
+\input{capitulos/capitulo5-extracao de informacao}
+\input{capitulos/capitulo6-analise de sentimentos}
+\input{capitulos/capitulo7-geracao de graficos}
+\input{capitulos/capitulo8-reorganizacao e db storage}
+\input{capitulos/capitulo9-analise dos dados obtidos}
+\input{capitulos/conclusao}
+
 % para adicionar o  capítulo N adicione a linha \input{capituloN} e crie o ficheiro 
 % capituloN.tex na directoria "capitulos" 
 
@@ -63,11 +77,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \apendices
 \input{apendices/apendice1}
+\input{apendices/apendice2}
+\input{apendices/apendice3}
+\input{apendices/apendice4}
+\input{apendices/apendice5}
+\input{apendices/apendice6}
+\input{apendices/apendice7}
+\input{apendices/apendice8}
+\input{apendices/apendice9}
+\input{apendices/apendice10}
+
 % para adicionar o  apêndice N adicione a linha \input{apendiceN} e crie o ficheiro 
 % apendiceN.tex na directoria "apendices" 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \anexos
 \input{anexos/anexo1}
+\input{anexos/anexo2}
+\input{anexos/anexo3}
+\input{anexos/anexo4}
+\input{anexos/anexo5}
+\input{anexos/anexo6}
 % para adicionar o  anexo N adicione a linha \input{anexoN} e crie o ficheiro 
 % anexoN.tex na directoria "anexos" 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

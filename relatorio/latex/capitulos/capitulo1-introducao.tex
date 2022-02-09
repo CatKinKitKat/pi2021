@@ -3,28 +3,33 @@
 
 % deve substituir as duas linhas seguintes pelo texto da introdução
 
+\section{Objetivo do trabalho}
+Este trabalho tem como principal objetivo a monitorização de fluxos de visitantes para identificar boas práticas, tendo sempre foco na criação de uma benéfica, sustentável e duradoura relação entre o turismo e o património. Para essa monitorização ser realizada, será necessário desenvolver um sistema de informação que recolha, armazena, processa e comunica dados e informação sobre as visitas ao património dos turistas nacionais e estrangeiros. Para que a essa monitorização seja realizada devidamente, será necessário que sejam realizadas algumas etapas, das quais seriam:
 
-Sugestão de capítulos e/ou secções para relatórios de projetos ou dissertações de mestrado:
 \begin{enumerate}
-    \item Introdução: tema, objetivo geral, a quem se destina, o que é suposto o leitor saber, apresentação da estrutura do documento (quais os capítulos que o constituem e uma frase resumo sobre o conteúdo de cada um);
-    \item Motivação para o tema (pode estar no capítulo de introdução); porque é que é importante o tema do trabalho;
-    \item Descrição e apresentação clara do problema que se pretende resolver; deve ficar claro porque é que é importante/útil resolver esse problema;
-    \item Estado da arte/trabalho relacionado (o que existe / o que se sabe sobre o problema a resolver); é um capítulo teórico que pode apresentar o que importa saber sobre o problema; 
-    \item  Descrição dos métodos para resolver o problema; pode incluir uma descrição das tecnologias, ferramentas e linguagens utilizadas, se foi feito um inquérito, etc.;
-    \item Um ou mais capítulos/secções sobre o que foi feito; por exemplo, análise, projecto, implementações e teste/validação;
-    \item Discussão / Conclusão (podem ser capítulos separados)
-\end{enumerate}
+    \item A recolha de dados sobre as visitas dos turistas nacionais e estrangeiros ao património cultural de Beja, destacando-se dessa mesma recolha, as atrações, hóteis e restaurantes, e tendo como origens as fontes,  \textit{  "TripAdvisor"}, \textit{  "Booking"}, \textit{  "Zoomato"}. Para que a recolha de dados fosse realizada das devidas fontes foi necessário recorrer ao conceito de \textit{  webscraping};
+    \item O armazenamento de dados numa base de dados SQL, para mais tarde facilitar o gerenciamento de toda a informação para as seguintes etapas;
+    \item O processamento dos dados, iniciando-se com a sua normalização e mais tarde passando á sua análise recorrendo ao \textit{  sentiment analysis} e à \textit{Keyword extraction};
+    \item A elaboração de gráficos usando a biblioteca \textit{  MatplotLib} e o \textit{  software PowerBI};
+\end{enumerate} 
 
-Importa ter presente que o principal objetivo do documento é o leitor perceber o que foi feito e porque é que é importante/útil. Também deve permitir que o leitor fique a saber onde encontrar mais informação sobre o tema do trabalho desenvolvido.
+O presente relatório encontra-se organizado na seguinte forma: na secção 2 descreve-se a fase de investigação; na secção 3 é descrito como foi realizado o processo de \textit{webscrapping} nos \textit{websites} mencionados, assim como a estratégia pensada e dividida pelos elementos do grupo; na secção 4 é explicado o processo de normalização/formatação desenvolido; na secção 5 mostramos os métodos escolhidos na extração das \textit{keywords}; na secção 6 falamos de todo o processo por detrás dos \textit{sentiment analysis}; na secção 7 de como foram gerados os gráficos ao decorrer da elaboração do projeto; na secção 8 de como e do porquê de termos reorganizado o projeto e também acerca da base de dados gerada; na secção 9 finalmente começamos a analisar os dados obtidos e por fim, na secção 10 são apresentadas as conclusões relativas à elaboração do presente trabalho. 
 
-Outras indicações sobre \LaTeX:
-\begin{enumerate}
-    \item Não se preocupe com as formatações. Utilize as que já estão exemplificadas no Capítulo \ref{cap2};
-    \item Em especial, não se preocupe com o sítio em que ficam as figuras, listagens e tabelas; estes são elementos \textit{flutuantes} (\textit{floating}) e são arrumados automaticamente pelo \LaTeX;  ficarão tanto melhor arrumados quanto mais texto houver; muitos elementos flutuantes em pouco texto não costuma permitir um documento com um \textit{layout} equilibrado; quando \textbf{concluir} a escrita do texto poderá então fazer pequenos ajustes na posição das figuras, listagens e tabelas utilizando, por exemplo, os seguintes métodos: alterar a dimensão das figuras; inserir quebras de página (\verb|\pagebreak|), alterar o local no texto em que surge o comando de inserção de cada figura;
-    utilizar o especificador "H"\ (ver \url{https://www.overleaf.com/learn/latex/Positioning_of_Figures}).
-    \item Deve referir cada uma das figuras, listagens e tabelas pelo menos uma vez; utilize sempre o comando \verb|\ref{umaLabel}|. Por exemplo: "na Fig.\linebreak \verb|\ref{fig:exemplofig}|"\ ou "A Listagem \verb|\ref{lst:exemplolst01}|";
-    \item Para referir capítulos, secções figuras, listagens e tabelas utilize "Capítulo\linebreak \verb|\ref{cap:exemplo}|", "Secção \verb|\ref{sec:exemplo}|", "Fig. \verb|\ref{fig:exemplo}|", "Listagem \verb|\ref{lst:exemplo}|"\ e "Tabela \verb|\ref{tab:exemplo}|", respectivamente;
-    \item Se pretender forçar uma mudança de linha pode utilizar \verb|\\|; se quiser que essa linha partida fique justificada, ocupando toda a largura da página, pode utilizar o comando \verb|\linebreak|; 
-    \item Para que o \LaTeX respeite a regra, em português, de hífen na mudança de linha, deve utilizar o comando \verb!"-! em lugar de \verb!-!. Por exemplo, deve escrever \verb!arco"-íris! em lugar de \verb!arco-íris!. Desta forma, quando mudar de linha no hífen, a palavra \textbf{arco"-íris} ficará em duas partes: "arco-"\ no fim de uma linha e  "-íris"\ no início da linha seguinte, tal como sucedeu na linha anterior. Se não conhece esta regra, consulte, por exemplo, a seguinte página no Ciberdúvidas: \url{https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/a-barra-e-o-hifen-na-translineacao/12731}.
-\end{enumerate}
+\section{Métodos utilizados}
+Para a extração dos dados ser realizada devidamente, tal como referido, foi utilizado o conceito de \textit{webscrapping}. O conceito de \textit{webscrapping} é simplesmente a recolha de dados de uma forma automatizada, no nosso caso foi utilizada a linguagem \textit{Python} juntamente com algumas biblioteocas como a \textit{"BeautifulSoup4"}. É importante também referir que durante a elaboração do trabalho algumas ideias e conceitos foram surgindo, o que colmatou com algumas possíveis dúvidas e percurso que inicialmente o grupo pensaria que iria tomar tal como a utilização dos processos \textit{ETL (extract, transform, load)}. O grupo tinha como ideia levar o conceito á risca como ideia inicial, porem, com o decorrer do trabalho foi verificado que alguns conceitos não se encaixariam da melhor forma, mais em concreto, a fase de \textit{load}. As fases de \textit{extract} e \textit{transform} encaixam-se na perfeição, já que o trabalho consiste na extração de informação de \textit{websites} (\textit{extract}) e a sua normalalização/formatação (\textit{tranform}). No entanto o processo de \textit{loading} só acabaria por ser usado como um processo secundário para outro, mais concretamente para a realização dos gráficos dentro do software \textit{PowerBI} uma vez que esta ferramenta é altamente útil para a realização de gráficos usando como base grandes quantidades de informações.
+
+\section{Descrição e motivação}
+O tema deste trabalho é bastante interessante do ponto de vista turístico e mais tarde financeiro, já que a partir dele é possível analisar as opiniões dos turistas (nacionais ou estranjeiros) e baseando-se nisso, ter noção de quais pontos turísticos, hóteis ou restaurantes cativam mais a atenção do público e também estudar os pontos fortes e fracos de cada um deles. É possível também verificar se determinados locais têm tendências a manter, aumentar ou dimunuir o número de turistas com o decorrer dos anos. Estes valores são bastante importantes para um país como Portugal que usa o turismo como forte fonte de rendimento, e uma vez que no presente trabalho o foco é o alentejo, que é altamente movimentado nas épocas balneares, mais importante a análise das informações recolhidas se tornam. 
+
+\section{Divisão de tarefas}
+Uma vez que o trabalho era realizado em grupo, foi decidido previamente que existiriam etapas onde ocorreria separação de tarefas por cada elemento do grupo, como por exemplo ao realizar o \textit{webscrapping} dos \textit{websites} pretendidos. Para alem da tarefas divididas entre os elementos do grupo, foi utilizado uma ferramenta para gerenciar as tarefas de cada elemento respetivamente, que foi o \textit{Trello}. O \textit{Trello} é tão simples como uma ferramenta de gerenciamento de projetos, é uma plataforma versátil e pode ser usada para acompanhamento de tarefas pessoais ou para organizar projetos que envolvam equipas/grupos com maior número de pessoas. Para além do \textit{Trello} o grupo também utilizou o \textit{GitHub} como ferramenta de gerenciamento do trabalho e repositório do mesmo, sendo a principal ferramenta no controlo de versões dos trabalhos realizados por cada elemento do grupo. Foram também utilizadas outras tecnologias no decorrer do trabalho como algumas bibliotecas específicas para algumas partes, como a \textit{BeautifulSoup4} ou o \textit{Yake!} ou até mesmo a ferramenta \textit{PowerBI} que já foi mencionado, porém estas serão faladas mais adiante no decorrer do trabalho.
+
+\section{Ambientes virtuais \textit{Python}}
+
+Neste projeto usamos ambientes virtuais \textit{Python}. Um ambiente virtual é uma forma de ter várias instâncias paralelas do interpretador de \textit{Python}, cada uma com diferntes conjutnos de pacotes e diferentes configurações.
+Cada ambiente virtual contém uma cópia do interpretador de \textit{Python}, incluindo cópias dos seus utilitários de suporte como o \textit{pip}. Estes contêm também uma zona para instalação de pacotes/bibliotecas localmente (dentro do ambiente virtual), sendo esta a razão principal pela qual foi decidido usá-los.
+
+
+
+
 

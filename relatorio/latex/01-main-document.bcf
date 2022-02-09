@@ -2344,14 +2344,6 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">03-bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">book:Brooks1995</bcf:citekey>
-    <bcf:citekey order="1">Chen1976</bcf:citekey>
-    <bcf:citekey order="2">AndroidDoc</bcf:citekey>
-    <bcf:citekey order="3">Huetal2000</bcf:citekey>
-    <bcf:citekey order="3">book:Brooks1995</bcf:citekey>
-    <bcf:citekey order="3">Chen1976</bcf:citekey>
-    <bcf:citekey order="4">AndroidDoc</bcf:citekey>
-    <bcf:citekey order="4">Chen1976</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
