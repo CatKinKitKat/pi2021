@@ -3,95 +3,92 @@
 
 \section{Planeamento}
 \subsection{Divisão de Tarefas}
-Para a realização desta fase de trabalho o grupo decidiu dividir as tarefas e organizá-las a partir da plataforma ''Trello'' (https://trello.com/b/PIApdmTA/pi-2021-22), uma plataforma de gestão de projeto estilo \textit{board} do qual podemos aplicar Kanban, Scrum ou outra AGILE \textit{management framework}.
 
-A divisão de tarefas decidida foi a distribuição de cada um dos três ``websites'' por cada um dos elementos do grupo, pela ordem de dificuldade em congruência linear com o tempo extra-curricular disponível de cada elemento.
-
-Assim sendo, o site ``TripAdvisor'' foi realizado pelo aluno Gonçalo Amaro, o ``Booking'' pelo Pedro Tomás e o ``Zomato'' pelo Vítor Abreu. No final verificou-se que todos conseguiram aceder aos seus devidos ``websites'' e adquirir as informações possíveis via \textit{scraping}.
+A divisão de tarefas decidida foi a distribuição de cada um dos três \textit{websites} por cada um dos elementos do grupo, pela ordem de dificuldade em congruência linear com o tempo extra-curricular disponível de cada elemento.
 
 \subsection{Tecnologias Usadas}
-Na realização do \textit{web-scrapping} foi desenvolvido um ambiente virtual de Python 3 para realizar os \textit{scripts} que iriam recolher as informações.
+Na realização do \textit{webscraping} foi desenvolvido um ambiente virtual de \textit{Python} 3 para realizar os \textit{scripts} que iriam recolher as informações.
 
-Como forma de organizar todos os pacotes e possíveis actualizações de bibliotecas dentro do código também foi gerado um ficheiro .txt denominado ``requirements'' que actualizávamos e usávamos sempre que um dos elementos do grupo iria realizar o seu trabalho.
+Como forma de organizar todos os pacotes e possíveis actualizações de bibliotecas dentro do código também foi gerado um ficheiro .txt denominado \textit{requirements} que actualizávamos e usávamos sempre que um dos elementos do grupo iria realizar o seu trabalho.
 
-A linguagem optada para a construção dos \textit{scripts} foi o Python já que é uma das mais acessíveis linguagens de programação disponíveis devido à sua simples \textit{syntax} e também pela vasta quantidade de bibliotecas disponibilizadas, das quais temos uma dúzia que são bastante úteis para a realização deste projecto.
+A linguagem optada para a construção dos \textit{scripts} foi o \textit{Python} já que é uma das mais acessíveis linguagens de programação disponíveis devido à sua simples \textit{syntax} e também pela vasta quantidade de bibliotecas disponibilizadas, das quais temos uma dúzia que são bastante úteis para a realização deste projecto.
 
-Para finalizar, todos os ficheiros foram guardados em formato \textit{.csv} uma vez que, como explicado no relatório de progresso anterior, é um formato que é aceite e nos facilita a manipulação de dados (ETL), a alimentação dos dados ao algoritmo de \textit{machine learning}, e pode ser usado com ferramentas de analise de dos e geradores de tabelas (como o PowerBI).
+Para finalizar, todos os ficheiros foram guardados em formato \textit{.csv} uma vez que é um formato que é aceite e nos facilita a manipulação de dados (ETL), a alimentação dos dados ao algoritmo de \textit{machine learning}, e pode ser usado com ferramentas de análise e geradores de tabelas (como o PowerBI).
 
-\subsubsection{Ambientes Virtuais de Python}
-Neste projecto usamos Ambientes Virtuais de Python. Um ambiente virtual é uma forma de ter várias instâncias paralelas do interpretador de Python, cada uma com diferentes conjuntos de pacotes e diferentes configurações.
+\subsubsection{Ambientes Virtuais de \textit{Python}}
+Neste projecto usamos Ambientes Virtuais de \textit{Python}. Um ambiente virtual é uma forma de ter várias instâncias paralelas do interpretador de \textit{Python}, cada uma com diferentes conjuntos de pacotes e diferentes configurações.
 
-Cada ambiente virtual contém uma cópia discreta do interpretador de Python, incluindo cópias dos seus utilitários de suporte como o \href{https://pypi.org/project/pip/}{pip}. Estes contêm também uma zona para instalação de pacotes/bibliotecas localmente (dentro do ambiente virtual), sendo esta a razão principal pela qual foi decido usá-los.
+Cada ambiente virtual contém uma cópia discreta do interpretador de \textit{Python}, incluindo cópias dos seus utilitários de suporte como o \href{https://pypi.org/project/pip/}{\textit{pip}}. Estes contêm também uma zona para instalação de pacotes/bibliotecas localmente (dentro do ambiente virtual), sendo esta a razão principal pela qual foi decidido usá-los.
 
-Tendo introduzido a razão, consegue-se perceber o óbvio: sendo este um trabalho de grupo e que posteriormente poderá ser testado pelos docentes ou futuros alunos, ao usar ambientes virtuais podemos fazer ``pip freeze'' para um ficheiro de texto do qual facilita a portabilidade e transmissão de requerimentos do projecto.
+Tendo introduzido a razão, consegue-se perceber o óbvio: sendo este um trabalho de grupo e que posteriormente poderá ser testado pelos docentes ou futuros alunos, ao usar ambientes virtuais podemos fazer \textit{pip freeze} para um ficheiro de texto do qual facilita a portabilidade e transmissão de requerimentos do projecto.
 
-Para a criação destes ambientes virtuais foi instalado o \href{https://pypi.org/project/virtualenvwrapper/}{virtualenvwrapper} o qual traz o \href{https://pypi.org/project/virtualenv/}{virtualenv} como dependência e um \textit{set} de extensões para o mesmo, tal como sempre recomendado pelo Professor José Jasnau Caeiro, todos os anos na disciplina de Linguagens de Programação.
+Para a criação destes ambientes virtuais foi instalado o \href{https://pypi.org/project/virtualenvwrapper/}{\textit{virtualenvwrapper}} o qual traz uma \textit{fork} com extensões úteis do \href{https://pypi.org/project/virtualenv/}{\textit{virtualenv}} como dependência e um \textit{set} de extensões para o mesmo.
 
-\subsubsection{Bibliotecas de Python}
-Como dito previamente, na explicação pelo qual o uso de Python, foi referida a grande quantidade de bibliotecas que nos são facilmente fornecidas pelo \href{https://pypi.org/project/pip/}{pip}.
+\subsubsection{Bibliotecas de \textit{Python}}
+Como dito previamente, na explicação pelo qual o uso de \textit{Python}, foi referida a grande quantidade de bibliotecas que nos são facilmente fornecidas pelo \href{https://pypi.org/project/pip/}{\textit{pip}}.
 
 Dentro deste repositório existe (perto de) uma dúzia de bibliotecas que nos permitem facilmente completar as nossas tarefas deste projecto. Dessa dúzia, para esta etapa, foram usadas:
 
 \begin{itemize}
-  \item \href{https://pypi.org/project/beautifulsoup4/}{BeautifulSoup4}, uma biblioteca que facilita a extracção de informações de páginas da web, fornecendo expressões para iterar, pesquisar e modificar a árvore de análise;
-  \item \href{https://pypi.org/project/lxml/}{lxml}, uma biblioteca Python que permite fácil manuseio de arquivos XML e HTML;
-  \item \href{https://pypi.org/project/requests/}{requests}, uma biblioteca HTTP elegante e simples para Python, construída de raiz para ser fácil de usar;
-  \item \href{https://pypi.org/project/pandas/}{pandas}, uma ferramenta de manipulação e análise de dados de código aberto rápida, poderosa, flexível e fácil de usar;
-  \item \href{pip install jupyter}{jupyter}, um meta-pacote o qual traz (como dependências) o sistema Jupyter (em especial os cadernos), o \textit{kernel} IPython e outros.
+  \item \href{https://pypi.org/project/beautifulsoup4/}{\textit{BeautifulSoup4}}, uma biblioteca que facilita a extracção de informações de páginas da web, fornecendo expressões para iterar, pesquisar e modificar a árvore de análise;
+  \item \href{https://pypi.org/project/lxml/}{\textit{lxml}}, uma biblioteca \textit{Python} que permite fácil manuseio de arquivos \textit{XML} e \textit{HTML};
+  \item \href{https://pypi.org/project/requests/}{requests}, uma biblioteca \textit{HTTP} elegante e simples para \textit{Python}, construída de raiz para ser fácil de usar;
+  \item \href{https://pypi.org/project/pandas/}{\textit{pandas}}, uma ferramenta de manipulação e análise de dados de código aberto rápida, poderosa, flexível e fácil de usar;
+  \item \href{pip install jupyter}{\textit{jupyter}}, um meta-pacote o qual traz (como dependências) o sistema \textit{Jupyter} (em especial os cadernos), o \textit{kernel} \textit{IPython} e outros.
 \end{itemize}
 
-Com estes pacotes temos um mapa de actuação para esta etapa de projecto (de webscraping): abrir um ambiente virtual (e instalar bibliotecas), abrir um caderno de Jupyter, importar as bibliotecas das quais usamos ``requests'' para ir buscar a nossa página, fazer \textit{parsing} da pagina via ``lxml'', criar um objecto ``Soup'' com o conteúdo \textit{parsed}, fazer \textit{scraping} e iterar pelos \textit{scrapes} dos quis criamos \textit{dataframes} de ``pandas'' e exportamos os mesmos em \textit{.csv} para uso futuro.
+Com estes pacotes temos um mapa de actuação para esta etapa de projecto (de webscraping): abrir um ambiente virtual (e instalar bibliotecas), abrir um caderno de \textit{Jupyter}, importar as bibliotecas das quais usámos \textit{request} para ir buscar a nossa página, fazer \textit{parsing} da página via \textit{lxml}, criar um objecto \textit{Soup} com o conteúdo \textit{parsed}, fazer \textit{scraping} e iterar pelos \textit{scrapes} dos quais criámos \textit{dataframes} de \textit{pandas} e exportámos os mesmos em \textit{.csv} para uso futuro.
 
 \section{Booking}   
 \subsection{Estratégia}
-Para a realização do ``web-scrapping'' no ``website'' da Booking.com, inicialmente foi necessário a filtragem pelos hotéis apenas na localidade de Beja, uma vez ser o local que o grupo em conjunto decidiu optar para realizar todas as pesquisas num sítio em comum.
-Após ter o Booking a apresentar todos os resultados para os hotéis de Beja, foi recolhido o link que redirecciona especificamente para esses resultados.
-Para aceder ás informações específicas de cada elemento da página e mais tarde aceder aos mesmos para retirar a informação pretendida, foi usado a ferramenta de ``inspeccionar a página'' e assim descobrir os nomes das classes e todos os outros elementos que continham conteúdo importante para o projecto, como o nome dos hotéis, preço, classificação, número de comentários e alguns outros detalhes que pudessem ser úteis.
+Para a realização do \textit{webscraping} no \textit{website} da \href{www.Booking.com}{\textit{Booking.com}}, inicialmente foi necessário a filtragem pelos hotéis apenas na localidade de Beja \cite{yt1}, uma vez ser o local que o grupo em conjunto decidiu optar para realizar todas as pesquisas num sítio em comum.
+Após ter o \textit{Booking} a apresentar todos os resultados para os hotéis de Beja, foi recolhido o link que redirecciona especificamente para esses resultados.
+Para aceder ás informações específicas de cada elemento da página e mais tarde aceder aos mesmos para retirar a informação pretendida, foi usado a ferramenta de \textit{inspeccionar a página} e assim descobrir os nomes das classes e todos os outros elementos que continham conteúdo importante para o projecto \cite{yt1}, como o nome dos hotéis, preço, classificação, número de comentários e alguns outros detalhes que pudessem ser úteis.
 
-Em seguida foi necessário realizar o ``web-scrapping'' das \textit{reviews} de cada hotel, a realização desta parte foi um pouco mais difícil uma vez que para as \textit{reviews} serem bem recolhidas era fulcral que o ``web-scrapping'' fosse realizado usando outro link, ou seja, foi retirado do site o prefixo de um novo link que seria o ``https://www.booking.com/reviews/pt/hotel/'' e baseando nos hotéis já retirados foi colocado o nome de cada um á frente do mesmo, criando assim um novo link que seria usado na realização do ``web-scrapping'' após a criação de um novo link para cada hotel, os processos foram semelhantes aos anteriormente feitos.
+Em seguida foi necessário realizar o \textit{webscraping} das \textit{reviews} de cada hotel, a realização desta parte foi um pouco mais difícil uma vez que para as \textit{reviews} serem bem recolhidas era fulcral que o \textit{webscraping} fosse realizado usando outro link \cite{yt1}, ou seja, foi retirado do \textit{website} o prefixo de um novo link que seria o \href{https://www.booking.com/reviews/pt/hotel/}{\textit{reviews}} e baseando nos hotéis já retirados foi colocado o nome de cada um á frente do mesmo, criando assim um novo link que seria usado na realização do \textit{webscraping} após a criação de um novo link para cada hotel, os processos foram semelhantes aos anteriormente feitos.
 
 Para finalizar, os resultados foram todos guardados em ficheiros \textit{.csv} para uma mais fácil visualização.
 
 \subsection{Desenvolvimento}
 
-Aqui detalha-se o processo de desenvolvimento do ''webscraping'' do ''website'' \href{https://www.booking.com/country/pt.pt-pt.html}{Booking}.
+Aqui detalha-se o processo de desenvolvimento do \textit{webscraping} do \textit{website} \href{https://www.booking.com/country/pt.pt-pt.html}{\textit{Booking}}.
 
 \subsubsection{Hotéis}
 
 Inicialmente foi feita a filtragem de apenas os hotéis de Beja.
 
 \newpage
-No código foi implementado as bibliotecas BeautifulSoup para facilitar a tarefa de realizar o ``web-scraping''.
+No código foi implementado as bibliotecas \textit{BeautifulSoup4} para facilitar a tarefa de realizar o \textit{webscraping}.
 
-A partir do ``website'' ao inspeccionar a página era possível retirar os \textit{headers} que eram valores necessários na realização do ``web-scrapping''.
-Também é realizado o pedido HTTP e juntou-se a informação com a biblioteca ``BeautifulSoup''.
+A partir do \textit{website} ao inspeccionar a página era possível retirar os \textit{headers} que eram valores necessários na realização do \textit{webscraping}.
+Também é realizado o pedido \textit{HTTP} e juntou-se a informação com a biblioteca \textit{BeautifulSoup4}.
 
 Foram criados diferentes \textit{arrays} para receber as informações e posteriormente colocada a respectiva informação em cada um deles.
 
-Devido a alguns ``arrays'' conterem mais informação, possivelmente devido a algum tipo de informação adicional que possa estar em algum hotel especificamente, para prevenir erros, foram reduzidos ao tamanho do \textit{array} mais curto.
+Devido a alguns \textit{arrays} conterem mais informação, possivelmente devido a algum tipo de informação adicional que possa estar em algum hotel especificamente, para prevenir erros, foram reduzidos ao tamanho do \textit{array} mais curto.
 
-Por fim todos os resultados contidos nos ``arrays'' foram guardados num ficheiro \textit{.csv} denominado ``listtable\textit{.csv}''.
+Por fim todos os resultados contidos nos \textit{arrays} foram guardados num ficheiro \textit{.csv} denominado \textit{listtable.csv}.
 
-Construção dos links para realizar o ``web-scraping'' das ``reviews'' de cada hotel.
+Construção dos links para realizar o \textit{webscraping} das \textit{reviews} de cada hotel.
 
-Foi realizado o pedido ``HTTP'' e juntado á biblioteca ``BeautifulSoup'' para aceder ás ``reviews'' de cada site e todos os valores foram salvos no formato \textit{.csv}.
+Foi realizado o pedido \textit{HTTP} e juntado á biblioteca \textit{BeautifulSoup4} para aceder ás \textit{reviews} de cada site e todos os valores foram salvos no formato \textit{.csv}.
 
-No final, temos esta tabela representativa do hotéis \textit{scraped} ordenada e representativa dos \textit{scrapes} ``hotelXX\textit{.csv}''.
+No final, temos esta tabela representativa do hotéis \textit{scraped} ordenada e representativa dos \textit{scrapes} hotelXX\textit{.csv}.
 
 
 
 \subsection{Resultado}
 
-Aqui exemplifica-se um ficheiro \textit{.csv}, ``hotel18\textit{.csv}'', que contem os \textit{reviews} do hotel ``Quinta do Castelo''.
+Aqui exemplifica-se um ficheiro \textit{.csv}, hotel18\textit{.csv}, que contem os \textit{reviews} do hotel Quinta do Castelo.
 
 
 \section{TripAdvisor}
 
-O \href{https://www.tripadvisor.pt/}{TripAdvisor} é uma empresa americana de viagens \textit{online} que opera \textit{web} e \textit{mobile apps} com conteúdo \textit{user generated} e um ``website'' de comparação de preços, dos quais se pode fazer com hotéis, locais atractivos (como monumentos, parques, museus, etc..) e restauração.
+O \href{https://www.tripadvisor.pt/}{TripAdvisor} é uma empresa americana de viagens \textit{online} que opera \textit{web} e \textit{mobile apps} com conteúdo \textit{user generated} e um website de comparação de preços, dos quais se pode fazer com hotéis, locais atractivos (como monumentos, parques, museus, etc..) e restauração.
 
 Este como sendo um produto/serviço que oferece acesso a três categorias distintas (hotéis, restaurantes e atracções), foi divido em três partes que representam as três categorias.
 
-Este ``website'' é conhecido pelas suas tentativas de dificultar os processos de \textit{scraping}, o qual foi observado, mas resolvido a custo de tempo. Felizmente encontramos um ``website'' chamado \textit{``Worth Web Scraping''} o qual nos mostrou como fazer na página de hotéis do TripAdvisor o \textit{scraping} da tabela de referência e dos \textit{reviews}.
+Este \textit{website} é conhecido pelas suas tentativas de dificultar os processos de \textit{scraping} \cite{wws1}, o qual foi observado, mas resolvido a custo de tempo. Felizmente encontramos um \textit{website} chamado \href{https://www.worthwebscraping.com/}{\textit{Worth Web Scraping}} o qual nos mostrou como fazer na página de hotéis do \textit{TripAdvisor} o \textit{scraping} da tabela de referência e dos \textit{reviews} \cite{wws2}.
 
 \subsection{Estratégia}
 
@@ -99,91 +96,91 @@ Após um \textit{scouting} inicial às páginas das três categorias, foi observ
 
 \begin{itemize}
   \item as páginas das três categorias são diferentes no seu \textit{layout} e organização;
-  \item os nomes das classes nos ``span'', ``div'' e outros elementos são \textit{random generated} e mudam de acordo com a sessão aberta ou cookie;
-  \item existem representações repetidas, estes são os \textit{posts sponsored} pelo próprio ``website'';
-  \item as ``subpáginas'' que nos retornam os \textit{reviews}, são de comprimentos diferentes de acordo com a categoria de \textit{listing};
-  \item as ``subpáginas'' que nos retornam os \textit{reviews}, usam múltiplos de cinco ou dez na \textit{query};
-  \item as ``subpáginas'' que nos retornam os \textit{reviews} mostram por defeito os que estão na linguagem referente ao dominio (.pt, .com, etc..) sem \textit{query parameter} para alterar,
-  \item \textit{links} com \textit{query parameters} que representem uma ``subpágina'' não existente não dão erro 404 (Page not found), mas redireccionam para a primeira;
-  \item quando tentamos extrair o total de \textit{reviews} apenas conseguimos o total dos totais e não o total por linguagem, impedindo assim de fazer uma conta para saber qual o múltiplo de cinco ou dez que seria a ultima ``subpágina''.
+  \item os nomes das classes nos \textit{span, div} e outros elementos são \textit{random generated} e mudam de acordo com a sessão aberta ou \textit{cookie};
+  \item existem representações repetidas, estes são os \textit{posts sponsored} \cite{wws1} pelo próprio \textit{website};
+  \item as subpáginas que nos retornam os \textit{reviews}, são de comprimentos diferentes de acordo com a categoria de \textit{listing} \cite{wws2};
+  \item as subpáginas que nos retornam os \textit{reviews}, usam múltiplos de cinco ou dez na \textit{query};
+  \item as subpáginas que nos retornam os \textit{reviews} mostram por defeito os que estão na linguagem referente ao dominio (.pt, .com, etc..) sem \textit{query parameter} para alterar,
+  \item \textit{links} com \textit{query parameters} que representem uma subpágina não existente não dão erro 404 (Page not found), mas redireccionam para a primeira \cite{wws2};
+  \item quando tentamos extrair o total de \textit{reviews} apenas conseguimos o total dos totais e não o total por linguagem, impedindo assim de fazer uma conta para saber qual o múltiplo de cinco ou dez que seria a ultima subpágina.
 \end{itemize}
 
 Assim sendo, a estratégia que foi usada, embora extremamente má em termos de tempo despendido e extracções redundantes, era a única que assegurava que se conseguia extrair todos os \textit{reviews}. Essa estratégia foi:
 
 \begin{itemize}
-  \item criar uma lista de \textit{links} para 200 ou 400 ``subpáginas'' (de acordo com o \textit{listing} daquela categoria com mais \textit{reviews} em português);
+  \item criar uma lista de \textit{links} para 200 ou 400 subpáginas (de acordo com o \textit{listing} daquela categoria com mais \textit{reviews} em português);
   \item extrair incluindo os repetidos para um \textit{array/list/arraylist};
   \item usar compreensão de listas através de \textit{sets}/dicionários/\textit{tuples} que possam ser ordenados para remover repetidos e não perder ordem;
-  \item transpor esses dados para um \textit{dataframe} de ``pandas'' e exportá-lo para \textit{.csv} para uso futuro.
+  \item transpor esses dados para um \textit{dataframe} de pandas e exportá-lo para \textit{.csv} para uso futuro.
 \end{itemize}
 
 \subsection{Desenvolvimento}
 
-Aqui iremos detalhar o processo longo do \textit{webscraping} da plataforma TripAdvisor e as suas três principais categorias.
+Aqui iremos detalhar o processo longo do \textit{webscraping} da plataforma \textit{TripAdvisor} e as suas três principais categorias.
 
 \subsubsection{Atracções}
-Para o desenvolvimento do \textit{webscraping} das Atracções de Beja, foi aberto um caderno de Jupyter no qual começamos por fazer o \textit{import} das bibliotecas e desactivar o aviso da falta de certificado SSL (após a introdução do trabalho em Inglês).
+Para o desenvolvimento do \textit{webscraping} das Atracções de Beja, foi aberto um caderno de \textit{Jupyter} no qual começámos por fazer o \textit{import} das bibliotecas e desactivar o aviso da falta de certificado \textit{SSL} (após a introdução do trabalho em Inglês).
 
-Seguidamente, foi feita a configuração do \textit{request} onde qual fazemos download da página \textit{web} pretendida. Estes \textit{headers} foram extraídos do \textit{browser} do computador usado, Microsoft Edge (Chromium).
+Seguidamente, foi feita a configuração do \textit{request} onde qual fazemos \textit{download} da página \textit{web} pretendida. Estes \textit{headers} foram extraídos do \textit{browser} do computador usado, \textit{Microsoft Edge (Chromium)}.
 
-Após fazer \textit{request} e verificar o status code (vazio ou 200 para OK), foi criado um objecto ``Soup'' com o parsing (via ``lxml'') da página \textit{requested}.
+Após fazer \textit{request} e verificar o \textit{status code} (vazio ou 200 para OK), foi criado um objecto \textit{Soup} com o \textit{parsing (via lxml)} da página \textit{requested}.
 
 Para a criação da tabela de referência das atracções fazemos um ciclo que nos vão fazer \textit{scrape} aos nomes.
 
-Sendo que agora podemos simplesmente através destes \textit{arrays} criados fazer um \textit{dataframe} der ``pandas'' via um dicionário de Python com os variados \textit{pandas} referidos. Seguidamente exportamos o \textit{dataframe} para um ficheiro \textit{.csv}.
+Sendo que agora podemos simplesmente através destes \textit{arrays} criados fazer um \textit{dataframe} der \textit{pandas} via um dicionário de \textit{Python} com os variados \textit{pandas} referidos. Seguidamente exportamos o \textit{dataframe} para um ficheiro \textit{.csv}.
 
-Agora um ciclo que retira os ``HTML tag'' onde  contem um ``href'' com uma parte do \textit{link} que nos possibilita (criar o \textit{link} inteiro e) visitar a pagina de \textit{reviews}.
+Agora um ciclo que retira os \textit{HTML tag} onde  contém um \textit{href} com uma parte do \textit{link} que nos possibilita (criar o \textit{link} inteiro e) visitar a pagina de \textit{reviews}.
 
 Essas páginas têm determinadas restrições faladas nas secções anteriores e a sua solução. A qual aqui em baixo representada, cria uma enormidade de \textit{links} por local.
-Dos quais \textit{links} agora serão \textit{scraped} (incluindo os \textit{reviews} repetidos e excepto os que contem ``desde'' e ``euros'') e seguidamente tratados (remoção de repetidos) indo seguidamente para um (dicionário e transformado num) \textit{dataframe} de ``pandas'', o qual é imediatamente exportado com o número do atracção referente na tabela de referência.
+Dos quais \textit{links} agora serão \textit{scraped} (incluindo os \textit{reviews} repetidos e excepto os que contêm \textit{desde} e \textit{euros}) e seguidamente tratados (remoção de repetidos) indo seguidamente para um (dicionário e transformado num) \textit{dataframe} de \textit{pandas}, o qual é imediatamente exportado com o número do atracção referente na tabela de referência.
 \subsubsection{Hotéis}
 
-Para o desenvolvimento do \textit{webscraping} dos Hotéis de Beja, foi aberto um caderno de Jupyter no qual começamos por fazer o \textit{import} das bibliotecas e desactivar o aviso da falta de certificado SSL (após a introdução do trabalho em Inglês).
+Para o desenvolvimento do \textit{webscraping} dos Hotéis de Beja, foi aberto um caderno de \textit{Jupyter} no qual começamos por fazer o \textit{import} das bibliotecas e desactivar o aviso da falta de certificado \textit{SSL} (após a introdução do trabalho em Inglês).
 
-Seguidamente, foi feita a configuração do \textit{request} onde qual fazemos download da página \textit{web} pretendida. Estes \textit{headers} foram extraídos do \textit{browser} do computador usado, Microsoft Edge (Chromium).
+Seguidamente, foi feita a configuração do \textit{request} onde qual fazemos \textit{download} da página \textit{web} pretendida. Estes \textit{headers} foram extraídos do \textit{browser} do computador usado, \textit{Microsoft Edge (Chromium)}.
 
-Após fazer \textit{request} e verificar o status code (vazio ou 200 para OK), foi criado um objecto ``Soup'' com o parsing (via ``lxml'') da página \textit{requested}.
+Após fazer \textit{request} e verificar o \textit{status code} (vazio ou 200 para OK), foi criado um objecto \textit{Soup} com o \textit{parsing (via lxml)} da página \textit{requested}.
 
 Para a criação da tabela de referência dos hotéis fazemos um grupo de ciclos que nos vão fazer \textit{scrape} aos nomes, \textit{ratings}, número total de \textit{reviews} e preços. Sendo que este número de \textit{reviews} não nos vale de muito tal como previamente referido.
 
-Sendo que agora podemos simplesmente através destes \textit{arrays} criados fazer um \textit{dataframe} der ``pandas'' via um dicionário de Python com os variados \textit{pandas} referidos. Seguidamente exportamos o \textit{dataframe} para um ficheiro \textit{.csv}.
+Sendo que agora podemos simplesmente através destes \textit{arrays} criados fazer um \textit{dataframe} der \textit{pandas} via um dicionário de \textit{Python} com os variados \textit{pandas} referidos. Seguidamente exportamos o \textit{dataframe} para um ficheiro \textit{.csv}.
 
 O qual gerou uma tabela de hotéis como referência.
 
-Mesmo que o numero total de \textit{reviews} não nos seja relevante o ``HTML tag'' onde é retirado contem um ``href'' com uma parte do \textit{link} que nos possibilita (criar o \textit{link} inteiro e) visitar a pagina de \textit{reviews}.
+Mesmo que o número total de \textit{reviews} não nos seja relevante o \textit{HTML tag} onde é retirado contem um \textit{href} com uma parte do \textit{link} que nos possibilita (criar o \textit{link} inteiro e) visitar a pagina de \textit{reviews}.
 
 Essas páginas têm determinadas restrições faladas nas secções anteriores e a sua solução. O que cria uma enormidade de \textit{links} por local.
 
-Dos quais \textit{links} agora serão \textit{scraped} (incluindo os \textit{reviews} repetidos) e seguidamente tratados (remoção de repetidos) indo seguidamente para um (dicionário e transformado num) \textit{dataframe} de ``pandas'', o qual é imediatamente exportado com o número do hotel referente na tabela de referência.
+Dos quais \textit{links} agora serão \textit{scraped} (incluindo os \textit{reviews} repetidos) e seguidamente tratados (remoção de repetidos) indo seguidamente para um (dicionário e transformado num) \textit{dataframe} de \textit{pandas}, o qual é imediatamente exportado com o número do hotel referente na tabela de referência.
 
 \subsubsection{Restaurantes}
-Para o desenvolvimento do \textit{webscraping} dos Restaurantes de Beja, foi aberto um caderno de Jupyter no qual começamos por fazer o \textit{import} das bibliotecas e desactivar o aviso da falta de certificado SSL (após a introdução do trabalho em Inglês).
+Para o desenvolvimento do \textit{webscraping} dos Restaurantes de Beja, foi aberto um caderno de \textit{Jupyter} no qual começamos por fazer o \textit{import} das bibliotecas e desactivar o aviso da falta de certificado \textit{SSL} (após a introdução do trabalho em Inglês).
 
-Seguidamente, foi feita a configuração do \textit{request} onde qual fazemos download da página \textit{web} pretendida. Estes \textit{headers} foram extraídos do \textit{browser} do computador usado, Microsoft Edge (Chromium).
+Seguidamente, foi feita a configuração do \textit{request} onde qual fazemos \textit{download} da página \textit{web} pretendida. Estes \textit{headers} foram extraídos do \textit{browser} do computador usado, \textit{Microsoft Edge (Chromium)}.
 
-Após fazer \textit{request} e verificar o status code (vazio ou 200 para OK), foi criado um objecto ``Soup'' com o parsing (via ``lxml'') da página \textit{requested}.
+Após fazer \textit{request} e verificar o \textit{status code} (vazio ou 200 para OK), foi criado um objecto \textit{Soup} com o \textit{parsing (via lxml)} da página \textit{requested}.
 
-Para a criação da tabela de referência das atracções fazemos um ciclo que nos vão fazer \textit{scrape} aos nomes e as partes de \textit{href} contidas nos ``href'' para a criação dos links dos \textit{reviews}.
+Para a criação da tabela de referência das atracções fazemos um ciclo que nos vão fazer \textit{scrape} aos nomes e as partes de \textit{href} contidas nos \textit{href} para a criação dos \textit{links} dos \textit{reviews}.
 
-Sendo que agora podemos simplesmente através destes \textit{arrays} criados fazer um \textit{dataframe} der ``pandas'' via um dicionário de Python com os variados \textit{pandas} referidos. Seguidamente exportamos o \textit{dataframe} para um ficheiro \textit{.csv}. O qual gerou uma tabela de restaurantes como referência.
+Sendo que agora podemos simplesmente através destes \textit{arrays} criados fazer um \textit{dataframe} der \textit{pandas} via um dicionário de \textit{Python} com os variados \textit{pandas} referidos. Seguidamente exportamos o \textit{dataframe} para um ficheiro \textit{.csv}. O qual gerou uma tabela de restaurantes como referência.
 
-Agora um ciclo que vai buscar os as partes de \textit{links} onde do ciclo anterior que nos possibilita (criar o \textit{link} inteiro e) visitar a pagina de \textit{reviews}.
+Agora um ciclo que vai buscar as partes de \textit{links} onde do ciclo anterior que nos possibilita (criar o \textit{link} inteiro e) visitar a página de \textit{reviews}.
 
 Essas páginas têm determinadas restrições faladas nas secções anteriores e a sua solução. A qual aqui em baixo representada, cria uma enormidade de \textit{links} por local.
 
-Dos quais \textit{links} agora serão \textit{scraped} (incluindo os \textit{reviews} repetidos) e seguidamente tratados (remoção de repetidos) indo seguidamente para um (dicionário e transformado num) \textit{dataframe} de ``pandas'', o qual é imediatamente exportado com o número do restaurante referente na tabela de referência.
+Dos quais \textit{links} agora serão \textit{scraped} (incluindo os \textit{reviews} repetidos) e seguidamente tratados (remoção de repetidos) indo seguidamente para um (dicionário e transformado num) \textit{dataframe} de \textit{pandas}, o qual é imediatamente exportado com o número do restaurante referente na tabela de referência.
 
 
 \subsection{Resultado}
-Aqui apresenta-se os resultados do \textit{webscrape} do TripAdvisor. Os quais representam um exemplar dos dez primeiros \textit{reviews} do primeiro hotel, atracção e restaurante, respectivamente.
+Aqui apresenta-se os resultados do \textit{webscrape} do \textit{TripAdvisor}. Os quais representam um exemplar dos dez primeiros \textit{reviews} do primeiro hotel, atracção e restaurante, respectivamente.
 
-\section{Zomato}
-A Zomato é um serviço de busca de restaurantes para quem quer sair para jantar, buscar comida ou pedir em casa. A Zomato possui duas secções: guia de restaurante e blog. Previamente, havia uma secção de eventos, já descontinuada.
+\section{\textit{Zomato}}
+A \textit{Zomato} é um serviço de busca de restaurantes para quem quer sair para jantar, buscar comida ou pedir em casa. A \textit{Zomato} possui duas secções: guia de restaurante e \textit{blog}. Previamente, havia uma secção de eventos, já descontinuada.
 
-O guia de restaurantes Zomato permite ao usuário buscar informações relacionadas a restaurantes, bares, cafés, pubs e casa nocturnas. As informações fornecidas geralmente incluem o nome do estabelecimento, telefones de contacto, endereço, cardápio, fotografias, avaliações e mapas de localização.
+O guia de restaurantes \textit{Zomato} permite ao usuário buscar informações relacionadas a restaurantes, bares, cafés, \textit{pubs} e casa nocturnas. As informações fornecidas geralmente incluem o nome do estabelecimento, telefones de contacto, endereço, cardápio, fotografias, avaliações e mapas de localização.
 
 \subsection{Estratégia}
-As páginas da \textit{web app} do Zomato usam um ``paralax'' de \textit{scrolling} infinito (até não haver mais restaurantes) e as classes dos ``HTML tags'' mudam por sessão e/ou \textit{rendering}, logo aqui a estratégia é literalmente fazer ``download'' da página web e fazer o \textit{scrape} a partir do \textit{parsing} dessa página.
+As páginas da \textit{web app} do \textit{Zomato} usam um \textit{paralax} de \textit{scrolling} infinito (até não haver mais restaurantes) e as classes dos \textit{HTML tags} mudam por sessão e/ou \textit{rendering}, logo aqui a estratégia é literalmente fazer \textit{download} da página \textit{web} e fazer o \textit{scrape} a partir do \textit{parsing} dessa página.
 
 \subsection{Desenvolvimento}
 Aqui é representada uma aproximação do desenvolvimento deste \textit{scraping}.
@@ -194,9 +191,8 @@ Depois pegando no código dos colegas como \textit{template}, adaptou-se para us
 
 Fazemos um ciclo de \textit{scraping} dos nomes dos locais de consumo.
 
-E agora dois ciclos, um para as classes com nome gerado no \textit{prerender} e outra pós \textit{render}; vamos buscar os tipos/classes de restaurantes, e outros dois ciclos do mesmo motivo, para ir buscar os preços. Pelo mesmo motivo criamos dois ciclos; que vão buscar os links das páginas dos \textit{reviews}, o qual extraímos todos os ``tags'' de parágrafos porque que sempre que se corria o código gerava uma classe nova.
-Logo, estas extracções desapontantes, vão sofrer ETL.
+E agora dois ciclos, um para as classes com nome gerado no \textit{prerender} e outra pós \textit{render}; vamos buscar os tipos/classes de restaurantes, e outros dois ciclos do mesmo motivo, para ir buscar os preços. Pelo mesmo motivo criámos dois ciclos; que vão buscar os \textit{links} das páginas dos \textit{reviews}, o qual extraímos todos os \textit{tags} de parágrafos porque que sempre que se corria o código gerava uma classe nova.
+Logo, estas extracções desapontantes, vão sofrer \textit{ETL}.
 
 \subsection{Resultado}
-Os resultados deste \textit{scrape} foram desapontantes no minimo devido à infeliz \textit{random generated} nome da classe, que é gerado por cada vez que se usa a página. Estes resultados vão sofrer muito ETL posterior.
-
+Os resultados deste \textit{scrape} foram desapontantes no mínimo devido à infeliz \textit{random generated} nome da classe, que é gerado por cada vez que se usa a página. Estes resultados vão sofrer muito \textit{ETL} posterior.

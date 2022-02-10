@@ -1,15 +1,16 @@
 \chapter{Investigação}
-\section{Objetivo desta investigação}
+\label{cap2}
+\section{Objectivo desta investigação}
 
-Com esta investigação foi determinado como objetivo definir o curso de ação que iriamos ter para o trabalho, assim como esclarecer alguns conceitos mais teóricos associados ao mesmo. 
-Assim sendo, foram obtidos todos os dados de \textit{posts} e comentários relacionados com \textit{providers} de acesso, entretenimento, refeições e estadia diretamente ligados ao património cultural do alentejo. Estes a serem analisados e classificados, criando assim um modelo de possíveis sentimentos e procuras que o comércio local tem o interesse em fornecer aos visitantes. O foco principal foram os \textit{posts} e comentários em português.
+Com esta investigação foi determinado como objectivo definir o curso de acção que iríamos ter para o trabalho, assim como esclarecer alguns conceitos mais teóricos associados ao mesmo. 
+Assim sendo, foram obtidos todos os dados de \textit{posts} e comentários relacionados com \textit{providers} de acesso, entretenimento, refeições e estadia directamente ligados ao património cultural do Alentejo. Estes a serem analisados e classificados, criando assim um modelo de possíveis sentimentos e procuras que o comércio local tem o interesse em fornecer aos visitantes. O foco principal foram os \textit{posts} e comentários em português.
 
 \section{\textit{Websites} escolhidos}
 
-Os \textit{websites} selecionados assim como os métodos de obtenção de dados, e também de analisar os mesmos foi decidida previamente pelo grupo e todos os elementos decidiram usar as mesmas ferramentas para cada função que lhes fora determinado.
+Os \textit{websites} seleccionados assim como os métodos de obtenção de dados, e também de analisar os mesmos foi decidida previamente pelo grupo e todos os elementos decidiram usar as mesmas ferramentas para cada função que lhes fora determinado.
 Após exaustiva procura pelos \textit{websites} preferenciais e discussão entre todos os elementos do grupo, para a utilização de um conjunto deles onde fosse possível se realizar uma boa análise e obtenção dos dados, com especial foco na linguagem portuguesa, reunimos alguns possíveis candidatos que serão abordados no ponto seguinte.
 
-Foi decidido também que dentro das opções que serão referidas em seguida, teremos preferência na utilização de um em específico, uma vez que temos intenções de dar alguma prioridade ás informações relacionadas com o turismo rural alentejano, sendo assim e devido a uma maior procura e número de resultados que o \textit{website} oferecia, inicialmente iriamos utilizar o \textit{website TripAdvisor} como primeira opção.
+Foi decidido também que dentro das opções que serão referidas em seguida, teremos preferência na utilização de um em específico, uma vez que temos intenções de dar alguma prioridade ás informações relacionadas com o turismo rural alentejano, sendo assim e devido a uma maior procura e número de resultados que o \textit{website} oferecia, inicialmente iríamos utilizar o \textit{website TripAdvisor} como primeira opção.
 
 \section{Sites pesquisados}
 
@@ -27,7 +28,7 @@ Foi também considerado o \textit{Google Maps}, mas este apresentou um novo set 
 
 \section{(Im)possibilidade de uso de \textit{APIs}}
 
-Em nenhum dos \textit{websites} testados foi observada uma facilidade na obtenção de acesso às suas \textit{APIs}, apenas alguns (3/4) ofereceram acesso à documentação da(s) mesma(s) facilmente. A maioria requer um contacto, que foi tentado e continuou sem resposta durante quase todo o processo de elaboração do trabalho(contactos iniciados por Amaro, entre dia 26 e 29 de Out, e dia 11 de Nov).
+Em nenhum dos \textit{websites} testados foi observada uma facilidade na obtenção de acesso às suas \textit{APIs}, apenas alguns (3/4) ofereceram acesso à documentação da(s) mesma(s) facilmente. A maioria requer um contacto, que foi tentado e continuou sem resposta durante quase todo o processo de elaboração do trabalho(contactos iniciados por Amaro, entre dia 26 e 29 de Outubro, e dia 11 de Novembro de 2021).
 
 Dentro dos \textit{websites} que oferecem documentação foi observado que todos subdividem os seus serviços de \textit{API} em 3 ou 4 \textit{APIs} para casos de uso específicos (reservas, dados, etc) em vez de uma com \textit{endpoints} que oferecem solução para todos os casos.
 
@@ -44,10 +45,10 @@ O \textit{tracker} é essencialmente o que os motores de busca fazem.
 É uma questão de visualizar uma página como um todo e indexá-la.
 Quando um \textit{Bot} rastreia um \textit{website}, ele passa por todas as páginas e todos os \textit{links}, até a última linha do \textit{website}, em busca de qualquer informação.
 
-O \textit{web scraping}, também conhecido como extração de dados da \textit{web}, é semelhante ao \textit{web crawling}, pois identifica e localiza os dados de destino das páginas da \textit{web}.
-A principal diferença é que, com o \textit{web scraping}, sabemos quem identificou o conjunto de dados exatamente, por exemplo, uma estrutura de elemento \textit{HTML} para páginas da \textit{web} que estão a ser corrigidas, da qual os dados precisam ser extraídos.
+O \textit{web scraping}, também conhecido como extracção de dados da \textit{web}, é semelhante ao \textit{web crawling}, pois identifica e localiza os dados de destino das páginas da \textit{web}.
+A principal diferença é que, com o \textit{web scraping}, sabemos quem identificou o conjunto de dados exactamente, por exemplo, uma estrutura de elemento \textit{HTML} para páginas da \textit{web} que estão a ser corrigidas, da qual os dados precisam ser extraídos.
 
-Com isto visto, \textit{web scraping} é o nosso alvo, visto que minimiza lixo e é direcionado.
+Com isto visto, \textit{web scraping} é o nosso alvo, visto que minimiza lixo e é direccionado.
 No entanto devemos olhar para:
 
 \subsubsection{Vantagens de \textit{web scraping}}
@@ -71,13 +72,13 @@ No entanto devemos olhar para:
 
 Com o acima dito, é necessário recorrer a soluções de \textit{Web Scraping}.
 
-A comunidade internauta reparou no mesmo, visto que em reação ao observado existem dezenas de projetos e tutoriais de \textit{Web Scraping} das variadas plataformas de turismo e reservas.
-Infelizmente, as mesmas não ajudam no processo e cada uma tem um forma de atuação bastante diferente.
+A comunidade internauta reparou no mesmo, visto que em reacção ao observado existem dezenas de projectos e tutoriais de \textit{Web Scraping} das variadas plataformas de turismo e reservas.
+Infelizmente, as mesmas não ajudam no processo e cada uma tem um forma de actuação bastante diferente.
 
 \section{Bibliotecas de \textit{Python} para \textit{Web Scraping}}
 
 Para fazer \textit{Web Scraping} vamos usar \textit{Python}, pela sua facilidade de uso e multifaceta \textit{``Development speed is more important than execution speed''}.
-Com \textit{Python} também temos as opções de criar cadernos \textit{Jupyter} onde o próprio código e os resultados são ``encadernados'' com parágrafos de texto fazendo o próprio projeto o seu pequeno relatório de progresso e resultados; como também a criação de ambientes virtuais (\textit{containers}), onde os pacotes usados ficam registados e instalados localmente, garantindo assim a portabilidade.
+Com \textit{Python} também temos as opções de criar cadernos \textit{Jupyter} onde o próprio código e os resultados são ``encadernados'' com parágrafos de texto fazendo o próprio projecto o seu pequeno relatório de progresso e resultados; como também a criação de ambientes virtuais (\textit{containers}), onde os pacotes usados ficam registados e instalados localmente, garantindo assim a portabilidade.
 
 Para tal linguagem existem 5 grandes bibliotecas para a resolução deste caso:
 \begin{itemize}
@@ -88,7 +89,7 @@ Para tal linguagem existem 5 grandes bibliotecas para a resolução deste caso:
 \end{itemize}
 
 Cada uma tem diferentes vantagens e desvantagens.
-Caso nenhuma destas tivesse resultado, teriamos usado \href{https://pypi.org/project/selenium/}{Selenium}, que é uma biblioteca mais completa e poderosa que as listadas, visto que é uma ferramenta de testes de automação.
+Caso nenhuma destas tivesse resultado, teríamos usado \href{https://pypi.org/project/selenium/}{Selenium}, que é uma biblioteca mais completa e poderosa que as listadas, visto que é uma ferramenta de testes de automação.
 Porém tem um nível de complexidade maior e requer um \textit{setup} inicial maior e mais trabalhoso, requer \textit{WebDrivers} para a execução das tarefas, pode ser complicada com Firefox, sendo preferencial usar \textit{Chromium-based Browsers} como o Chrome e o novo Edge (necessário ainda o \textit{ChromeDriver} e o \textit{EdgeDriver})..
 Tentaremos evitar essa, a todo o custo, pela sua complexidade e extras desnecessários às nossas necessidades e custo temporal do setup inicial.
 
@@ -108,19 +109,19 @@ No entanto nada nos impede de tentar prever ou imaginar quais esses serão e pos
 \section{Análise}
 \subsection{Algoritmos de mineração de texto}
 
-Os algoritmos de análise de texto podem ser considerados ferramentas de mineração de texto, isto é, o processo de descoberta de conhecimento potencialmente útil e inicialmente desconhecido, ou seja, a extração de conhecimento útil utilizando bases textuais.
+Os algoritmos de análise de texto podem ser considerados ferramentas de mineração de texto, isto é, o processo de descoberta de conhecimento potencialmente útil e inicialmente desconhecido, ou seja, a extracção de conhecimento útil utilizando bases textuais.
 
 O processo de mineração de texto é dividido em quatro etapas bem definidas:
 \begin{itemize}
-  \item Seleção
+  \item Selecção
   \item Pré-processamento
   \item Mineração
   \item Assimilação
 \end{itemize}
 
-Na seleção, os documentos relevantes devem ser escolhidos e mais tarde processados.
+Na selecção, os documentos relevantes devem ser escolhidos e mais tarde processados.
 No pré-processamento ocorrerá a conversão dos documentos em uma estrutura compatível com minerador, bem como ocorrerá um tratamento especial do texto.
-Na mineração, o minerador irá detetar os padrões com base no algoritmo escolhido.
+Na mineração, o minerador irá detectar os padrões com base no algoritmo escolhido.
 E por fim, na assimilação, os utilizadores irão utilizar o conhecimento gerado para apoiar as suas decisões.
 
 A etapa pré-processamento pode ser dividida em quatro tarefas:
@@ -132,9 +133,9 @@ A etapa pré-processamento pode ser dividida em quatro tarefas:
 \end{itemize}
 
 Na etapa Remover \textit{stopwords} os termos com pouca ou nenhuma relevância para o documento serão removidos.
-São palavras auxiliares ou conetivas, ou seja, não são discriminantes para o conteúdo do documento.
+São palavras auxiliares ou conectivas, ou seja, não são discriminantes para o conteúdo do documento.
 
-Na etapa seguinte, compilação, realiza-se uma normalização morfológica, ou seja, as palavras são reduzidas ao seu radical, serão combinadas em uma única representação. A radicalização pode ser efetuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de \textit{Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP)}.
+Na etapa seguinte, compilação, realiza-se uma normalização morfológica, ou seja, as palavras são reduzidas ao seu radical, serão combinadas em uma única representação. A radicalização pode ser efectuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de \textit{Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP)}.
 
 Após a compilação, na etapa de normalização de sinónimos, os termos que possuem significados similares serão agrupados em um único termo, por exemplo, as palavras ruído, tumulto e barulho serão substituídas ou representadas pelo termo barulho.
 
@@ -142,18 +143,18 @@ E, por fim, na etapa indexação atribui-se uma pontuação para cada termo, gar
 No processo de atribuição de pesos devem ser considerados dois pontos:
 \begin{itemize}
   \item Quanto mais vezes um termo aparece no documento, mais relevante ele é para o documento
-  \item Quanto mais vezes um termo aparece na coleção de documentos, menos importante ele é para diferenciar os documentos
+  \item Quanto mais vezes um termo aparece na colecção de documentos, menos importante ele é para diferenciar os documentos
 \end{itemize}
 
 \subsection{Algoritmos Clássicos}
 
-Os algoritmos clássicos são instruções passo a passo de modo a que, dada uma entrada específica, é possível rastrear e determinar exatamente a saída.
+Os algoritmos clássicos são instruções passo a passo de modo a que, dada uma entrada específica, é possível rastrear e determinar exactamente a saída.
 \begin{itemize}
   \item Algoritmos clássicos especificam as regras exactas para encontrar a resposta geral
   \item Um algoritmo clássico usa código e dados para prever a resposta correta para uma pergunta
   \item Algoritmo clássico produz uma saída com base nas etapas descritas no algoritmo
   \item Em algoritmos clássicos, normalmente é necessário um grande número de exemplos para determinar a que distância a equação está da equação desejada. É por isso que ``\textit{big data}'' é uma grande negócio hoje em dia
-  \item Um algoritmo clássico não dá uma solução depois de chegar a uma solução optima para um problema
+  \item Um algoritmo clássico não dá uma solução depois de chegar a uma solução óptima para um problema
 \end{itemize}
 
 \subsection{Algoritmos de \textit{machine learning}}
@@ -188,17 +189,17 @@ Os dados que está a fornecer não são etiquetados e as etiquetas no resultado 
 
 \subsubsection{Aprendizagem de reforço}
 
-A aprendizagem por reforço utiliza algoritmos que aprendem com resultados e decide a ação a realizar em seguida.
-Após cada ação, o algoritmo recebe comentários que o ajudam a determinar se a escolha feita foi correta, neutra ou incorreta.
+A aprendizagem por reforço utiliza algoritmos que aprendem com resultados e decide a acção a realizar em seguida.
+Após cada acção, o algoritmo recebe comentários que o ajudam a determinar se a escolha feita foi correta, neutra ou incorrecta.
 Por exemplo, se estivermos a criar um carro autónomo, queremos que este cumpra a lei e mantenha as pessoas seguras.
 À medida que o carro ganha experiência e um histórico de reforço, aprende a permanecer dentro da faixa, a não ultrapassar o limite de velocidade e a travar quando encontrar peões.
 
 Existem muitos tipos diferentes de algoritmos de \textit{machine learning}.Contudo, por norma, os casos de utilização destes algoritmos enquadram-se numa destas categorias.
 \begin{itemize}
   \item Algoritmos de classificação de duas classes (binários) dividem os dados em duas categorias. São úteis para perguntas com apenas duas respostas possíveis mutuamente exclusivas, incluindo perguntas de sim/não
-  \item Algoritmos de classificação multiclasse (multinomial) dividem os dados em três ou mais categorias. São úteis para perguntas com três ou mais respostas possíveis mutuamente exclusivas
-  \item Algoritmos de deteção de anomalias identificam os pontos de dados que estão fora dos parâmetros definidos para o que é considerado ``normal''
-  \item Algoritmos de regressão preveem o valor de um novo ponto de dados com base em dados históricos
+  \item Algoritmos de classificação multi-classe (multinomial) dividem os dados em três ou mais categorias. São úteis para perguntas com três ou mais respostas possíveis mutuamente exclusivas
+  \item Algoritmos de detecção de anomalias identificam os pontos de dados que estão fora dos parâmetros definidos para o que é considerado ``normal''
+  \item Algoritmos de regressão prevêem o valor de um novo ponto de dados com base em dados históricos
   \item Algoritmos de séries temporais mostram as alterações a um determinado valor ao longo do tempo. Com a análise e a previsão de série temporal, os dados são recolhidos a intervalos regulares ao longo do tempo e utilizados para fazer previsões e identificar tendências, sazonalidade, periodicidade e irregularidade
   \item Algoritmos de \textit{clustering} dividem os dados por vários grupos ao determinar o nível de semelhança entre os pontos de dados
   \item Algoritmos de classificação utilizam cálculos de previsão para atribuir dados a categorias predefinidas
@@ -207,7 +208,7 @@ Existem muitos tipos diferentes de algoritmos de \textit{machine learning}.Contu
 \subsection{Decisão sobre o tipo de algoritmo}
 
 Após a grande análise dos tipos e subtipos de algoritmos de mineração de texto (análise de texto), é óbvia a escolha em algoritmos de \textit{machine learning} com aprendizagem não supervisionada para a execução da nossa análise; a questão está em qual serão usados visto que muitos deles para os nossos casos poderão ter de ser sujeitos a pré-processamento; o que removeria as nossas requeridas dimensões de análise textual.
-No entanto vai continuar a haver pré-processamento como algoritmos de redução de dimensionalidade, a diferença comparado com a frase anterior é quão a pré-modelação não afetará negativamente os resultados e possíveis associações.
+No entanto vai continuar a haver pré-processamento como algoritmos de redução de dimensionalidade, a diferença comparado com a frase anterior é quão a pré-modelação não afectará negativamente os resultados e possíveis associações.
 
 \subsubsection{Algoritmos considerados}
 
@@ -225,12 +226,6 @@ Este é o:
   \item LSTM (\textit{Long-short term memory}): que é um tipo de RNN (rede neural recorrente) com ou sem um \textit{layer} CNN (um \textit{layer} de convulsão).
 \end{itemize}
 
-Poderá ser usado este método visto que não só ``está na moda'' como existe muito material de apoio por esse motivo, isto se houver tempo extra para experimentar e se essa experiência produzir melhores resultados comparativamente a um SVM por exemplo\ldots
-
 Pode-se notar que aqui foram escolhidos algoritmos de \textit{machine learning} já comuns a grupos que realizaram tarefas semelhantes e que são algoritmos simples e rápido não sendo mais um algoritmo de uma família de algoritmos (mais complexos ou não, mas que têm muita variedade), tais como redes neurais (à exceção do RNN LSTM), algoritmos genéticos ou algoritmos lineares (como regressões lineares).
 
-Porém no decorrer do trabalho o algoritmo LSTM não funcionou da melhor maneira, e optámos por outra técnica que será explicada e mostrada mais adiante no relatório.
-
-
-
-
+Porém no decorrer do trabalho o algoritmo LSTM não funcionou da melhor maneira, e optámos por outras técnicas que serão explicadas, justificadas e demonstradas mais adiante no relatório.

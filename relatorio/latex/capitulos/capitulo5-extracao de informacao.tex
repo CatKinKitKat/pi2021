@@ -1,47 +1,45 @@
-\chapter{Extracção de Palavras-Chave}
+\chapter{Extracção de \textit{keywords}}
 \label{cap5}
 
-\section{Extracção de Palavras-Chave}
+A extracção de \textit{keywords} é uma técnica de extracção de informações que consiste em extrair \textit{keywords} de um texto.
 
-A extracção de palavras-chave é uma técnica de extracção de informações que consiste em extrair palavras-chave de um texto.
+Geralmente, as \textit{keywords} são utilizadas para identificar o conteúdo de um documento \cite{tamyt1}, ou seja, para identificar o que o documento contém \cite{tamyt2}. No nosso caso, as \textit{keywords} são utilizadas para identificar pontos fulcrais da recepção de um cliente turístico num estabelecimento turístico de Beja (hotel, atracção, restaurante, etc).
 
-Geralmente, as palavras-chave são utilizadas para identificar o conteúdo de um documento, ou seja, para identificar o que o documento contém. No nosso caso, as palavras-chave são utilizadas para identificar pontos fulcrais da recepção dum cliente turístico num estabelecimento turístico de Beja (hotel, atracção, restaurante, etc).
+Com estas \textit{keywords}, é possível identificar o que o cliente quer, ou seja, o que ele quer ver, o que ele quer comer, o que ele quer fazer, ou o nível de satisfação com o serviço prestado.
 
-Com estas palavras-chave, é possível identificar o que o cliente quer, ou seja, o que ele quer ver, o que ele quer comer, o que ele quer fazer, ou o nível de satisfação com o serviço prestado.
+\section{Metodologia}
 
-\subsection{Metodologia}
+Para a extracção de \textit{keywords}, utilizamos uma biblioteca de \textit{Python} chamada \textit{YAKE}. Esta é um pipeline de processamento de linguagem natural, que utiliza um algoritmo personalizado descendente do \textit{Naïve Bayes} para extrair \textit{keywords} de um texto.
 
-Para a extracção de palavras-chave, utilizamos uma biblioteca de \textit{Python} chamada \textit{YAKE!}. Esta é um pipeline de processamento de linguagem natural, que utiliza um algoritmo personalizado descendente do \textit{Naïve Bayes} para extrair palavras-chave de um texto.
+Para a extracção de \textit{keywords}s de cada \textit{review}, utilizamos o \textit{YAKE} iterativamente por cada \textit{review}, alimentando-o com o seu conteúdo textual, após o pré-processamento textual de todas as \textit{reviews} (a qual especificamente foi usada a versão sem diacríticos).
 
-Para a extracção de palavras chaves de cada \textit{review}, utilizamos o \textit{YAKE!} iterativamente por cada \textit{review}, alimentando-o com o seu conteúdo textual, após o pre-processamento textual de todas as \textit{reviews} (a qual especificamente foi usada a versão sem diacríticos).
+O \textit{output} da alimentação do \textit{YAKE} é um par de \textit{keywords} e seus respectivos pesos, que são armazenados num dicionário \cite{tamgh1}. O dicionário é ordenado pelo valor de seus pesos \cite{tamyt3}, e o número de \textit{keywords} extraídas é limitado ao número de \textit{reviews} que foram utilizadas para a extracção por cada estabelecimento.
 
-O output da alimentação do \textit{YAKE} é um par de palavras-chave e seus respectivos pesos, que são armazenados num dicionário. O dicionário é ordenado pelo valor de seus pesos, e o número de palavras-chave extraídas é limitado ao numero de \textit{reviews} que foram utilizadas para a extracção por cada estabelecimento.
+\subection{\textit{YAKE}}
 
-\subsubection{\textit{YAKE!}}
-
-Esta biblioteca é um software livre, e pode ser obtida via \textit{pip} ou via GitHub, que é uma ferramenta de extracção de palavras-chave desenvolvida por autores portugueses (e um japonês) da Universidade do Porto, Politécnico de Tomar, e da Universidade da Beira Interior (e da Universidade de Kyoto).
+Esta biblioteca é um software livre, e pode ser obtida via \textit{pip} ou via \textit{GitHub}, que é uma ferramenta de extracção de \textit{keywords} desenvolvida por autores portugueses (e um japonês) da Universidade do Porto, Politécnico de Tomar, e da Universidade da Beira Interior (e da Universidade de Kyoto).
 
 O sua utilização pode ser simples, basta instalar a biblioteca e executar o seguinte comando: \texttt{yake.KeywordExtractor(lan="pt").extract\textunderscore keywords(text)}
 
-No entanto esta pode ser mais complexa caso seja necessário optimizar a extracção de palavras-chave, com os seus variados parâmetros opcionais.
+No entanto esta pode ser mais complexa caso seja necessário optimizar a extracção de \textit{keywords}, com os seus variados parâmetros opcionais.
 
-Este funciona da seguinte forma: quando recebe um texto, vai testar todas as palavras do texto, com uma determinada formula, e guardar o peso da palavra, e a palavra em si, no final expele um dicionário com as palavras-chave e seus respectivos pesos.
+Este funciona da seguinte forma: quando recebe um texto, vai testar todas as palavras do texto, com uma determinada fórmula, e guardar o peso da palavra, e a palavra em si, no final expele um dicionário com as \textit{keywords} e seus respectivos pesos.
 
-A formula falada anteriormente é:
+A fórmula falada anteriormente é:
 \begin{math}
     S(kw) = \frac{\prod_{w \in kw}^{} S(kw)}{TF(kw) * \sum_{w \in kw}^{}S(w)}
 \end{math}
 
-Mais especificamente este modulo é uma forma mais delicada e avançada de um classificador \textit{Naïve Bayes} o qual será mais e melhor explicado no capitulo seguinte onde procedemos ao desenvolvimento de um para efeitos de analise de sentimentos.
+Mais especificamente este módulo é uma forma mais delicada e avançada de um classificador \textit{Naïve Bayes} \cite{tamgh1} \cite{tamyt1} \cite{tamyt2} \cite{tamyt3} o qual será mais e melhor explicado no capítulo seguinte onde procedemos ao desenvolvimento de um para efeitos de análise de \textit{sentiments}.
 
-\subsubsection{Execução}
+\subsection{Execução}
 
-Foi criado um \textit{notebook} de \textit{Jupyter} o qual contém o código usado para a extracção de palavras via \textit{YAKE!}. Cada bloco de código está sobreposto por um bloco de \textit{markdown}, que é um comentário. Os comentários são usados para explicar o que cada bloco de código faz.
+Foi criado um \textit{notebook} de \textit{Jupyter} o qual contém o código usado para a extracção de palavras via \textit{YAKE}. Cada bloco de código está sobreposto por um bloco de \textit{markdown}, que é um comentário. Os comentários são usados para explicar o que cada bloco de código faz.
 
-As rotinas de extracção de palavras-chave são: iterativamente, para cada ficheiro \textit{.csv} dentro da pasta indicada, importar via \textit{DataFrame} de \textit{pandas}. O qual \textit{DataFrame} é um conjunto de dados, como uma tabela de dados, e contém uma coluna com os \textit{reviews}. O \textit{DataFrame} é iterado na sua coluna única, e o seu conteúdo é passado para o \textit{YAKE!}. O qual exporta o resultado para um ficheiro \textit{.csv}, que é um ficheiro \textit{.csv} com uma coluna com as palavras-chave e outra com o seu peso.
+As rotinas de extracção de \textit{keywords} são: iterativamente, para cada ficheiro \textit{.csv} dentro da pasta indicada, importar via \textit{DataFrame} de \textit{pandas}. O qual \textit{DataFrame} é um conjunto de dados, como uma tabela de dados, e contém uma coluna com os \textit{reviews}. O \textit{DataFrame} é iterado na sua coluna única, e o seu conteúdo é passado para o \textit{YAKE}. O qual exporta o resultado para um ficheiro \textit{.csv}, que é um ficheiro \textit{.csv} com uma coluna com as \textit{keywords} e outra com o seu peso.
 
 O \textit{notebook} e o código estão disponíveis nos anexos.
 
-\subsection{Resultados}
+\section{Resultados}
 
-Os resultados obtidos detém um sentimento misto no grupo. Estas palavras chave por vezes não são palavras únicas, mas são expressões que são frequentes. Muitas palavras únicas aparecem lado a lado das expressões, o que dá uma noção de repetição ou confirmação de resultado.
+Os resultados obtidos detêm um \textit{sentiment} misto no grupo. Estas \textit{keywords} por vezes não são palavras únicas, mas são expressões que são frequentes. Muitas palavras únicas aparecem lado a lado das expressões, o que dá uma noção de repetição ou confirmação de resultado.

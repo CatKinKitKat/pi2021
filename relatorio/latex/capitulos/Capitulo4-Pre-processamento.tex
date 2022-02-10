@@ -1,34 +1,32 @@
 \chapter{Pré-processamento}
 \label{cap4}
 
-\section{Pré-processamento de dados}
+Esta etapa consiste em remover todos os caracteres especiais, que não são letras, números ou espaços \cite{u1}. As quais podemos considerar diacrítico como caracteres especiais ou não. Dependendo do caso, podemos remover todos os caracteres especiais, ou apenas os que não são diacríticos \cite{cr1}.
 
-Esta etapa consiste em remover todos os caracteres especiais, que não são letras, números ou espaços. As quais podemos considerar diacrítico como caracteres especiais ou não. Dependendo do caso, podemos remover todos os caracteres especiais, ou apenas os que não são diacríticos.
+Nos nossos casos de análise textual, houve necessidade de remover todos os caracteres especiais, mas os diacríticos podem ser úteis para a nossa análise, em especial nos passos seguintes, extracção de \textit{keywords} e análise de \textit{sentiments}, foram descartados ou usados respectivamente, pelo motivo da precisão da análise em questão.
 
-Nos nossos casos de analise textual, houve necessidade de remover todos os caracteres especiais, mas os diacríticos podem ser úteis para a nossa análise, em especial nos passos seguintes, extracção de palavras-chave e analise de sentimentos, foram descartados ou usados respectivamente, pelo motivo da precisão da análise em questão.
+\section{Metodologia}
 
-\subsection{Metodologia}
+Para remover os caracteres especiais, foram criados dois \textit{scripts}, um para limpar os ficheiros \textit{.csv} e outro tratar do texto em si, que consiste em remover os caracteres especiais, fazer a normalização dos caracteres via \textit{NFKD} e aplicar a remoção de acentos \cite{cr1}, caso seja necessário (apenas alterando o último passo de \textit{encoding}/\textit{decoding}).
 
-Para remover os caracteres especiais, foram criados dois \textit{scripts}, um para limpar os ficheiros \textit{.csv} e outro tratar do texto em si, que consiste em remover os caracteres especiais, fazer a normalização dos caracteres via NFKD e aplicar a remoção de acentos, caso seja necessário (apenas alterando o ultimo passo de \textit{encoding}/\textit{decoding}).
+Estes não requerem bibliotecas externas, podem ser executados em \textit{Python 3}, e as suas bibliotecas \textit{standard}.
 
-Estes não requerem bibliotecas externas, podem ser executados em \textit{Python 3}, e as suas bibliotecas standard.
+\subsection{Limpar ficheiros}
 
-\subsubsection{Limpar ficheiros}
+O \textit{script trimer.py} é responsável fazer \textit{trimming} (remover espaços em branco), remover linhas em branco e colocar aspas duplas em cada \textit{review}. Para estes foi necessário o uso de expressões regulares \cite{u1}.
 
-O \textit{script ``trimer.py''} é responsável fazer \textit{trimming} (remover espaços em branco), remover linhas em branco e colocar aspas duplas em cada \textit{review}.
+\subsection{Limpar texto dos \textit{reviews}}
 
-\subsubsection{Limpar texto dos \textit{reviews}}
+O \textit{script normalize} é responsável por remover caracteres especiais, fazer a normalização dos caracteres via \textit{NFKD} e aplicar a remoção de acentos \cite{cr1}, caso seja necessário (apenas alterando o último passo de \textit{encoding}/\textit{decoding}).
 
-O \textit{script ``normalize''} é responsável por remover caracteres especiais, fazer a normalização dos caracteres via NFKD e aplicar a remoção de acentos, caso seja necessário (apenas alterando o ultimo passo de \textit{encoding}/\textit{decoding}).
+\section{Execução}
 
-\subsection{Execução}
+Executamos o \textit{script trimer.py} para limpar os ficheiros \textit{.csv} \cite{gfg1} e o \textit{script} \textit{normalize} para limpar o texto dos \textit{reviews}. Estes aceitam um caminho para uma pasta com os ficheiros \textit{.csv} e itera sobre os ficheiros, executando as funções de limpeza.
 
-Executamos o \textit{script ``trimer.py''} para limpar os ficheiros \textit{.csv} e o \textit{script} `normalize` para limpar o texto dos \textit{reviews}. Estes aceitam um caminho para uma pasta com os ficheiros \textit{.csv} e itera sobre os ficheiros, executando as funções de limpeza.
-
-Após a execução da limpeza textual e normalização sem remoção de acentos, os tenhamos ambas as versões. Para a versão com remoção de acentos, foi necessário usar o pacote \textit{``Unidecode''} para aplicar a remoção de acentos.
+Após a execução da limpeza textual e normalização sem remoção de acentos, seguidamente realizámos com remoção de acentos para que tenhamos ambas as versões. Para a versão com remoção de acentos, foi necessário usar o pacote \textit{Unidecode} para aplicar a remoção de acentos \cite{cr1}.
 
 Com estas duas versões podemos obter os resultados óptimos para a nossa análise textual.
 
-\subsection{Resultados}
+\section{Resultados}
 
 Os ficheiros \textit{.csv} foram limpos e normalizados sem remoção de acentos e com remoção de acentos.
