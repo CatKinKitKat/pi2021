@@ -7,9 +7,9 @@
 A divisão de tarefas decidida foi a distribuição de cada um dos três \textit{websites} por cada um dos elementos do grupo, pela ordem de dificuldade em congruência linear com o tempo extra-curricular disponível de cada elemento.
 
 \subsection{Tecnologias Usadas}
-Na realização do \textit{webscraping} foi desenvolvido um ambiente virtual de \textit{Python} 3 para realizar os \textit{scripts} que iriam recolher as informações.
+Na realização do \textit{webscraping} foi desenvolvido um ambiente virtual de \textit{Python 3} para realizar os \textit{scripts} que iriam recolher as informações.
 
-Como forma de organizar todos os pacotes e possíveis actualizações de bibliotecas dentro do código também foi gerado um ficheiro .txt denominado \textit{requirements} que actualizávamos e usávamos sempre que um dos elementos do grupo iria realizar o seu trabalho.
+Como forma de organizar todos os pacotes \href{https://github.com/CatKinKitKat/pi2021}{GitHub} e possíveis actualizações de bibliotecas dentro do código também foi gerado um ficheiro \textit{.txt} denominado \textit{requirements} que actualizávamos e usávamos sempre que um dos elementos do grupo iria realizar o seu trabalho.
 
 A linguagem optada para a construção dos \textit{scripts} foi o \textit{Python} já que é uma das mais acessíveis linguagens de programação disponíveis devido à sua simples \textit{syntax} e também pela vasta quantidade de bibliotecas disponibilizadas, das quais temos uma dúzia que são bastante úteis para a realização deste projecto.
 
@@ -28,16 +28,16 @@ Para a criação destes ambientes virtuais foi instalado o \href{https://pypi.or
 Como dito previamente, na explicação pelo qual o uso de \textit{Python}, foi referida a grande quantidade de bibliotecas que nos são facilmente fornecidas pelo \href{https://pypi.org/project/pip/}{\textit{pip}}.
 
 Dentro deste repositório existe (perto de) uma dúzia de bibliotecas que nos permitem facilmente completar as nossas tarefas deste projecto. Dessa dúzia, para esta etapa, foram usadas:
-
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item \href{https://pypi.org/project/beautifulsoup4/}{\textit{BeautifulSoup4}}, uma biblioteca que facilita a extracção de informações de páginas da web, fornecendo expressões para iterar, pesquisar e modificar a árvore de análise;
   \item \href{https://pypi.org/project/lxml/}{\textit{lxml}}, uma biblioteca \textit{Python} que permite fácil manuseio de arquivos \textit{XML} e \textit{HTML};
   \item \href{https://pypi.org/project/requests/}{requests}, uma biblioteca \textit{HTTP} elegante e simples para \textit{Python}, construída de raiz para ser fácil de usar;
   \item \href{https://pypi.org/project/pandas/}{\textit{pandas}}, uma ferramenta de manipulação e análise de dados de código aberto rápida, poderosa, flexível e fácil de usar;
-  \item \href{pip install jupyter}{\textit{jupyter}}, um meta-pacote o qual traz (como dependências) o sistema \textit{Jupyter} (em especial os cadernos), o \textit{kernel} \textit{IPython} e outros.
+  \item \href{https://pypi.org/project/jupyter/}{\textit{jupyter}}, um meta-pacote o qual traz (como dependências) o sistema \textit{Jupyter} (em especial os cadernos), o \textit{kernel} \textit{IPython} e outros.
 \end{itemize}
 
-Com estes pacotes temos um mapa de actuação para esta etapa de projecto (de webscraping): abrir um ambiente virtual (e instalar bibliotecas), abrir um caderno de \textit{Jupyter}, importar as bibliotecas das quais usámos \textit{request} para ir buscar a nossa página, fazer \textit{parsing} da página via \textit{lxml}, criar um objecto \textit{Soup} com o conteúdo \textit{parsed}, fazer \textit{scraping} e iterar pelos \textit{scrapes} dos quais criámos \textit{dataframes} de \textit{pandas} e exportámos os mesmos em \textit{.csv} para uso futuro.
+Com estes pacotes temos um mapa de actuação para esta etapa de projecto (de webscraping): abrir um ambiente virtual (e instalar bibliotecas), abrir um caderno de \textit{Jupyter}, importar as bibliotecas das quais usámos \textit{request} para ir buscar a nossa página, fazer \textit{parsing} da página via \textit{lxml}, criar um objecto \textit{Soup} com o conteúdo \textit{parsed}, fazer \textit{scraping} e iterar pelos \textit{scrapes} dos quais criámos \textit{dataframes} de \textit{pandas} e exportámos os mesmos em \textit{.csv} para uso futuro. Nas secções seguintes será explicado com mais detalhe de acordo com o \textit{website} em questão.
 
 \section{Booking}   
 \subsection{Estratégia}
@@ -45,7 +45,7 @@ Para a realização do \textit{webscraping} no \textit{website} da \href{www.Boo
 Após ter o \textit{Booking} a apresentar todos os resultados para os hotéis de Beja, foi recolhido o link que redirecciona especificamente para esses resultados.
 Para aceder ás informações específicas de cada elemento da página e mais tarde aceder aos mesmos para retirar a informação pretendida, foi usado a ferramenta de \textit{inspeccionar a página} e assim descobrir os nomes das classes e todos os outros elementos que continham conteúdo importante para o projecto \cite{yt1}, como o nome dos hotéis, preço, classificação, número de comentários e alguns outros detalhes que pudessem ser úteis.
 
-Em seguida foi necessário realizar o \textit{webscraping} das \textit{reviews} de cada hotel, a realização desta parte foi um pouco mais difícil uma vez que para as \textit{reviews} serem bem recolhidas era fulcral que o \textit{webscraping} fosse realizado usando outro link \cite{yt1}, ou seja, foi retirado do \textit{website} o prefixo de um novo link que seria o \href{https://www.booking.com/reviews/pt/hotel/}{\textit{reviews}} e baseando nos hotéis já retirados foi colocado o nome de cada um á frente do mesmo, criando assim um novo link que seria usado na realização do \textit{webscraping} após a criação de um novo link para cada hotel, os processos foram semelhantes aos anteriormente feitos.
+Em seguida foi necessário realizar o \textit{webscraping} das \textit{reviews} de cada hotel, a realização desta parte foi um pouco mais difícil uma vez que para as \textit{reviews} serem bem recolhidas era fulcral que o \textit{webscraping} fosse realizado usando outro link \cite{yt1}, ou seja, foi retirado do \textit{website} o prefixo de um novo link que seria o \href{https://www.booking.com/reviews/pt/hotel/}{\textit{reviews}} e baseando nos hotéis já retirados foi colocado o nome de cada um à frente do mesmo. Criando assim um novo link que seria usado na realização do \textit{webscraping}. Após a criação de um novo link para cada hotel, os processos foram semelhantes aos anteriormente feitos.
 
 Para finalizar, os resultados foram todos guardados em ficheiros \textit{.csv} para uma mais fácil visualização.
 
@@ -57,8 +57,7 @@ Aqui detalha-se o processo de desenvolvimento do \textit{webscraping} do \textit
 
 Inicialmente foi feita a filtragem de apenas os hotéis de Beja.
 
-\newpage
-No código foi implementado as bibliotecas \textit{BeautifulSoup4} para facilitar a tarefa de realizar o \textit{webscraping}.
+No código foi implementado as bibliotecas \textit{BeautifulSoup4} para facilitar a tarefa de realizar o \textit{webscraping}. Esse mesmo código está disponível no repositório \href{https://github.com/CatKinKitKat/pi2021/tree/master/projecto/webscrape/scrapes}{GitHub} e no apêndice \hyperref[ap4]{4}.
 
 A partir do \textit{website} ao inspeccionar a página era possível retirar os \textit{headers} que eram valores necessários na realização do \textit{webscraping}.
 Também é realizado o pedido \textit{HTTP} e juntou-se a informação com a biblioteca \textit{BeautifulSoup4}.
@@ -73,14 +72,46 @@ Construção dos links para realizar o \textit{webscraping} das \textit{reviews}
 
 Foi realizado o pedido \textit{HTTP} e juntado á biblioteca \textit{BeautifulSoup4} para aceder ás \textit{reviews} de cada site e todos os valores foram salvos no formato \textit{.csv}.
 
-No final, temos esta tabela representativa do hotéis \textit{scraped} ordenada e representativa dos \textit{scrapes} hotelXX\textit{.csv}.
+No final, temos esta tabela representativa dos hotéis \textit{scraped} ordenada e representativa dos \textit{scrapes} hotelXX\textit{.csv}.
 
-
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|l|l|l|l|}
+    \hline
+    ~  & Hotel                                              & Classificação & Preço \\ \hline
+    0  & Hotel Bejense                                      & ``8,4''       & 189   \\ \hline
+    1  & Aljana Guest House Beja                            & ``9,3''       & 330   \\ \hline
+    2  & BejaParque Hotel                                   & ``8,1''       & 255   \\ \hline
+    3  & Pousada Convento de Beja                           & ``8,7''       & 270   \\ \hline
+    4  & Guest House Stories                                & ``8,7''       & 135   \\ \hline
+    5  & Hotel Melius                                       & ``8,1''       & 242   \\ \hline
+  \end{tabular}
+  \caption{Tabela exemplar dos hotéis do \textit{Booking}}
+  \label{table:2}
+\end{table}
 
 \subsection{Resultado}
 
 Aqui exemplifica-se um ficheiro \textit{.csv}, hotel18\textit{.csv}, que contem os \textit{reviews} do hotel Quinta do Castelo.
 
+\begin{table}[!ht]
+  \centering
+  \begin{adjustbox}{width=\columnwidth,center}
+    \begin{tabular}{|l|l|}
+      \hline
+      ~     & Opiniões                                                                                                                                     \\ \hline
+      0     & A localização é excelente assim como as condições do espaço. Local muito bem cuidado e apelativo. Fomos muito bem recebidos \dots            \\ \hline
+      1     & Nada digno de registo.                                                                                                                       \\ \hline
+      2     & A simpatia da Sra Catarina foi fantástica. A casa e as acomodações corresponderam ás expetivas e relação qualidade preço foi perfeita \ldots \\ \hline
+      3     & Localização excelente, apartamento espaçoso, e totalmente equipado.
+      O facto de ser uma construção antiga, cria um ambiente muito \ldots                                                                                  \\ \hline
+      4     & A localização é impecável mesmo no centro histórico de Beja. Casa Limpa e organizada. Dona super prestável e e simpática.                    \\ \hline
+      5     & De noite ouve-se o barulho da rua com muita facilidade.                                                                                      \\ \hline
+    \end{tabular}
+  \end{adjustbox}
+  \caption{Tabela de resultados exemplar dos \textit{reviews} de um hotel do \textit{Booking}}
+  \label{table:3}
+\end{table}
 
 \section{TripAdvisor}
 
@@ -93,8 +124,8 @@ Este \textit{website} é conhecido pelas suas tentativas de dificultar os proces
 \subsection{Estratégia}
 
 Após um \textit{scouting} inicial às páginas das três categorias, foi observado as seguintes peculiaridades:
-
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item as páginas das três categorias são diferentes no seu \textit{layout} e organização;
   \item os nomes das classes nos \textit{span, div} e outros elementos são \textit{random generated} e mudam de acordo com a sessão aberta ou \textit{cookie};
   \item existem representações repetidas, estes são os \textit{posts sponsored} \cite{wws1} pelo próprio \textit{website};
@@ -105,9 +136,9 @@ Após um \textit{scouting} inicial às páginas das três categorias, foi observ
   \item quando tentamos extrair o total de \textit{reviews} apenas conseguimos o total dos totais e não o total por linguagem, impedindo assim de fazer uma conta para saber qual o múltiplo de cinco ou dez que seria a ultima subpágina.
 \end{itemize}
 
-Assim sendo, a estratégia que foi usada, embora extremamente má em termos de tempo despendido e extracções redundantes, era a única que assegurava que se conseguia extrair todos os \textit{reviews}. Essa estratégia foi:
-
+Assim sendo, a estratégia que foi usada, embora inapropriada em termos de tempo despendido e extracções redundantes, era a única que assegurava que se conseguia extrair todos os \textit{reviews}. Essa estratégia foi:
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item criar uma lista de \textit{links} para 200 ou 400 subpáginas (de acordo com o \textit{listing} daquela categoria com mais \textit{reviews} em português);
   \item extrair incluindo os repetidos para um \textit{array/list/arraylist};
   \item usar compreensão de listas através de \textit{sets}/dicionários/\textit{tuples} que possam ser ordenados para remover repetidos e não perder ordem;
@@ -174,6 +205,58 @@ Dos quais \textit{links} agora serão \textit{scraped} (incluindo os \textit{rev
 \subsection{Resultado}
 Aqui apresenta-se os resultados do \textit{webscrape} do \textit{TripAdvisor}. Os quais representam um exemplar dos dez primeiros \textit{reviews} do primeiro hotel, atracção e restaurante, respectivamente.
 
+\begin{table}[!ht]
+  \centering
+  \begin{adjustbox}{width=\columnwidth,center}
+    \begin{tabular}{|l|l|}
+      \hline
+      ~      & Avaliações                                                                                                               \\ \hline
+      0      & Excelente hotel .  Pessoal da recepção e serviços de quarto muito atenciosos e prestativos -  o frigobar\ldots           \\ \hline
+      1      & Património histórico ao seu melhor nível de recuperação, renovação e utilização. Magnificas salas,como\ldots             \\ \hline
+      2      & Chegámos depois da meia-noite e fomos recebidos com extrema simpatia! Passámos o nosso aniversário de\ldots              \\ \hline
+      3      & Gostei muito do alojamento e da estadia. Destaco a beleza, qualidade e localização da  pousada, a simpatia de\ldots      \\ \hline
+      4      & Na reserva tinha a descrição de um tipo de quarto e foi atribuído outro. Parque infantil insuficiente e fechado.\ldots   \\ \hline
+      5      & Boas instalações, uma óptima piscina, bons acessos e estacionamento.  Um inexcedível acolhimento, simpatia e\ldots       \\ \hline
+    \end{tabular}
+  \end{adjustbox}
+  \caption{Tabela representativa dos cinco primeiros \textit{reviews} de um hotel do \textit{TripAdvisor}}
+  \label{table:5}
+\end{table}
+
+\begin{table}[!ht]
+  \centering
+  \begin{adjustbox}{width=\columnwidth,center}
+    \begin{tabular}{|l|l|}
+      \hline
+      ~      & Avaliações                                                                                                               \\ \hline
+      0      & Muito bom.                                                                                                               \\ \hline
+      1      & Castelo bem conservado, com torre de menagem altiva e exuberante, pena fechar a horas proibitivas. Pode-se dar a\ldots   \\ \hline
+      3      & Castelo bonito numa zona central de Beja. Não se paga para entrar nem para andar pelas muralhas. A vista é bonita\ldots. \\ \hline
+      4      & ~                                                                                                                        \\ \hline
+      5      & No entanto, apesar de existirem pessoas dedicadas, não se vende qualquer tipo de recordações.                            \\ \hline
+    \end{tabular}
+  \end{adjustbox}
+  \caption{Tabela representativa dos cinco primeiros \textit{reviews} de uma atracção do \textit{TripAdvisor}}
+  \label{table:6}
+\end{table}
+
+\begin{table}[!ht]
+  \centering
+  \begin{adjustbox}{width=\columnwidth,center}
+    \begin{tabular}{|l|l|}
+      \hline
+      ~      & Avaliações                                                                                                                  \\ \hline
+      0      & Num bairro de Beja encontra-se este restaurante com esplanada e sala mediana. Carta com muitas sugestões de entradas\ldots  \\ \hline
+      1      & Não se deixem intimidar pelo aspecto do restaurante. Comida ao nível de uma estrela Michelin. Bem confecionada\ldots        \\ \hline
+      2      & duas pessoas, embora sendo individuais. Serviço simpático e pronto. O espaço não é condizente com a delícia da comida\ldots \\ \hline
+      3      & Mais                                                                                                                        \\ \hline
+      4      & Cozinhar divinamente, sem dúvida é uma arte! Nível de estrela Michelin e preço normal! Só retiraria a TV da sala\ldots      \\ \hline                                                                                                                     \\ \hline
+    \end{tabular}
+  \end{adjustbox}
+  \caption{Tabela representativa dos cinco primeiros \textit{reviews} de um restaurante do \textit{TripAdvisor}}
+  \label{table:6}
+\end{table}
+
 \section{\textit{Zomato}}
 A \textit{Zomato} é um serviço de busca de restaurantes para quem quer sair para jantar, buscar comida ou pedir em casa. A \textit{Zomato} possui duas secções: guia de restaurante e \textit{blog}. Previamente, havia uma secção de eventos, já descontinuada.
 
@@ -192,7 +275,6 @@ Depois pegando no código dos colegas como \textit{template}, adaptou-se para us
 Fazemos um ciclo de \textit{scraping} dos nomes dos locais de consumo.
 
 E agora dois ciclos, um para as classes com nome gerado no \textit{prerender} e outra pós \textit{render}; vamos buscar os tipos/classes de restaurantes, e outros dois ciclos do mesmo motivo, para ir buscar os preços. Pelo mesmo motivo criámos dois ciclos; que vão buscar os \textit{links} das páginas dos \textit{reviews}, o qual extraímos todos os \textit{tags} de parágrafos porque que sempre que se corria o código gerava uma classe nova.
-Logo, estas extracções desapontantes, vão sofrer \textit{ETL}.
 
 \subsection{Resultado}
 Os resultados deste \textit{scrape} foram desapontantes no mínimo devido à infeliz \textit{random generated} nome da classe, que é gerado por cada vez que se usa a página. Estes resultados vão sofrer muito \textit{ETL} posterior.

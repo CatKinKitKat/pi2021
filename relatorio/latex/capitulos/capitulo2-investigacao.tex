@@ -1,8 +1,8 @@
-\chapter{Investigação}
+\chapter{Identificação dos requisitos}
 \label{cap2}
 \section{Objectivo desta investigação}
 
-Com esta investigação foi determinado como objectivo definir o curso de acção que iríamos ter para o trabalho, assim como esclarecer alguns conceitos mais teóricos associados ao mesmo. 
+O objectivo desta investigação será esclarecer alguns conceitos mais teóricos associados ao trabalho realizado. 
 Assim sendo, foram obtidos todos os dados de \textit{posts} e comentários relacionados com \textit{providers} de acesso, entretenimento, refeições e estadia directamente ligados ao património cultural do Alentejo. Estes a serem analisados e classificados, criando assim um modelo de possíveis sentimentos e procuras que o comércio local tem o interesse em fornecer aos visitantes. O foco principal foram os \textit{posts} e comentários em português.
 
 \section{\textit{Websites} escolhidos}
@@ -16,6 +16,7 @@ Foi decidido também que dentro das opções que serão referidas em seguida, te
 
 Foram usados os sites:
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item \textit{\href{https://www.tripadvisor.com/}{TripAdvisor}}
   \item \textit{\href{https://www.booking.com/}{Booking}}
   \item \textit{\href{https://www.zomato.com/}{Zomato}}
@@ -54,6 +55,7 @@ No entanto devemos olhar para:
 \subsubsection{Vantagens de \textit{web scraping}}
 
 \begin{enumerate}
+  \setlength\itemsep{0.05em}
   \item Mais rápido: É possível manusear grandes quantidades de dados que poderiam levar dias ou semanas a serem processados através do trabalho manual, com o uso do \textit{scraping} podemos reduzir substancialmente o esforço e aumentar a velocidade de decisão.
   \item Confiável e consistente: Ao fazer o trabalho manual é muito fácil de haver erros, por exemplo, erros tipográficos, informações esquecidas ou inserção nas colunas erradas. O uso do \textit{web scraping} garante consistência e a qualidade dos dados.
   \item Ajuda a reduzir a carga de trabalho.
@@ -64,6 +66,7 @@ No entanto devemos olhar para:
 \subsubsection{Desvantagens de \textit{web scraping}}
 
 \begin{enumerate}
+  \setlength\itemsep{0.05em}
   \item Baixa proteção: Se os dados na \textit{web} são protegidos, o uso do \textit{scraping} também pode se tornar um desafio e aumentar os custos.
   \item Dados estruturados: Não vai ser possível fazer scraping a 1000 \textit{websites} diferentes pois cada \textit{website} tem uma estrutura completamente diferente. Será necessário haver alguma estrutura básica que seja diferente em determinadas situações.
 \end{enumerate}
@@ -82,6 +85,7 @@ Com \textit{Python} também temos as opções de criar cadernos \textit{Jupyter}
 
 Para tal linguagem existem 5 grandes bibliotecas para a resolução deste caso:
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item \textit{\href{https://pypi.org/project/requests/}{Requests}}
   \item \textit{\href{https://pypi.org/project/BeautifulSoup/}{BeautifulSoup}}
   \item \textit{\href{https://pypi.org/project/Scrapy3/}{Scrapy}}
@@ -113,6 +117,7 @@ Os algoritmos de análise de texto podem ser considerados ferramentas de minera�
 
 O processo de mineração de texto é dividido em quatro etapas bem definidas:
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item Selecção
   \item Pré-processamento
   \item Mineração
@@ -122,10 +127,13 @@ O processo de mineração de texto é dividido em quatro etapas bem definidas:
 Na selecção, os documentos relevantes devem ser escolhidos e mais tarde processados.
 No pré-processamento ocorrerá a conversão dos documentos em uma estrutura compatível com minerador, bem como ocorrerá um tratamento especial do texto.
 Na mineração, o minerador irá detectar os padrões com base no algoritmo escolhido.
-E por fim, na assimilação, os utilizadores irão utilizar o conhecimento gerado para apoiar as suas decisões.
+E por fim, na assimilação, os utilizadores irão utilizar o conhecimento gerado para apoiar as suas decisões. 
+
+Por outras palavras este processo de mineração de texto pode também ser chamado de \textit{webscrapping} que é o utilizado no nosso trabalho.
 
 A etapa pré-processamento pode ser dividida em quatro tarefas:
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item Remover \textit{StopWords}
   \item Compilação
   \item Normalização de sinónimos
@@ -142,19 +150,9 @@ Após a compilação, na etapa de normalização de sinónimos, os termos que po
 E, por fim, na etapa indexação atribui-se uma pontuação para cada termo, garantindo uma única instância do termo no documento.
 No processo de atribuição de pesos devem ser considerados dois pontos:
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item Quanto mais vezes um termo aparece no documento, mais relevante ele é para o documento
   \item Quanto mais vezes um termo aparece na colecção de documentos, menos importante ele é para diferenciar os documentos
-\end{itemize}
-
-\subsection{Algoritmos Clássicos}
-
-Os algoritmos clássicos são instruções passo a passo de modo a que, dada uma entrada específica, é possível rastrear e determinar exactamente a saída.
-\begin{itemize}
-  \item Algoritmos clássicos especificam as regras exactas para encontrar a resposta geral
-  \item Um algoritmo clássico usa código e dados para prever a resposta correta para uma pergunta
-  \item Algoritmo clássico produz uma saída com base nas etapas descritas no algoritmo
-  \item Em algoritmos clássicos, normalmente é necessário um grande número de exemplos para determinar a que distância a equação está da equação desejada. É por isso que ``\textit{big data}'' é uma grande negócio hoje em dia
-  \item Um algoritmo clássico não dá uma solução depois de chegar a uma solução óptima para um problema
 \end{itemize}
 
 \subsection{Algoritmos de \textit{machine learning}}
@@ -167,6 +165,7 @@ Os algoritmos de \textit{machine learning} utilizam parâmetros baseados em dado
 Algoritmos diferentes analisam os dados de diversas formas.
 Geralmente, são agrupados consoante as técnicas de \textit{machine learning} para as quais são utilizados:
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item Aprendizagem supervisionada
   \item Aprendizagem não supervisionada
   \item Aprendizagem por reforço
@@ -196,6 +195,7 @@ Por exemplo, se estivermos a criar um carro autónomo, queremos que este cumpra 
 
 Existem muitos tipos diferentes de algoritmos de \textit{machine learning}.Contudo, por norma, os casos de utilização destes algoritmos enquadram-se numa destas categorias.
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item Algoritmos de classificação de duas classes (binários) dividem os dados em duas categorias. São úteis para perguntas com apenas duas respostas possíveis mutuamente exclusivas, incluindo perguntas de sim/não
   \item Algoritmos de classificação multi-classe (multinomial) dividem os dados em três ou mais categorias. São úteis para perguntas com três ou mais respostas possíveis mutuamente exclusivas
   \item Algoritmos de detecção de anomalias identificam os pontos de dados que estão fora dos parâmetros definidos para o que é considerado ``normal''
@@ -207,14 +207,16 @@ Existem muitos tipos diferentes de algoritmos de \textit{machine learning}.Contu
 
 \subsection{Decisão sobre o tipo de algoritmo}
 
-Após a grande análise dos tipos e subtipos de algoritmos de mineração de texto (análise de texto), é óbvia a escolha em algoritmos de \textit{machine learning} com aprendizagem não supervisionada para a execução da nossa análise; a questão está em qual serão usados visto que muitos deles para os nossos casos poderão ter de ser sujeitos a pré-processamento; o que removeria as nossas requeridas dimensões de análise textual.
-No entanto vai continuar a haver pré-processamento como algoritmos de redução de dimensionalidade, a diferença comparado com a frase anterior é quão a pré-modelação não afectará negativamente os resultados e possíveis associações.
+Após a grande análise dos tipos e subtipos de algoritmos de mineração de texto (análise de texto), a escolha foram os algoritmos de \textit{machine learning} com aprendizagem não supervisionada para a execução da nossa análise; a questão está em qual serão usados visto que muitos deles para os nossos casos poderão ter de ser sujeitos a pré-processamento; o que removeria as nossas requeridas dimensões de análise textual.
+No entanto vai continuar a haver pré-processamento como algoritmos de redução de dimensionalidade, a diferença comparado com a frase anterior é quão o pré-processamento não afectará negativamente os resultados e possíveis associações.
 
 \subsubsection{Algoritmos considerados}
 
-Dos variados algoritmos vistos e disponíveis na internet ou em bibliotecas de \textit{Python} (como \textit{SciKitLearn, Tensorflow, Keras}), tomamos a decisão de considerar os seguintes algoritmos como candidatos a uso e/ou pertencentes aos grupos de algoritmos usados para comparação de resultados:
+Dos variados algoritmos vistos e disponíveis na internet ou em bibliotecas de \textit{Python} (como \textit{SciKitLearn, Tensorflow}), tomamos a decisão de considerar os seguintes algoritmos como candidatos a uso e/ou pertencentes aos grupos de algoritmos usados para comparação de resultados:
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item \textit{LDA (Latent Dirichlet Allocation)}: um modelo de distribuição gaussiana, muito usado por empresas de software sobre \textit{feedback} e \textit{bug reports} para associação de resultados do \textit{QA},
+  \item \textit{Naïve Bayes} \cite{mbn1}: uma família de "classificadores probabilísticos" simples baseados na aplicação do teorema de Bayes com suposições de independência fortes (ingênuas) entre os recursos.
   \item \textit{K-Means Clustering}: muito usado para fazer \textit{clusters} de \textit{keywords} em redes sociais,
   \item \textit{KNN (K-Nearest Neighbor)}: usado para agrupar dados relacionais com os contactos, relatórios, correspondência e \textit{emails} em empresas,
   \item \textit{SVM (Support Vector Machines)}: este é usado nos mesmos lugares que regressões lineares, porém mais rápido ou poderoso, é usado para agrupar pontos como texto com imagens ou tópicos de texto em sites de vendas de 2ª mão.
@@ -223,9 +225,28 @@ Dos variados algoritmos vistos e disponíveis na internet ou em bibliotecas de \
 No entanto existe um algoritmo de \textit{machine learning} semi-supervisto (aprendizagem não supervista mas ele faz a sua auto-supervisão; logo é questão de semântica).
 Este é o:
 \begin{itemize}
+  \setlength\itemsep{0.05em}
   \item LSTM (\textit{Long-short term memory}): que é um tipo de RNN (rede neural recorrente) com ou sem um \textit{layer} CNN (um \textit{layer} de convulsão).
 \end{itemize}
 
 Pode-se notar que aqui foram escolhidos algoritmos de \textit{machine learning} já comuns a grupos que realizaram tarefas semelhantes e que são algoritmos simples e rápido não sendo mais um algoritmo de uma família de algoritmos (mais complexos ou não, mas que têm muita variedade), tais como redes neurais (à exceção do RNN LSTM), algoritmos genéticos ou algoritmos lineares (como regressões lineares).
 
 Porém no decorrer do trabalho o algoritmo LSTM não funcionou da melhor maneira, e optámos por outras técnicas que serão explicadas, justificadas e demonstradas mais adiante no relatório.
+
+\section{Resumo dos Passos de Execução}
+
+A seguinte tabela descreve os passos de actuação.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+        ~ & Passo \\ \hline
+        1 & Webscraping \\ \hline
+        2 & Pré-processamento \\ \hline
+        3 & Data-mining (Keywords e Sentimentos) \\ \hline
+        4 & Geração de Graficos \\ \hline
+        5 & Análise dos Resultados \\ \hline
+    \end{tabular}
+    \label{table:1}
+\end{table}
