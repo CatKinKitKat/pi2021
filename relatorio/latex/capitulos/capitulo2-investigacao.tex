@@ -1,8 +1,8 @@
 \chapter{Identificação dos requisitos}
 \label{cap2}
-\section{Objectivo desta investigação}
+\section{Objectivo}
 
-O objectivo desta investigação será esclarecer alguns conceitos mais teóricos associados ao trabalho realizado. 
+O objectivo deste capítulo será esclarecer alguns conceitos mais teóricos associados ao trabalho realizado. 
 Assim sendo, foram obtidos todos os dados de \textit{posts} e comentários relacionados com \textit{providers} de acesso, entretenimento, refeições e estadia directamente ligados ao património cultural do Alentejo. Estes a serem analisados e classificados, criando assim um modelo de possíveis sentimentos e procuras que o comércio local tem o interesse em fornecer aos visitantes. O foco principal foram os \textit{posts} e comentários em português.
 
 \section{\textit{Websites} escolhidos}
@@ -12,6 +12,7 @@ Após exaustiva procura pelos \textit{websites} preferenciais e discussão entre
 
 Foi decidido também que dentro das opções que serão referidas em seguida, teremos preferência na utilização de um em específico, uma vez que temos intenções de dar alguma prioridade ás informações relacionadas com o turismo rural alentejano, sendo assim e devido a uma maior procura e número de resultados que o \textit{website} oferecia, inicialmente iríamos utilizar o \textit{website TripAdvisor} como primeira opção.
 
+\newpage
 \section{Sites pesquisados}
 
 Foram usados os sites:
@@ -56,10 +57,10 @@ No entanto devemos olhar para:
 
 \begin{enumerate}
   \setlength\itemsep{0.05em}
-  \item Mais rápido: É possível manusear grandes quantidades de dados que poderiam levar dias ou semanas a serem processados através do trabalho manual, com o uso do \textit{scraping} podemos reduzir substancialmente o esforço e aumentar a velocidade de decisão.
-  \item Confiável e consistente: Ao fazer o trabalho manual é muito fácil de haver erros, por exemplo, erros tipográficos, informações esquecidas ou inserção nas colunas erradas. O uso do \textit{web scraping} garante consistência e a qualidade dos dados.
-  \item Ajuda a reduzir a carga de trabalho.
-  \item Menor custo: Uma vez implementado o \textit{scraping}, o custo total da extração de dados é significativamente reduzido, especialmente quando comparado ao trabalho manual.
+  \item Mais rápido: É possível manusear grandes quantidades de dados que poderiam levar dias ou semanas a serem processados através do trabalho manual, com o uso do \textit{scraping} podemos reduzir substancialmente o esforço e aumentar a velocidade de decisão;
+  \item Confiável e consistente: Ao fazer o trabalho manual é muito fácil de haver erros, por exemplo, erros tipográficos, informações esquecidas ou inserção nas colunas erradas. O uso do \textit{web scraping} garante consistência e a qualidade dos dados;
+  \item Ajuda a reduzir a carga de trabalho;
+  \item Menor custo: Uma vez implementado o \textit{scraping}, o custo total da extração de dados é significativamente reduzido, especialmente quando comparado ao trabalho manual;
   \item Manutenção básica: Fazer o \textit{scraping} de dados geralmente não requer muita manutenção.
 \end{enumerate}
 
@@ -67,7 +68,7 @@ No entanto devemos olhar para:
 
 \begin{enumerate}
   \setlength\itemsep{0.05em}
-  \item Baixa proteção: Se os dados na \textit{web} são protegidos, o uso do \textit{scraping} também pode se tornar um desafio e aumentar os custos.
+  \item Baixa proteção: Se os dados na \textit{web} são protegidos, o uso do \textit{scraping} também pode se tornar um desafio e aumentar os custos;
   \item Dados estruturados: Não vai ser possível fazer scraping a 1000 \textit{websites} diferentes pois cada \textit{website} tem uma estrutura completamente diferente. Será necessário haver alguma estrutura básica que seja diferente em determinadas situações.
 \end{enumerate}
 
@@ -118,10 +119,10 @@ Os algoritmos de análise de texto podem ser considerados ferramentas de minera�
 O processo de mineração de texto é dividido em quatro etapas bem definidas:
 \begin{itemize}
   \setlength\itemsep{0.05em}
-  \item Selecção
-  \item Pré-processamento
-  \item Mineração
-  \item Assimilação
+  \item Selecção;
+  \item Pré-processamento;
+  \item Mineração;
+  \item Assimilação.
 \end{itemize}
 
 Na selecção, os documentos relevantes devem ser escolhidos e mais tarde processados.
@@ -134,13 +135,13 @@ Por outras palavras este processo de mineração de texto pode também ser chama
 A etapa pré-processamento pode ser dividida em quatro tarefas:
 \begin{itemize}
   \setlength\itemsep{0.05em}
-  \item Remover \textit{StopWords}
-  \item Compilação
-  \item Normalização de sinónimos
-  \item Indexação
+  \item Remover \textit{stopwords};
+  \item Compilação;
+  \item Normalização de sinónimos;
+  \item Indexação.
 \end{itemize}
 
-Na etapa Remover \textit{stopwords} os termos com pouca ou nenhuma relevância para o documento serão removidos.
+Na etapa de remoção de \textit{stopwords} os termos com pouca ou nenhuma relevância para o documento serão removidos.
 São palavras auxiliares ou conectivas, ou seja, não são discriminantes para o conteúdo do documento.
 
 Na etapa seguinte, compilação, realiza-se uma normalização morfológica, ou seja, as palavras são reduzidas ao seu radical, serão combinadas em uma única representação. A radicalização pode ser efectuada com o auxílio de algoritmos de radicalização, sendo os mais utilizados o algoritmo de \textit{Porter (Porter Stemming Algorithm) e algoritmo de Orengo (Stemmer Portuguese ou RLSP)}.
@@ -151,8 +152,8 @@ E, por fim, na etapa indexação atribui-se uma pontuação para cada termo, gar
 No processo de atribuição de pesos devem ser considerados dois pontos:
 \begin{itemize}
   \setlength\itemsep{0.05em}
-  \item Quanto mais vezes um termo aparece no documento, mais relevante ele é para o documento
-  \item Quanto mais vezes um termo aparece na colecção de documentos, menos importante ele é para diferenciar os documentos
+  \item Quanto mais vezes um termo aparece no documento, mais relevante ele é para o documento;
+  \item Quanto mais vezes um termo aparece na colecção de documentos, menos importante ele é para diferenciar os documentos.
 \end{itemize}
 
 \subsection{Algoritmos de \textit{machine learning}}
@@ -166,9 +167,9 @@ Algoritmos diferentes analisam os dados de diversas formas.
 Geralmente, são agrupados consoante as técnicas de \textit{machine learning} para as quais são utilizados:
 \begin{itemize}
   \setlength\itemsep{0.05em}
-  \item Aprendizagem supervisionada
-  \item Aprendizagem não supervisionada
-  \item Aprendizagem por reforço
+  \item Aprendizagem supervisionada;
+  \item Aprendizagem não supervisionada;
+  \item Aprendizagem por reforço.
 \end{itemize}
 
 \subsubsection{Aprendizagem supervisionada}
@@ -196,13 +197,13 @@ Por exemplo, se estivermos a criar um carro autónomo, queremos que este cumpra 
 Existem muitos tipos diferentes de algoritmos de \textit{machine learning}.Contudo, por norma, os casos de utilização destes algoritmos enquadram-se numa destas categorias.
 \begin{itemize}
   \setlength\itemsep{0.05em}
-  \item Algoritmos de classificação de duas classes (binários) dividem os dados em duas categorias. São úteis para perguntas com apenas duas respostas possíveis mutuamente exclusivas, incluindo perguntas de sim/não
-  \item Algoritmos de classificação multi-classe (multinomial) dividem os dados em três ou mais categorias. São úteis para perguntas com três ou mais respostas possíveis mutuamente exclusivas
+  \item Algoritmos de classificação de duas classes (binários) dividem os dados em duas categorias. São úteis para perguntas com apenas duas respostas possíveis mutuamente exclusivas, incluindo perguntas de sim/não;
+  \item Algoritmos de classificação multi-classe (multinomial) dividem os dados em três ou mais categorias. São úteis para perguntas com três ou mais respostas possíveis mutuamente exclusivas;
   \item Algoritmos de detecção de anomalias identificam os pontos de dados que estão fora dos parâmetros definidos para o que é considerado ``normal''
-  \item Algoritmos de regressão prevêem o valor de um novo ponto de dados com base em dados históricos
-  \item Algoritmos de séries temporais mostram as alterações a um determinado valor ao longo do tempo. Com a análise e a previsão de série temporal, os dados são recolhidos a intervalos regulares ao longo do tempo e utilizados para fazer previsões e identificar tendências, sazonalidade, periodicidade e irregularidade
-  \item Algoritmos de \textit{clustering} dividem os dados por vários grupos ao determinar o nível de semelhança entre os pontos de dados
-  \item Algoritmos de classificação utilizam cálculos de previsão para atribuir dados a categorias predefinidas
+  \item Algoritmos de regressão prevêem o valor de um novo ponto de dados com base em dados históricos;
+  \item Algoritmos de séries temporais mostram as alterações a um determinado valor ao longo do tempo. Com a análise e a previsão de série temporal, os dados são recolhidos a intervalos regulares ao longo do tempo e utilizados para fazer previsões e identificar tendências, sazonalidade, periodicidade e irregularidade;
+  \item Algoritmos de \textit{clustering} dividem os dados por vários grupos ao determinar o nível de semelhança entre os pontos de dados;
+  \item Algoritmos de classificação utilizam cálculos de previsão para atribuir dados a categorias predefinidas.
 \end{itemize}
 
 \subsection{Decisão sobre o tipo de algoritmo}
@@ -215,10 +216,10 @@ No entanto vai continuar a haver pré-processamento como algoritmos de redução
 Dos variados algoritmos vistos e disponíveis na internet ou em bibliotecas de \textit{Python} (como \textit{SciKitLearn, Tensorflow}), tomamos a decisão de considerar os seguintes algoritmos como candidatos a uso e/ou pertencentes aos grupos de algoritmos usados para comparação de resultados:
 \begin{itemize}
   \setlength\itemsep{0.05em}
-  \item \textit{LDA (Latent Dirichlet Allocation)}: um modelo de distribuição gaussiana, muito usado por empresas de software sobre \textit{feedback} e \textit{bug reports} para associação de resultados do \textit{QA},
-  \item \textit{Naïve Bayes} \cite{mbn1}: uma família de "classificadores probabilísticos" simples baseados na aplicação do teorema de Bayes com suposições de independência fortes (ingênuas) entre os recursos.
-  \item \textit{K-Means Clustering}: muito usado para fazer \textit{clusters} de \textit{keywords} em redes sociais,
-  \item \textit{KNN (K-Nearest Neighbor)}: usado para agrupar dados relacionais com os contactos, relatórios, correspondência e \textit{emails} em empresas,
+  \item \textit{LDA (Latent Dirichlet Allocation)}: um modelo de distribuição gaussiana, muito usado por empresas de software sobre \textit{feedback} e \textit{bug reports} para associação de resultados do \textit{QA};
+  \item \textit{Naïve Bayes} \cite{mbn1}: uma família de "classificadores probabilísticos" simples baseados na aplicação do teorema de Bayes com suposições de independência fortes (ingênuas) entre os recursos;
+  \item \textit{K-Means Clustering}: muito usado para fazer \textit{clusters} de \textit{keywords} em redes sociais;
+  \item \textit{KNN (K-Nearest Neighbor)}: usado para agrupar dados relacionais com os contactos, relatórios, correspondência e \textit{emails} em empresas;
   \item \textit{SVM (Support Vector Machines)}: este é usado nos mesmos lugares que regressões lineares, porém mais rápido ou poderoso, é usado para agrupar pontos como texto com imagens ou tópicos de texto em sites de vendas de 2ª mão.
 \end{itemize}
 
@@ -233,20 +234,12 @@ Pode-se notar que aqui foram escolhidos algoritmos de \textit{machine learning} 
 
 Porém no decorrer do trabalho o algoritmo LSTM não funcionou da melhor maneira, e optámos por outras técnicas que serão explicadas, justificadas e demonstradas mais adiante no relatório.
 
+\newpage
 \section{Resumo dos Passos de Execução}
 
 A seguinte tabela descreve os passos de actuação.
 
-\begin{table}[!ht]
-    \centering
-    \begin{tabular}{|l|l|}
-    \hline
-        ~ & Passo \\ \hline
-        1 & Webscraping \\ \hline
-        2 & Pré-processamento \\ \hline
-        3 & Data-mining (Keywords e Sentimentos) \\ \hline
-        4 & Geração de Graficos \\ \hline
-        5 & Análise dos Resultados \\ \hline
-    \end{tabular}
+\begin{center}
+    \fbox{\includegraphics[scale=1]{flowchart/flowchart.pdf}}
     \label{table:1}
-\end{table}
+\end{center}

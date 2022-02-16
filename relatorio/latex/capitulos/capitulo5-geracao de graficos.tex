@@ -19,7 +19,7 @@ Para cada tipo de estabelecimento, de cada plataforma, foi accionada as rotinas 
 
 \subsection{Resultados}
 
-Como se podem verificar nestas três imagens seguintes, os gráficos de totais apresentam um desenvolvimento de sentimentos e \textit{keywords}, que demonstra um sentimento total positivo no nosso turismo, e \textit{keywords} que apresentam a satisfação com o serviço ou uma característica do estabelecimento.
+Como se podem verificar nestas três imagens seguintes (\hyperref[fig:exemplofig21sentimentsTrip]{\textbf{5.1}}, \hyperref[fig:exemplofig21keywordsTrip]{\textbf{5.2}} e \hyperref[fig:exemplofig21cloudTrip]{\textbf{5.3}}), os gráficos de totais apresentam um desenvolvimento de sentimentos e \textit{keywords}, que demonstra um sentimento total positivo no nosso turismo, e \textit{keywords} que apresentam a satisfação com o serviço ou uma característica do estabelecimento.
 
 \begin{figure}[!htb]
 \centering
@@ -42,7 +42,26 @@ Como se podem verificar nestas três imagens seguintes, os gráficos de totais a
 \label{fig:exemplofig21cloudTrip}
 \end{figure}
 
-\section{Gráficos temporais}
+\clearpage
+\section{Reorganização dos dados (\textit{TripAdvisor} apenas)}
+
+Para as análises temporais e para o transporte de dados, foi necessário criar uma base de dados organizada e relacional, que garantisse a integridade dos dados e a sua coerência na importação dos mesmos para o \textit{PowerBI}. A importação de apenas ficheiros \textit{.csv} não nos apresenta relações entre tabelas, nem como quais possíveis relações funcionariam.
+
+Para isso foram usados os pacotes \textit{pandas} para o \textit{import} dos \textit{.csv} em \textit{DataFrames} e \textit{sqlite3} para a criação da base de dados \textit{SQLite3}.
+
+\subsection{Metodologia}
+
+Inicialmente, foi criada uma base de dados \textit{SQLite3}, que será usada para armazenar os dados. A base de dados \textit{SQLite3} foi criada e as tabelas foram criadas, com os campos correspondentes a cada coluna do ficheiro \textit{.csv}, dos quais os dados foram importados via \textit{pandas}. 
+
+Os \textit{DataFrames} de \textit{pandas} oferecem uma maneira de aceder e manipular dados, e também fornecem uma maneira de criar e manipular tabelas. Todas as operações de manipulação de dados são feitas através de funções de \textit{DataFrame}.
+
+Seguidamente, é empurrado os dados dos \textit{DataFrames} correspondentes às tabelas para a base de dados. Com esta base de dados, é possível fazer consultas e manipulações de dados, tal como também exportar os dados organizados para ficheiros \textit{.csv} de forma a que possam ser usados em outros programas, tais como o \textit{R}, o \textit{Excel}, o \textit{PowerBI}, etc.
+
+\subsection{Execução e Resultados}
+
+Foi feito um \textit{script} para executar a criação da base de dados \textit{SQLite3}, e para o \textit{import} dos dados dos \textit{DataFrames} para a base de dados. O qual foi executado com sucesso, como podemos ver na base de dados e nos ficheiros \textit{.csv}.
+
+\section{Gráficos temporais (\textit{TripAdvisor} apenas)}
 
 Com gráficos temporais, queremos dizer que nos dados apresentados e nas análises é considerado o desenvolvimento temporal, quer isto dizer que as \textit{reviews} mostradas ao longo do tempo tornam possível verificar as datas em que foram escritas e a quantidade que cada hotel/restaurante/atracção recebeu ao longo dos anos e meses.
 
@@ -57,25 +76,25 @@ Os ficheiros \textit{.csv} que contêm as informações relativas a todas as \te
 
 \subsection{Resultados}
 
-Como se podem verificar nestas três seguintes imagens, os gráficos temporais apresentam um desenvolvimento de sentimentos e \textit{keywords} ao longo do tempo bastante positivo revelando-se um óptimo ponto para o nosso turismo e \textit{keywords} que mostram bastante agrado. 
+Como se podem verificar nestas três seguintes imagens (\hyperref[fig:exemplofigqntsntmyear]{\textbf{5.4}}, \hyperref[fig:exemplofigqntyearbus]{\textbf{5.5}} e \hyperref[fig:exemplofigposneg]{\textbf{5.6}}), os gráficos temporais apresentam um desenvolvimento de sentimentos e \textit{keywords} ao longo do tempo bastante positivo revelando-se um óptimo ponto para o nosso turismo e \textit{keywords} que mostram bastante agrado. 
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=16cm]{figuras/NrReviewsPerYear/TableGraph6.PNG}
+\includegraphics[width=14cm]{figuras/NrReviewsPerYear/TableGraph6.PNG}
 \caption{Gráfico de tabelas gerado baseando-se em todos os sentimentos dados da plataforma \textit{TripAdvisor} ao longo dos anos}
 \label{fig:exemplofigqntsntmyear}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=16cm]{figuras/NrReviewsPerYear&BusinessType/8.PNG}
+\includegraphics[width=14cm]{figuras/NrReviewsPerYear&BusinessType/8.PNG}
 \caption{Gráfico de tabelas gerado baseando-se em todos os sentimentos da plataforma \textit{TripAdvisor} referente a cada hotel com o decorrer dos anos}
 \label{fig:exemplofigqntyearbus}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=16cm]{figuras/Pos&NegSentiments/TableGraph4.PNG}
+\includegraphics[width=14cm]{figuras/Pos&NegSentiments/TableGraph4.PNG}
 \caption{Gráfico de tabelas gerado baseando-se na quantidade de sentimentos da plataforma \textit{TripAdvisor} positivos e negativos ao longo do tempo para cada hotel}
 \label{fig:exemplofigposneg}
 \end{figure}

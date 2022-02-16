@@ -73,7 +73,7 @@ O \textit{notebook} e o código estão disponíveis nos apêndices \autoref{ap9}
 
 \subsection{Resultados}
 
-Os resultados obtidos detêm um sentimento misto no grupo. Estas \textit{keywords} por vezes não são palavras únicas, mas são expressões que são frequentes. Muitas palavras únicas aparecem lado a lado das expressões, o que dá uma noção de repetição ou confirmação de resultado.
+Os resultados obtidos detêm um sentimento misto no grupo. Estas \textit{keywords} por vezes não são palavras únicas, mas são expressões que são frequentes. Muitas palavras únicas aparecem lado a lado das expressões, o que dá uma noção de repetição ou confirmação de resultado. \href{https://github.com/CatKinKitKat/pi2021/blob/master/projecto/textanalysis/keywordextraction/tripadvisor/hotels/hotel1.csv}{\textbf{Os quais podemos observar as \textit{keywords} ``Victoria'' e ``Santa'' e a expressão ``Santa Victoria''.}}
 
 \section{Análise de Sentimentos}
 
@@ -97,7 +97,7 @@ Este trabalho de treino, teste e validação, no caso do modelo final escolhido,
 
 Para pré-processar o texto a ser classificado (e os textos de treino e teste), utilizámos o pacote de linguagem natural do \textit{Python}, ou seja, a biblioteca \textit{NLTK}, para aplicar algumas transformações ao texto, como remover pontuação, remover \textit{stopwords}, etc.
 
-Este passo é o mais importante para o modelo matemático ser bem treinado e o mais importante para o modelo ser bem classificado.
+Este passo é o mais importante para o modelo matemático ser bem treinado e para o modelo ser bem avaliado.
 
 \subsubsection{Pré-processamento}
 
@@ -120,7 +120,7 @@ Sendo assim, ao aplicar \textit{stemming}, reduzimos a dimensão da matriz/vecto
 
 Foram feitas três tentativas de classificação de sentimentos. A primeira foi um fracasso completo, foi tentada a criação de um modelo sequencial com \textit{layers LSTM} com \textit{embedding} e de convulsão. À falta de conhecimento prévio, e à falta de informações simples e palpáveis com acesso fácil na \textit{internet}, não foi possível fazer a classificação de sentimentos com este modelo. Este modelo foi tentado com o uso da biblioteca de \textit{TensorFlow}, que é uma biblioteca de código aberto.
 
-A segunda tentativa foi muito mais bem sucedida que a primeira. Foi usado para o algoritmo de classificação de sentimentos o \textit{Naïve Bayes} (\textit{Multinomial}), e como dados de treino e teste, foram utilizados os dados de treino e teste disponíveis no \textit{Kaggle}, estes usavam \textit{reviews} de filmes e produtos de \textit{e-commerce} em português do \textit{Brasil}, já que em português de Portugal não foi possível encontrar.
+A segunda tentativa foi muito mais bem sucedida que a primeira. Foi usado para o algoritmo de classificação de sentimentos o \textit{Naïve Bayes} (\textit{Multinomial}), e como dados de treino e teste, \href{https://www.kaggle.com/fredericods/ptbr-sentiment-analysis-datasets}{foram utilizados os dados de treino e teste disponíveis no \textit{Kaggle}}, estes usavam \textit{reviews} de filmes e produtos de \textit{e-commerce} em português do \textit{Brasil}, já que em português de Portugal não foi possível encontrar.
 
 \subsubsection{Modelo Sequencial \textit{LSTM} com \textit{Embedding}}
 
@@ -138,7 +138,7 @@ Não foi possível executar a tentativa de classificação de sentimentos com es
 
 \subsubsection{Modelo \textit{Naïve Bayes} do \textit{Scikit-Learn} com \textit{Datasets PT-BR} do \textit{Kaggle}}
 
-Nesta tentativa de classificação de sentimentos, foi utilizado o pacote \textit{Scikit-Learn}, e foi utilizado um par de \textit{datasets} de \textit{reviews} do \textit{Kaggle}, que é um \textit{dataset} de \textit{reviews} de filmes e produtos de \textit{e-commerce} em português do \textit{Brasil}, já que em português de Portugal não foi possível encontrar.
+Nesta tentativa de classificação de sentimentos, foi utilizado o pacote \textit{Scikit-Learn}, \href{https://www.kaggle.com/fredericods/ptbr-sentiment-analysis-datasets}{e foi utilizado um par de \textit{datasets} de \textit{reviews} do \textit{Kaggle}}, que é um \textit{dataset} de \textit{reviews} de filmes e produtos de \textit{e-commerce} em português do \textit{Brasil}, já que em português de Portugal não foi possível encontrar.
 
 Foi criado um objecto (que deriva da nossa classe \textit{StemmerTokenizer}), que foi utilizado para aplicar o \textit{Stemming} e \textit{Tokenização} aos dados de treino e teste. Reduziu-se a quantidade de dados, e aumentou a capacidade de aprendizagem do modelo. A necessidade de aplicar \textit{stemming} à \textit{Tokenização} veio da necessidade de reduzir a dimensão da matriz/vector, e simplificar a linguagem, de maneira inteligente.
 
@@ -185,12 +185,12 @@ Um \textit{Transformer} é um tipo de rede neural que é capaz de aprender funç
 \textit{Transformers} tem muitas aplicações em linguagens de processamento natural, processamento de imagens e visão computacional. Eles foram bem-sucedidos em diversos domínios, incluindo:
 \begin{itemize}
   \setlength\itemsep{0.05em}
-    \item Sumários de texto (\textit{BERT, DistilBert, RoBERTa, XLNet})
-    \item Captação de imagens (\textit{XLNet})
-    \item Tradução de imagens (\textit{BERT, DistilBert, RoBERTa})
-    \item Respostas a perguntas (\textit{BERT, DistilBert, RoBERTa})
-    \item \textit{Chatbots} (\textit{BERT, DistilBert, RoBERTa})
-    \item Classificação (\textit{BERT, DistilBert, RoBERTa})
+    \item Sumários de texto (\textit{BERT, DistilBert, RoBERTa, XLNet});
+    \item Captação de imagens (\textit{XLNet});
+    \item Tradução de imagens (\textit{BERT, DistilBert, RoBERTa});
+    \item Respostas a perguntas (\textit{BERT, DistilBert, RoBERTa});
+    \item \textit{Chatbots} (\textit{BERT, DistilBert, RoBERTa});
+    \item Classificação (\textit{BERT, DistilBert, RoBERTa});
     \item \textit{Entre outros}.
 \end{itemize}
 
@@ -211,8 +211,8 @@ Especificamente o \textit{Transformer} é um modelo de sequência-para-sequênci
 Os três mais importantes tipos de \textit{layers} \cite{hf1} são:
 \begin{itemize}
   \setlength\itemsep{0.05em}
-    \item A \textit{softmax function} é uma função comum em redes \textit{neurais}. Ela toma um vector e retorna um vector com o mesmo tamanho. A \textit{softmax function} é usada para normalizar o \textit{output} da rede. Ela é usada para garantir que o \textit{output} é uma distribuição probabilística \cite{mtf1}.
-    \item Uma regressão linear é uma função que toma um vector e retorna um vector. Ela é usada para fazer predições usando um meio probabilístico simples e comum.
+    \item A \textit{softmax function} é uma função comum em redes \textit{neurais}. Ela toma um vector e retorna um vector com o mesmo tamanho. A \textit{softmax function} é usada para normalizar o \textit{output} da rede. Ela é usada para garantir que o \textit{output} é uma distribuição probabilística \cite{mtf1};
+    \item Uma regressão linear é uma função que toma um vector e retorna um vector; Ela é usada para fazer predições usando um meio probabilístico simples e comum;
     \item A função de \textit{self-attention} é feita usando uma combinação de regressão linear e a \textit{softmax}, com ou sem paralelismo (\textit{multi-head attention}), a função de \textit{self-attention} é usada para imprimir uma importância para o conjunto de palavras que está sendo avaliado.
 \end{itemize}
 
