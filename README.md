@@ -1,10 +1,10 @@
 # Projecto avaliação da disciplina de Projecto Integrado ano lectivo 2021/2022
 
-## Grupo
+Projecto integrado é uma disciplina do meu curso de engenharia informtica que visa aplicar conteudo de disciplinas anteriores e trabalho de grupo.
 
-+ Gonçalo Amaro -- 17440
-+ Pedro Tomás -- 18962
-+ Vítor Abreu -- 18966
+## Descrição
+
+Analise de dados de plataformas turisticas de clientes portugueses. De forma a tentar auxiliar, atraves da analise, o turismo rural e em especial do baixo alentejo, em beja.
 
 ## Ilustração
 
